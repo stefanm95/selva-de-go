@@ -1,0 +1,430 @@
+/* ============================================================================
+   TYPOGRAPHY SYSTEM: Luxury Cinematic Brand
+   Philosophy: Clear contrast between Display (Recoleta) and UI (Satoshi) with Inter accents
+   ============================================================================ */
+
+/* Google Fonts Import */
+@import url("https://fonts.googleapis.com/css2?family=Recoleta:wght@400;700&family=Satoshi:wght@300;400;500;600;700&family=Inter:wght@100..900&display=swap");
+
+/* ============================================================================
+   1. COLOR SYSTEM
+   ============================================================================ */
+
+:root {
+  /* Base Palette */
+  --background: #f6eadf;
+  --foreground: #1f1a17;
+
+  /* Brand Colors */
+  --brand-orange: #c96a32;
+  --brand-gold: #d8a63d;
+  --brand-olive: #6f7b52;
+  --brand-berry: #7a3b45;
+
+  /* Semantic Colors */
+  --muted: #dccfc2;
+  --border: #d2c2b2;
+
+  /* Backgrounds */
+  --bg-primary: #f6eadf;
+  --bg-secondary: #faf7f3;
+  --bg-elevated: #ffffff;
+  --bg-overlay: rgba(31, 26, 23, 0.8);
+
+  /* Text Colors */
+  --text-primary: #1f1a17;
+  --text-secondary: #5a5450;
+  --text-muted: #8b8580;
+  --text-inverse: #f6eadf;
+
+  /* Font Families */
+  --font-display: "Recoleta", serif;
+  --font-body: "Satoshi", sans-serif;
+  --font-accent: "Inter", sans-serif;
+
+  /* Typography Scale - Display */
+  --display-2xl: 120px;
+  --display-xl: 96px;
+  --display-lg: 72px;
+  --display-md: 56px;
+  --display-sm: 40px;
+
+  /* Typography Scale - Headings */
+  --heading-1: 48px;
+  --heading-2: 36px;
+  --heading-3: 28px;
+  --heading-4: 22px;
+
+  /* Typography Scale - Body */
+  --body-lg: 20px;
+  --body-md: 18px;
+  --body-sm: 16px;
+  --caption: 14px;
+  --micro: 12px;
+
+  /* Line Heights */
+  --lh-display: 0.95;
+  --lh-heading: 1.1;
+  --lh-body: 1.6;
+  --lh-body-tight: 1.5;
+
+  /* Letter Spacing */
+  --ls-display: -0.04em;
+  --ls-normal: 0;
+  --ls-wide: 0.02em;
+}
+
+/* ============================================================================
+   2. BASE STYLES
+   ============================================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: var(--lh-body);
+  font-size: var(--body-md);
+  font-weight: 400;
+  min-height: 100vh;
+}
+
+/* ============================================================================
+   3. TYPOGRAPHY SCALE UTILITIES
+   ============================================================================ */
+
+/* Display Scale - Headlines */
+.display-2xl {
+  font-family: var(--font-display);
+  font-size: var(--display-2xl);
+  font-weight: 500;
+  line-height: var(--lh-display);
+  letter-spacing: var(--ls-display);
+}
+
+.display-xl {
+  font-family: var(--font-display);
+  font-size: var(--display-xl);
+  font-weight: 500;
+  line-height: var(--lh-display);
+  letter-spacing: var(--ls-display);
+}
+
+.display-lg {
+  font-family: var(--font-display);
+  font-size: var(--display-lg);
+  font-weight: 500;
+  line-height: var(--lh-display);
+  letter-spacing: var(--ls-display);
+}
+
+.display-md {
+  font-family: var(--font-display);
+  font-size: var(--display-md);
+  font-weight: 500;
+  line-height: var(--lh-display);
+  letter-spacing: var(--ls-display);
+}
+
+.display-sm {
+  font-family: var(--font-display);
+  font-size: var(--display-sm);
+  font-weight: 500;
+  line-height: var(--lh-display);
+  letter-spacing: var(--ls-display);
+}
+
+/* Headings - Recoleta */
+.h1 {
+  font-family: var(--font-display);
+  font-size: var(--heading-1);
+  font-weight: 500;
+  line-height: var(--lh-heading);
+  letter-spacing: var(--ls-display);
+}
+
+.h2 {
+  font-family: var(--font-display);
+  font-size: var(--heading-2);
+  font-weight: 500;
+  line-height: var(--lh-heading);
+  letter-spacing: var(--ls-display);
+}
+
+.h3 {
+  font-family: var(--font-display);
+  font-size: var(--heading-3);
+  font-weight: 500;
+  line-height: var(--lh-heading);
+  letter-spacing: var(--ls-display);
+}
+
+.h4 {
+  font-family: var(--font-display);
+  font-size: var(--heading-4);
+  font-weight: 500;
+  line-height: var(--lh-heading);
+  letter-spacing: var(--ls-normal);
+}
+
+/* Body Text - Satoshi */
+.body-lg {
+  font-family: var(--font-body);
+  font-size: var(--body-lg);
+  font-weight: 400;
+  line-height: var(--lh-body);
+  letter-spacing: var(--ls-normal);
+}
+
+.body-md {
+  font-family: var(--font-body);
+  font-size: var(--body-md);
+  font-weight: 400;
+  line-height: var(--lh-body);
+  letter-spacing: var(--ls-normal);
+}
+
+.body-sm {
+  font-family: var(--font-body);
+  font-size: var(--body-sm);
+  font-weight: 400;
+  line-height: var(--lh-body);
+  letter-spacing: var(--ls-normal);
+}
+
+.caption {
+  font-family: var(--font-body);
+  font-size: var(--caption);
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: var(--ls-normal);
+}
+
+.micro {
+  font-family: var(--font-body);
+  font-size: var(--micro);
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: var(--ls-wide);
+}
+
+/* ============================================================================
+   4. HEADINGS - Semantic HTML
+   ============================================================================ */
+
+h1 {
+  font-family: var(--font-display);
+  font-size: var(--heading-1);
+  font-weight: 500;
+  line-height: var(--lh-heading);
+  letter-spacing: var(--ls-display);
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-family: var(--font-display);
+  font-size: var(--heading-2);
+  font-weight: 500;
+  line-height: var(--lh-heading);
+  letter-spacing: var(--ls-display);
+  margin-bottom: 0.875rem;
+}
+
+h3 {
+  font-family: var(--font-display);
+  font-size: var(--heading-3);
+  font-weight: 500;
+  line-height: var(--lh-heading);
+  letter-spacing: var(--ls-display);
+  margin-bottom: 0.75rem;
+}
+
+h4 {
+  font-family: var(--font-display);
+  font-size: var(--heading-4);
+  font-weight: 500;
+  line-height: var(--lh-heading);
+  letter-spacing: var(--ls-normal);
+  margin-bottom: 0.5rem;
+}
+
+h5,
+h6 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  line-height: var(--lh-heading);
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  line-height: var(--lh-body);
+}
+
+/* ============================================================================
+   5. REUSABLE UTILITY CLASSES
+   ============================================================================ */
+
+/* Text Wrapping */
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-pretty {
+  text-wrap: pretty;
+}
+
+/* Display Typography Container */
+.display {
+  font-family: var(--font-display);
+  letter-spacing: var(--ls-display);
+  line-height: var(--lh-display);
+}
+
+/* Brand Accent Text */
+.text-brand-orange {
+  color: var(--brand-orange);
+}
+
+.text-brand-gold {
+  color: var(--brand-gold);
+}
+
+.text-brand-olive {
+  color: var(--brand-olive);
+}
+
+.text-brand-berry {
+  color: var(--brand-berry);
+}
+
+/* Text Color Variants */
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.text-inverse {
+  color: var(--text-inverse);
+}
+
+/* Font Weights */
+.font-light {
+  font-weight: 300;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-black {
+  font-weight: 900;
+}
+
+/* ============================================================================
+   6. LINKS & INTERACTIVE
+   ============================================================================ */
+
+a {
+  color: var(--brand-orange);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--brand-berry);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--brand-gold);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+/* ============================================================================
+   7. SPACING & RHYTHM
+   ============================================================================ */
+
+/* Creates luxury through restraint and breathing room */
+
+section {
+  padding: 3rem 0;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 2rem 0;
+  }
+}
+
+/* ============================================================================
+   8. SEMANTIC BACKGROUNDS
+   ============================================================================ */
+
+.bg-primary {
+  background-color: var(--bg-primary);
+}
+
+.bg-secondary {
+  background-color: var(--bg-secondary);
+}
+
+.bg-elevated {
+  background-color: var(--bg-elevated);
+}
+
+.bg-overlay {
+  background-color: var(--bg-overlay);
+}
+
+/* ============================================================================
+   9. ACCESSIBILITY
+   ============================================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (prefers-contrast: more) {
+  body {
+    letter-spacing: 0.02em;
+  }
+
+  .display {
+    letter-spacing: -0.02em;
+  }
+}
