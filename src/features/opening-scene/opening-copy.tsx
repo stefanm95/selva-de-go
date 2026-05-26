@@ -1,3 +1,4 @@
+import { FadeIn } from "@/components/motion/fade-in";
 import { homepageData } from "@/data/homepage";
 
 export function OpeningCopy() {
@@ -32,9 +33,9 @@ export function OpeningCopy() {
             bg-[#d96c3d]
           '
         />
-
-        <p
-          className='
+        <FadeIn delay={0.1}>
+          <p
+            className='
             rotate-[-2deg]
 
             text-[11px]
@@ -45,14 +46,15 @@ export function OpeningCopy() {
 
             text-[#7a3b45]
           '
-        >
-          {scene.eyebrow}
-        </p>
+          >
+            {scene.eyebrow}
+          </p>
+        </FadeIn>
       </div>
-
-      {/* TITLE */}
-      <h1
-        className='
+      <FadeIn delay={0.2}>
+        {/* TITLE */}
+        <h1
+          className='
           display
 
           relative
@@ -66,27 +68,28 @@ export function OpeningCopy() {
 
           text-[#1f1a17]
         '
-      >
-        <span className='relative inline-block'>wild</span>
+        >
+          <span className='relative inline-block'>wild</span>
 
-        <br />
+          <br />
 
-        <span className='relative inline-block'>nutrition</span>
+          <span className='relative inline-block'>nutrition</span>
 
-        <br />
+          <br />
 
-        <span
-          className='
+          <span
+            className='
             relative
 
             inline-block
 
             text-[#7a3b45]
           '
-        >
-          for modern dogs
-        </span>
-      </h1>
+          >
+            for modern dogs
+          </span>
+        </h1>
+      </FadeIn>
 
       {/* DESCRIPTION */}
       <div
@@ -115,9 +118,9 @@ export function OpeningCopy() {
             blur-[30px]
           '
         />
-
-        <p
-          className='
+        <FadeIn delay={0.35}>
+          <p
+            className='
             relative
             z-10
 
@@ -127,9 +130,10 @@ export function OpeningCopy() {
 
             text-[#463c35]/82
           '
-        >
-          {scene.description}
-        </p>
+          >
+            {scene.description}
+          </p>
+        </FadeIn>
       </div>
     </div>
   );

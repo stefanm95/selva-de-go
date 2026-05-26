@@ -113,7 +113,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             absolute
             inset-0
 
-            opacity-[0.14]
+            opacity-[0.24]
             mix-blend-multiply
           '
           style={{
@@ -183,23 +183,6 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           '
         >
           <span>{children}</span>
-
-          <span
-            className='
-              relative
-
-              top-[-1px]
-
-              text-[14px]
-
-              transition-transform
-              duration-300
-
-              group-hover:translate-x-[2px]
-            '
-          >
-            →
-          </span>
         </span>
       </button>
     );
