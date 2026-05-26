@@ -10,10 +10,13 @@ export function OpeningActions() {
       className='
         relative
         z-30
+
         mt-12
+
         flex
         flex-wrap
         items-center
+
         gap-4
       '
     >
