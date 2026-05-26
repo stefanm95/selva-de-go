@@ -4,6 +4,23 @@
   background-size: 180px;
 }
 
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+body {
+  overflow-x: hidden;
+}
+
 /* ============================================================================
    TYPOGRAPHY SYSTEM: Luxury Cinematic Brand
    Philosophy: Clear contrast between Display (Recoleta) and UI (Satoshi) with Inter accents
