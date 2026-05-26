@@ -4,7 +4,7 @@ export function OpeningCopy() {
   const scene = homepageData.openingScene;
 
   return (
-    <div className='relative z-30'>
+    <div className='relative left-[50%] z-30'>
       {/* EYEBROW */}
       <p
         className='

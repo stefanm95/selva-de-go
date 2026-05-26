@@ -17,7 +17,6 @@ export function SceneContainer({ children, className }: SceneContainerProps) {
 
           w-full
           max-w-[1720px]
-
           px-6
           md:px-10
           xl:px-16

@@ -12,7 +12,7 @@ export function OpeningActions() {
         z-30
 
         mt-12
-
+        left-[50%]
         flex
         flex-wrap
         items-center
@@ -20,11 +20,11 @@ export function OpeningActions() {
         gap-4
       '
     >
-      <Button asChild variant='primary' size='lg'>
+      <Button variant='primary' size='lg'>
         <a href={scene.primaryCta.href}>{scene.primaryCta.label}</a>
       </Button>
 
-      <Button asChild variant='secondary' size='lg'>
+      <Button variant='secondary' size='lg'>
         <a href={scene.secondaryCta.href}>{scene.secondaryCta.label}</a>
       </Button>
     </div>

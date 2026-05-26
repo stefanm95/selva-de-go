@@ -16,8 +16,8 @@ export function OpeningProduct() {
           bottom-[4%]
           left-1/2
 
-          h-[120px]
-          w-[460px]
+          h-[30rem]
+          w-[40rem]
 
           -translate-x-1/2
 
@@ -55,8 +55,8 @@ export function OpeningProduct() {
         className='
           relative
 
-          h-[720px]
-          w-[480px]
+          h-[32rem]
+          w-[32rem]
 
           overflow-hidden
 
