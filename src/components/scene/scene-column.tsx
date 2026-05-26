@@ -1,27 +1,22 @@
 import { cn } from "@/lib/cn";
 
-type SceneProps = {
+type SceneColumnProps = {
   children: React.ReactNode;
   className?: string;
 };
 
-export function Scene({ children, className }: SceneProps) {
+export function SceneColumn({ children, className }: SceneColumnProps) {
   return (
-    <section
+    <div
       className={cn(
         `
           relative
-          isolate
-
-          overflow-hidden
-
-          min-h-screen
-          w-full
+          z-20
         `,
         className,
       )}
     >
       {children}
-    </section>
+    </div>
   );
 }
