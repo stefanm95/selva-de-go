@@ -29,9 +29,9 @@ export function OpeningCopy() {
 
           max-w-[760px]
 
-          text-[clamp(5rem,9vw,10rem)]
+          ttext-[clamp(6rem,10vw,11rem)]
 
-          leading-[0.84]
+          leading-[0.8]
           tracking-[-0.08em]
 
           text-[#1f1a17]

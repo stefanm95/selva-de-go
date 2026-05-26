@@ -15,13 +15,14 @@ type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary: `
-    bg-[#1f1a17]
+    bg-[#221e1c]
     text-white
 
     shadow-[0_12px_30px_rgba(0,0,0,0.18)]
 
     hover:bg-black
     hover:-translate-y-[2px]
+    hover:shadow-[0_18px_40px_rgba(0,0,0,0.22)]
   `,
 
   secondary: `

@@ -44,6 +44,40 @@ export function OpeningAtmosphere() {
         '
       />
 
+      {/* FLOATING DUST */}
+      <div
+        className='
+    absolute
+    left-[34%]
+    top-[26%]
+
+    h-[420px]
+    w-[420px]
+
+    rounded-full
+
+    bg-white/[0.04]
+
+    blur-[120px]
+  '
+      />
+
+      <div
+        className='
+    absolute
+    left-[46%]
+    top-[48%]
+
+    h-[180px]
+    w-[180px]
+
+    rounded-full
+
+    border
+    border-[#7a3b45]/10
+  '
+      />
+
       {/* MASSIVE TYPO */}
       <div
         className='
