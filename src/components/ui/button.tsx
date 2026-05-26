@@ -17,8 +17,7 @@ const variantStyles: Record<ButtonVariant, string> = {
     border-[#2f221d]
 
     bg-[#d96c3d]
-
-    text-[#fff5e9]
+    text-[#f6eadf]
 
     shadow-[0_8px_0_#2f221d,0_18px_40px_rgba(0,0,0,0.18)]
 
@@ -31,6 +30,7 @@ const variantStyles: Record<ButtonVariant, string> = {
     border-[#2f221d]
 
     bg-[#f6eadf]
+
 
     text-[#2f221d]
 

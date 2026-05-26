@@ -378,7 +378,7 @@ p {
    ============================================================================ */
 
 a {
-  color: var(--brand-orange);
+  /* color: var(--text-inverse); */
   text-decoration: none;
   transition: color 0.2s ease;
 }

@@ -12,7 +12,7 @@ import { OpeningProduct } from "./opening-product";
 
 export function OpeningScene() {
   return (
-    <Scene className='bg-[#f6eadf]'>
+    <Scene>
       <SceneBackground />
 
       <OpeningAtmosphere />
