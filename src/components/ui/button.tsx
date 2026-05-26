@@ -2,7 +2,7 @@ import { forwardRef } from "react";
 
 import { cn } from "@/lib/cn";
 
-type ButtonVariant = "primary" | "secondary" | "ghost";
+type ButtonVariant = "primary" | "secondary";
 
 type ButtonSize = "sm" | "md" | "lg";
 
@@ -13,62 +13,52 @@ type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary: `
-    border
-    border-[#8f3e35]/30
+    border-[3px]
+    border-[#2f221d]
 
-    bg-[linear-gradient(180deg,#7a3240_0%,#5a2435_100%)]
+    bg-[#d96c3d]
 
-    text-[#fff7f1]
+    text-[#fff5e9]
 
-    shadow-[0_20px_50px_rgba(0,0,0,0.22)]
+    shadow-[0_8px_0_#2f221d,0_18px_40px_rgba(0,0,0,0.18)]
 
-    hover:shadow-[0_28px_70px_rgba(0,0,0,0.28)]
-    hover:-translate-y-[3px]
+    hover:translate-y-[3px]
+    hover:shadow-[0_4px_0_#2f221d,0_10px_22px_rgba(0,0,0,0.18)]
   `,
 
   secondary: `
-    border
-    border-[#7a3b45]/12
+    border-[3px]
+    border-[#2f221d]
 
-    bg-[#fff7f0]/60
+    bg-[#f6eadf]
 
-    text-[#2b2421]
+    text-[#2f221d]
 
-    shadow-[0_10px_30px_rgba(0,0,0,0.06)]
+    shadow-[0_8px_0_#2f221d,0_16px_30px_rgba(0,0,0,0.12)]
 
-    backdrop-blur-xl
-
-    hover:bg-[#fff9f4]
-    hover:-translate-y-[2px]
-  `,
-
-  ghost: `
-    bg-transparent
-
-    text-[#2b2421]
-
-    hover:bg-black/[0.04]
+    hover:translate-y-[3px]
+    hover:shadow-[0_4px_0_#2f221d,0_10px_18px_rgba(0,0,0,0.14)]
   `,
 };
 
 const sizeStyles: Record<ButtonSize, string> = {
   sm: `
-    h-11
-    px-5
+    h-12
+    px-6
 
     text-[11px]
   `,
 
   md: `
-    h-13
-    px-7
+    h-14
+    px-8
 
     text-[12px]
   `,
 
   lg: `
-    h-15
-    px-9
+    h-16
+    px-10
 
     text-[13px]
   `,
@@ -95,16 +85,16 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
             rounded-[999px]
 
-            font-medium
+            font-black
             uppercase
 
             tracking-[0.18em]
 
             transition-all
-            duration-700
-            ease-out
+            duration-300
 
-            active:scale-[0.985]
+            active:translate-y-[5px]
+            active:shadow-[0_2px_0_#2f221d]
 
             disabled:pointer-events-none
             disabled:opacity-50
@@ -123,8 +113,8 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             absolute
             inset-0
 
-            opacity-[0.08]
-            mix-blend-overlay
+            opacity-[0.14]
+            mix-blend-multiply
           '
           style={{
             backgroundImage: "url('/images/wrm-paper/carton.jfif')",
@@ -139,7 +129,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             absolute
             inset-0
 
-            opacity-[0.05]
+            opacity-[0.08]
             mix-blend-soft-light
           '
           style={{
@@ -150,76 +140,34 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           }}
         />
 
-        {/* TOP GLOSS */}
+        {/* PRINT HIGHLIGHT */}
         <div
           className='
             absolute
-            left-[8%]
-            top-[6%]
+            left-[6%]
+            top-[10%]
 
-            h-[45%]
-            w-[84%]
+            h-[34%]
+            w-[88%]
 
             rounded-full
 
-            bg-white/[0.08]
+            bg-white/16
 
-            blur-[10px]
-
-            transition-all
-            duration-700
-
-            group-hover:translate-y-[-2px]
-            group-hover:bg-white/[0.12]
+            blur-[6px]
           '
         />
 
-        {/* EDGE LIGHT */}
+        {/* INNER BORDER */}
         <div
           className='
             absolute
-            inset-[1px]
+            inset-[3px]
 
             rounded-[999px]
 
-            border
+            border-[2px]
             border-white/10
-          '
-        />
-
-        {/* INNER SHADOW */}
-        <div
-          className='
-            absolute
-            inset-0
-
-            shadow-[inset_0_-8px_14px_rgba(0,0,0,0.14)]
-          '
-        />
-
-        {/* AMBIENT GLOW */}
-        <div
-          className='
-            absolute
-            left-1/2
-            top-1/2
-
-            h-[120%]
-            w-[120%]
-
-            -translate-x-1/2
-            -translate-y-1/2
-
-            rounded-full
-
-            bg-[#ffcf9d]/0
-
-            blur-[30px]
-
-            transition-all
-            duration-700
-
-            group-hover:bg-[#ffcf9d]/10
           '
         />
 
@@ -236,32 +184,22 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         >
           <span>{children}</span>
 
-          {variant === "primary" && (
-            <span
-              className='
-                flex
-                h-5
-                w-5
+          <span
+            className='
+              relative
 
-                items-center
-                justify-center
+              top-[-1px]
 
-                rounded-full
+              text-[14px]
 
-                border
-                border-white/14
+              transition-transform
+              duration-300
 
-                bg-white/10
-
-                transition-transform
-                duration-700
-
-                group-hover:translate-x-[2px]
-              '
-            >
-              →
-            </span>
-          )}
+              group-hover:translate-x-[2px]
+            '
+          >
+            →
+          </span>
         </span>
       </button>
     );
