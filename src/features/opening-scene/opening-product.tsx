@@ -9,35 +9,55 @@ export function OpeningProduct() {
         justify-center
       '
     >
-      {/* GROUND SHADOW */}
+      {/* HARD GROUND SHADOW */}
       <div
         className='
           absolute
-          bottom-[4%]
+          bottom-[2%]
           left-1/2
 
-          h-[30rem]
-          w-[40rem]
+          h-[16rem]
+          w-[42rem]
 
           -translate-x-1/2
 
           rounded-full
 
-          bg-black/25
+          bg-[#2b1d18]/28
 
-          blur-[45px]
+          blur-[26px]
         '
       />
 
-      {/* AMBIENT GLOW */}
+      {/* WARM SHADOW */}
+      <div
+        className='
+          absolute
+          bottom-[8%]
+          left-1/2
+
+          h-[8rem]
+          w-[28rem]
+
+          -translate-x-1/2
+
+          rounded-full
+
+          bg-[#a14e31]/18
+
+          blur-[34px]
+        '
+      />
+
+      {/* AMBIENT BACK GLOW */}
       <div
         className='
           absolute
           left-1/2
           top-1/2
 
-          h-[720px]
-          w-[720px]
+          h-[42rem]
+          w-[42rem]
 
           -translate-x-1/2
           -translate-y-1/2
@@ -46,7 +66,7 @@ export function OpeningProduct() {
 
           bg-[#d97b42]/10
 
-          blur-[120px]
+          blur-[100px]
         '
       />
 
@@ -55,19 +75,21 @@ export function OpeningProduct() {
         className='
           relative
 
-          h-[32rem]
+          h-[34rem]
           w-[32rem]
+
+          rotate-[-1.2deg]
 
           overflow-hidden
 
-          rounded-[3.2rem]
+          rounded-[2.7rem]
 
-          border
-          border-white/20
+          border-[4px]
+          border-[#2f221d]
 
           bg-[linear-gradient(165deg,#5a2435_0%,#8f3e35_28%,#c45f35_62%,#df8a45_100%)]
 
-          shadow-[0_80px_160px_rgba(0,0,0,0.28)]
+          shadow-[0_10px_0_#2f221d,0_24px_0_#6a3429,0_42px_60px_rgba(0,0,0,0.18)]
         '
       >
         {/* PAPER TEXTURE */}
@@ -76,8 +98,8 @@ export function OpeningProduct() {
             absolute
             inset-0
 
-            opacity-[0.08]
-            mix-blend-overlay
+            opacity-[0.16]
+            mix-blend-multiply
           '
           style={{
             backgroundImage: "url('/images/wrm-paper/carton.jfif')",
@@ -92,7 +114,7 @@ export function OpeningProduct() {
             absolute
             inset-0
 
-            opacity-[0.06]
+            opacity-[0.08]
             mix-blend-soft-light
           '
           style={{
@@ -103,6 +125,44 @@ export function OpeningProduct() {
           }}
         />
 
+        {/* PRINT BLOOM */}
+        <div
+          className='
+            absolute
+            left-[4%]
+            top-[6%]
+
+            h-[10rem]
+            w-[22rem]
+
+            rotate-[-8deg]
+
+            rounded-full
+
+            bg-[#ffe3bc]/12
+
+            blur-[20px]
+          '
+        />
+
+        {/* OFFSET SHAPE */}
+        <div
+          className='
+            absolute
+            right-[-8%]
+            top-[18%]
+
+            h-[16rem]
+            w-[16rem]
+
+            rounded-full
+
+            bg-[#ffcf8d]/10
+
+            blur-[10px]
+          '
+        />
+
         {/* TOP SPECULAR */}
         <div
           className='
@@ -110,14 +170,14 @@ export function OpeningProduct() {
             left-[8%]
             top-[5%]
 
-            h-[220px]
-            w-[220px]
+            h-[10rem]
+            w-[10rem]
 
             rounded-full
 
-            bg-white/20
+            bg-white/16
 
-            blur-[60px]
+            blur-[40px]
           '
         />
 
@@ -128,69 +188,54 @@ export function OpeningProduct() {
             right-[-10%]
             top-[20%]
 
-            h-[320px]
-            w-[180px]
+            h-[20rem]
+            w-[10rem]
 
             rounded-full
 
             bg-[#ffd6a8]/14
 
-            blur-[80px]
+            blur-[70px]
           '
         />
 
-        {/* INNER EDGE */}
+        {/* INNER BORDER */}
         <div
           className='
             absolute
-            inset-[18px]
+            inset-[14px]
 
-            rounded-[2.6rem]
+            rounded-[2.2rem]
 
-            border
-            border-white/10
+            border-[2px]
+            border-white/12
           '
         />
 
-        {/* TOP REFLECTION */}
+        {/* RETRO STRIPES */}
         <div
           className='
             absolute
-            left-[8%]
-            top-[3%]
-
-            h-[90px]
-            w-[84%]
-
-            rounded-full
-
-            bg-white/[0.07]
-
-            blur-[18px]
-          '
-        />
-
-        {/* ATMOSPHERIC STRIP */}
-        <div
-          className='
-            absolute
-            left-[-10%]
+            right-[-6%]
             top-[12%]
 
-            h-[2px]
-            w-[120%]
+            flex
+            flex-col
+            gap-4
 
-            bg-white/10
-
-            blur-sm
+            opacity-[0.14]
           '
-        />
+        >
+          <div className='h-4 w-52 rounded-full bg-white' />
+          <div className='h-4 w-40 rounded-full bg-white' />
+          <div className='h-4 w-28 rounded-full bg-white' />
+        </div>
 
         {/* TYPOGRAPHY BLOCK */}
         <div
           className='
             absolute
-            bottom-16
+            bottom-14
             left-12
             right-12
           '
@@ -198,12 +243,12 @@ export function OpeningProduct() {
           <p
             className='
               text-[11px]
-              font-medium
+              font-black
               uppercase
 
               tracking-[0.34em]
 
-              text-white/72
+              text-[#ffe5c8]
             '
           >
             Premium Nutrition
@@ -213,10 +258,10 @@ export function OpeningProduct() {
             className='
               mt-5
 
-              text-[4.5rem]
+              text-[5.2rem]
 
-              leading-[0.84]
-              tracking-[-0.07em]
+              leading-[0.78]
+              tracking-[-0.08em]
 
               text-white
             '
@@ -236,19 +281,19 @@ export function OpeningProduct() {
               flex
               items-center
 
-              gap-3
+              gap-4
             '
           >
             <div
               className='
-                h-2.5
-                w-2.5
+                h-3.5
+                w-3.5
 
                 rounded-full
 
-                bg-[#ffe0ae]
+                bg-[#ffd35e]
 
-                shadow-[0_0_18px_rgba(255,224,174,0.9)]
+                shadow-[0_0_18px_rgba(255,211,94,0.9)]
               '
             />
 
@@ -256,9 +301,11 @@ export function OpeningProduct() {
               className='
                 text-sm
 
+                font-medium
+
                 tracking-[-0.01em]
 
-                text-white/70
+                text-white/72
               '
             >
               Crafted for vitality & instinct
