@@ -129,7 +129,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             absolute
             inset-0
 
-            opacity-[0.08]
+            opacity-[0.15]
             mix-blend-soft-light
           '
           style={{
