@@ -1,8 +1,13 @@
+.film-grain {
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  background-repeat: repeat;
+  background-size: 180px;
+}
+
 /* ============================================================================
    TYPOGRAPHY SYSTEM: Luxury Cinematic Brand
    Philosophy: Clear contrast between Display (Recoleta) and UI (Satoshi) with Inter accents
    ============================================================================ */
-
 /* Google Fonts Import */
 @import url("https://fonts.googleapis.com/css2?family=Recoleta:wght@400;700&family=Satoshi:wght@300;400;500;600;700&family=Inter:wght@100..900&display=swap");
 
