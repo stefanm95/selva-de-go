@@ -2,16 +2,25 @@ import { forwardRef } from "react";
 
 import { cn } from "@/lib/cn";
 
-type ButtonVariant = "primary" | "secondary";
+type ButtonVariant =
+  | "primary"
+  | "secondary"
+  | "editorial"
+  | "utility"
+  | "ghost";
 
 type ButtonSize = "sm" | "md" | "lg";
+
+type ButtonShape = "pill" | "circle";
 
 type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: ButtonVariant;
   size?: ButtonSize;
+  shape?: ButtonShape;
 };
 
 const variantStyles: Record<ButtonVariant, string> = {
+  /* HERO CTA */
   primary: `
     border-[3px]
     border-[#2f221d]
@@ -25,13 +34,12 @@ const variantStyles: Record<ButtonVariant, string> = {
     hover:shadow-[0_4px_0_#2f221d,0_10px_22px_rgba(0,0,0,0.18)]
   `,
 
+  /* LIGHT PAPER BUTTON */
   secondary: `
     border-[3px]
     border-[#2f221d]
 
     bg-[#f6eadf]
-
-
     text-[#2f221d]
 
     shadow-[0_8px_0_#2f221d,0_16px_30px_rgba(0,0,0,0.12)]
@@ -39,14 +47,55 @@ const variantStyles: Record<ButtonVariant, string> = {
     hover:translate-y-[3px]
     hover:shadow-[0_4px_0_#2f221d,0_10px_18px_rgba(0,0,0,0.14)]
   `,
+
+  /* NAV / SYSTEM BUTTON */
+  editorial: `
+    border-[2px]
+    border-[#2b211d]
+
+    bg-[#f7ecdf]
+    text-[#2b211d]
+
+    shadow-[0_5px_0_#2b211d,0_10px_24px_rgba(0,0,0,0.08)]
+
+    hover:translate-y-[2px]
+    hover:shadow-[0_2px_0_#2b211d,0_6px_14px_rgba(0,0,0,0.08)]
+  `,
+
+  /* FLOATING ICON UTILITIES */
+  utility: `
+    border
+    border-[#2b211d]/10
+
+    bg-white/40
+    text-[#2b211d]
+
+    backdrop-blur-[8px]
+
+    shadow-[0_4px_12px_rgba(0,0,0,0.06)]
+
+    hover:bg-white/72
+    hover:translate-y-[1px]
+  `,
+
+  /* MINIMAL */
+  ghost: `
+    border
+    border-transparent
+
+    bg-transparent
+    text-[#2f221d]
+
+    hover:bg-black/[0.04]
+  `,
 };
 
 const sizeStyles: Record<ButtonSize, string> = {
   sm: `
-    h-12
-    px-6
+    h-11
+    px-5
 
-    text-[11px]
+    text-[10px]
   `,
 
   md: `
@@ -64,11 +113,49 @@ const sizeStyles: Record<ButtonSize, string> = {
   `,
 };
 
+const shapeStyles: Record<ButtonShape, string> = {
+  pill: `
+    rounded-[1rem]
+  `,
+
+  circle: `
+    rounded-[1rem]
+
+    p-0
+  `,
+};
+
+const circleSizeStyles: Record<ButtonSize, string> = {
+  sm: `
+    h-11
+    w-11
+  `,
+
+  md: `
+    h-12
+    w-12
+  `,
+
+  lg: `
+    h-14
+    w-14
+  `,
+};
+
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
-    { className, variant = "primary", size = "md", children, ...props },
+    {
+      className,
+      variant = "primary",
+      size = "md",
+      shape = "pill",
+      children,
+      ...props
+    },
     ref,
   ) => {
+    const isUtility = variant === "utility" || variant === "ghost";
+
     return (
       <button
         ref={ref}
@@ -78,12 +165,11 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             relative
 
             inline-flex
+            shrink-0
             items-center
             justify-center
 
             overflow-hidden
-
-            rounded-[999px]
 
             font-black
             uppercase
@@ -94,95 +180,109 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             duration-300
 
             active:translate-y-[5px]
-            active:shadow-[0_2px_0_#2f221d]
 
             disabled:pointer-events-none
             disabled:opacity-50
           `,
 
           variantStyles[variant],
-          sizeStyles[size],
+
+          shape === "circle" ? circleSizeStyles[size] : sizeStyles[size],
+
+          shapeStyles[shape],
+
+          !isUtility &&
+            `
+              active:shadow-[0_2px_0_#2f221d]
+            `,
 
           className,
         )}
         {...props}
       >
-        {/* PAPER TEXTURE */}
-        <div
-          className='
-            absolute
-            inset-0
+        {/* TEXTURE SYSTEM */}
+        {!isUtility && (
+          <>
+            {/* PAPER TEXTURE */}
+            <div
+              className="
+                absolute
+                inset-0
 
-            opacity-[0.24]
-            mix-blend-multiply
-          '
-          style={{
-            backgroundImage: "url('/images/wrm-paper/carton.jfif')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
+                opacity-[0.24]
+                mix-blend-multiply
+              "
+              style={{
+                backgroundImage: "url('/images/wrm-paper/carton.jfif')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            />
 
-        {/* HALFTONE */}
-        <div
-          className='
-            absolute
-            inset-0
+            {/* HALFTONE */}
+            <div
+              className="
+                absolute
+                inset-0
 
-            opacity-[0.15]
-            mix-blend-soft-light
-          '
-          style={{
-            backgroundImage:
-              "url('/images/halftone-dots/monochrome-dots.jfif')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
+                opacity-[0.15]
+                mix-blend-soft-light
+              "
+              style={{
+                backgroundImage:
+                  "url('/images/halftone-dots/monochrome-dots.jfif')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            />
 
-        {/* PRINT HIGHLIGHT */}
-        <div
-          className='
-            absolute
-            left-[6%]
-            top-[10%]
+            {/* PRINT HIGHLIGHT */}
+            <div
+              className="
+                absolute
+                left-[6%]
+                top-[10%]
 
-            h-[34%]
-            w-[88%]
+                h-[34%]
+                w-[88%]
 
-            rounded-full
+                rounded-full
 
-            bg-white/16
+                bg-white/16
 
-            blur-[6px]
-          '
-        />
+                blur-[6px]
+              "
+            />
 
-        {/* INNER BORDER */}
-        <div
-          className='
-            absolute
-            inset-[3px]
+            {/* INNER BORDER */}
+            <div
+              className="
+                absolute
+                inset-[3px]
 
-            rounded-[999px]
+                rounded-[inherit]
 
-            border-[2px]
-            border-white/10
-          '
-        />
+                border-[2px]
+                border-white/10
+              "
+            />
+          </>
+        )}
 
         {/* LABEL */}
         <span
-          className='
+          className="
             relative
             z-20
 
             flex
             items-center
+            justify-center
+
             gap-3
-          '
+          "
         >
-          <span>{children}</span>
+          {children}
         </span>
       </button>
     );

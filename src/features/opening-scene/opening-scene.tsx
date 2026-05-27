@@ -1,8 +1,6 @@
 import {
   Cinematic,
-  FadeIn,
   Float,
-  Magnetic,
   Parallax,
   Reveal,
   staggerContainer,
@@ -15,6 +13,7 @@ import { SceneGrid } from "@/components/scene/scene-grid";
 
 import { SceneBackground } from "@/components/atmosphere/scene-background";
 
+import { OpeningNavigation } from "@/features/opening-scene/opening-navigation";
 import { OpeningActions } from "./opening-actions";
 import { OpeningAtmosphere } from "./opening-atmosphere";
 import { OpeningCopy } from "./opening-copy";
@@ -26,92 +25,38 @@ export function OpeningScene() {
       {/* MASTER ATMOSPHERE */}
       <SceneBackground />
 
+      <OpeningNavigation />
+
       {/* DECORATIVE CINEMATIC LAYERS */}
-      <Parallax speed={0.18}>
-        <OpeningAtmosphere />
-      </Parallax>
 
-      {/* LARGE RETRO WORDS */}
-      <div
-        className="
-          pointer-events-none
-          absolute
-          inset-0
-          overflow-hidden
-        "
-      >
-        <Parallax speed={0.08}>
-          <div
-            className="
-              absolute
-              left-[-4vw]
-              top-[6vh]
-
-              opacity-[0.05]
-            "
-          >
-            <h2
-              className="
-                display
-
-                text-[18vw]
-
-                leading-none
-                tracking-[-0.1em]
-
-                text-[#4b231f]
-              "
-            >
-              WILD
-            </h2>
-          </div>
-        </Parallax>
-
-        <Parallax speed={0.12}>
-          <div
-            className="
-              absolute
-              bottom-[0vh]
-              right-[-3vw]
-
-              opacity-[0.04]
-            "
-          >
-            <h2
-              className="
-                display
-
-                text-[14vw]
-
-                leading-none
-                tracking-[-0.08em]
-
-                text-[#7a3b45]
-              "
-            >
-              INSTINCT
-            </h2>
-          </div>
-        </Parallax>
-      </div>
+      <OpeningAtmosphere />
 
       {/* MAIN LAYOUT */}
       <SceneContainer>
-        <Reveal variants={staggerContainer} className="relative z-30">
+        <Reveal
+          variants={staggerContainer}
+          className="relative pt-[11rem] xl:pt-[13rem] z-30"
+        >
           <SceneGrid>
             {/* COPY SIDE */}
             <SceneColumn
               className="
-                relative
-                z-30
+    relative
+    z-30
 
-                flex
-                items-center
+    flex
+    items-start
 
-                xl:col-span-5
-              "
+    xl:col-span-5
+
+    translate-x-[3rem]
+  "
             >
-              <div className="relative">
+              <div
+                className="relative  pl-2
+      md:pl-4
+      xl:pl-10"
+              >
                 {/* ORGANIC BACK GLOW */}
                 <Parallax speed={0.1}>
                   <div
@@ -136,11 +81,11 @@ export function OpeningScene() {
                   <OpeningCopy />
                 </Cinematic>
 
-                <FadeIn delay={0.45}>
-                  <Magnetic>
+                <Parallax speed={0.22}>
+                  <Cinematic delay={0.45}>
                     <OpeningActions />
-                  </Magnetic>
-                </FadeIn>
+                  </Cinematic>
+                </Parallax>
               </div>
             </SceneColumn>
 

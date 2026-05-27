@@ -1,115 +1,146 @@
+import { Float, Parallax } from "@/components/motion";
+
 import { SceneOrb } from "@/components/scene/scene-orb";
 
 export function OpeningAtmosphere() {
   return (
     <>
-      {/* SUN GLOW */}
-      <SceneOrb
-        className="
-          left-[-10%]
-          top-[-8%]
+      {/* MAIN WARM LIGHT */}
+      <Parallax speed={0.08}>
+        <SceneOrb
+          className="
+            left-[-14%]
+            top-[-10%]
 
-          h-[460px]
-          w-[460px]
+            h-[520px]
+            w-[520px]
 
-          bg-[#f0c59a]/32
-        "
-      />
+            bg-[#efc28f]/18
+          "
+        />
+      </Parallax>
 
-      {/* BURNT LIGHT */}
-      <SceneOrb
-        className="
-          right-[2%]
-          top-[12%]
+      {/* PRODUCT LIGHT SYSTEM */}
+      <Float intensity={16}>
+        <Parallax speed={0.22}>
+          <>
+            {/* BURNT SHAPE */}
+            <div
+              className="
+                absolute
+                right-[-10%]
+                top-[4%]
 
-          h-[320px]
-          w-[320px]
+                h-[42rem]
+                w-[42rem]
 
-          bg-[#c45a32]/20
-        "
-      />
+                rounded-[38%]
 
-      {/* LOWER HAZE */}
-      <SceneOrb
-        className="
-          bottom-[-12%]
-          left-1/2
+                rotate-[8deg]
 
-          h-[560px]
-          w-[560px]
+                bg-[#b14d35]/[0.08]
+              "
+            />
 
-          -translate-x-1/2
+            {/* DARK ANCHOR */}
+            <div
+              className="
+                absolute
+                right-[8%]
+                top-[14%]
 
-          bg-[#f4d7b8]/18
-        "
-      />
+                h-[32rem]
+                w-[24rem]
 
-      {/* EDITORIAL CIRCLE */}
+                rounded-[3rem]
+
+                bg-[#2a1d1b]/[0.05]
+
+                blur-[2px]
+              "
+            />
+
+            {/* HALFTONE */}
+            <div
+              className="
+                absolute
+                right-[10%]
+                top-[10%]
+
+                h-[18rem]
+                w-[18rem]
+
+                opacity-[0.05]
+
+                mix-blend-multiply
+              "
+              style={{
+                backgroundImage:
+                  "url('/images/halftone-dots/monochrome-dots.jfif')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            />
+
+            {/* FILM BURN */}
+            <div
+              className="
+                absolute
+                right-[2%]
+                top-0
+
+                h-full
+                w-[38%]
+
+                opacity-[0.14]
+                mix-blend-screen
+              "
+              style={{
+                backgroundImage: "url('/images/light-leaks/film-burn-1.jfif')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            />
+          </>
+        </Parallax>
+      </Float>
+
+      {/* FLOOR LIGHT */}
+      <Parallax speed={0.05}>
+        <SceneOrb
+          className="
+            bottom-[-18%]
+            left-1/2
+
+            h-[620px]
+            w-[620px]
+
+            -translate-x-1/2
+
+            bg-[#f5dcc0]/10
+          "
+        />
+      </Parallax>
+
+      {/* REGISTRATION CIRCLE */}
       <div
         className="
           absolute
-          left-[48%]
-          top-[48%]
+          left-[50%]
+          top-[56%]
 
-          h-[180px]
-          w-[180px]
+          h-[14rem]
+          w-[14rem]
+
+          -translate-x-1/2
+          -translate-y-1/2
 
           rounded-full
 
           border
-          border-[#5a2e2a]/10
+          border-[#5a2e2a]/[0.06]
         "
       />
-
-      {/* TYPOGRAPHIC WORLD */}
-      <div
-        className="
-          pointer-events-none
-
-          absolute
-          inset-0
-
-          overflow-hidden
-        "
-      >
-        <p
-          className="
-            display
-
-            absolute
-            left-[-2vw]
-            top-[4vh]
-
-            text-[18vw]
-
-            leading-none
-            tracking-[-0.12em]
-
-            text-black/[0.04]
-          "
-        >
-          WILD
-        </p>
-
-        <p
-          className="
-            display
-
-            absolute
-            bottom-[-2vh]
-            right-[-2vw]
-
-            text-[14vw]
-
-            leading-none
-            tracking-[-0.1em]
-
-            text-black/[0.03]
-          "
-        >
-          INSTINCT
-        </p>
-      </div>
     </>
   );
 }

@@ -9,10 +9,10 @@ export function SceneBackground({ className }: SceneBackgroundProps) {
     <div
       className={cn(
         `
+          pointer-events-none
           absolute
           inset-0
           overflow-hidden
-          pointer-events-none
         `,
         className,
       )}
@@ -20,7 +20,7 @@ export function SceneBackground({ className }: SceneBackgroundProps) {
       {/* BASE PAPER */}
       <div className="absolute inset-0 bg-[#f5e7d7]" />
 
-      {/* MAIN WARM RADIAL */}
+      {/* WARM TOP LIGHT */}
       <div
         className="
           absolute
@@ -30,7 +30,7 @@ export function SceneBackground({ className }: SceneBackgroundProps) {
         "
       />
 
-      {/* LARGE RETRO SHAPE */}
+      {/* LARGE LEFT ORGANIC SHAPE */}
       <div
         className="
           absolute
@@ -42,31 +42,13 @@ export function SceneBackground({ className }: SceneBackgroundProps) {
 
           rounded-full
 
-          bg-[#e2b87e]/28
+          bg-[#e2b87e]/20
 
-          blur-[4px]
+          blur-[6px]
         "
       />
 
-      {/* BURNT ORANGE SHAPE */}
-      <div
-        className="
-          absolute
-          right-[-10%]
-          top-[6%]
-
-          h-[42rem]
-          w-[42rem]
-
-          rounded-[38%]
-
-          bg-[#b14d35]/14
-
-          rotate-[8deg]
-        "
-      />
-
-      {/* ORGANIC BOTTOM FORM */}
+      {/* LOWER EDITORIAL FORM */}
       <div
         className="
           absolute
@@ -79,48 +61,10 @@ export function SceneBackground({ className }: SceneBackgroundProps) {
           rounded-[42%]
 
           border-[2px]
-          border-[#5c2d28]/8
+          border-[#5c2d28]/[0.05]
 
-          bg-[#efe1d1]/80
+          bg-[#efe1d1]/70
         "
-      />
-
-      {/* DARK EDITORIAL ANCHOR */}
-      <div
-        className="
-          absolute
-          right-[8%]
-          top-[14%]
-
-          h-[32rem]
-          w-[24rem]
-
-          rounded-[3rem]
-
-          bg-[#2a1d1b]/10
-
-          blur-[2px]
-        "
-      />
-
-      {/* HALFTONE */}
-      <div
-        className="
-          absolute
-          right-[8%]
-          top-[8%]
-
-          h-[22rem]
-          w-[22rem]
-
-          opacity-[0.08]
-          mix-blend-multiply
-        "
-        style={{
-          backgroundImage: "url('/images/halftone-dots/monochrome-dots.jfif')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
       />
 
       {/* PAINT TEXTURE */}
@@ -129,7 +73,7 @@ export function SceneBackground({ className }: SceneBackgroundProps) {
           absolute
           inset-0
 
-          opacity-[0.14]
+          opacity-[0.12]
           mix-blend-multiply
         "
         style={{
@@ -146,7 +90,7 @@ export function SceneBackground({ className }: SceneBackgroundProps) {
           absolute
           inset-0
 
-          opacity-[0.12]
+          opacity-[0.1]
           mix-blend-multiply
         "
         style={{
@@ -162,7 +106,7 @@ export function SceneBackground({ className }: SceneBackgroundProps) {
           absolute
           inset-0
 
-          opacity-[0.09]
+          opacity-[0.08]
           mix-blend-soft-light
         "
         style={{
@@ -172,27 +116,7 @@ export function SceneBackground({ className }: SceneBackgroundProps) {
         }}
       />
 
-      {/* FILM BURN */}
-      <div
-        className="
-          absolute
-          right-0
-          top-0
-
-          h-full
-          w-[42%]
-
-          opacity-[0.18]
-          mix-blend-screen
-        "
-        style={{
-          backgroundImage: "url('/images/light-leaks/film-burn-1.jfif')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      />
-
-      {/* ATMOSPHERIC HAZE */}
+      {/* GLOBAL ATMOSPHERIC HAZE */}
       <div
         className="
           absolute
@@ -207,7 +131,7 @@ export function SceneBackground({ className }: SceneBackgroundProps) {
 
           rounded-full
 
-          bg-white/14
+          bg-white/10
 
           blur-[120px]
         "
@@ -219,7 +143,7 @@ export function SceneBackground({ className }: SceneBackgroundProps) {
           absolute
           inset-0
 
-          bg-[radial-gradient(circle_at_center,transparent_55%,rgba(24,16,12,0.12)_100%)]
+          bg-[radial-gradient(circle_at_center,transparent_55%,rgba(24,16,12,0.10)_100%)]
         "
       />
     </div>

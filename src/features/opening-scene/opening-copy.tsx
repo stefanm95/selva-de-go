@@ -6,85 +6,100 @@ export function OpeningCopy() {
 
   return (
     <div
-      className='
+      className="
         relative
-        left-[50%]
         z-30
-      '
+
+        max-w-[820px]
+
+      "
     >
-      {/* EYEBROW */}
+      {/* ATMOSPHERIC GLOW */}
       <div
-        className='
-          mb-10
+        className="
+          absolute
+          left-[-6rem]
+          top-[-4rem]
 
-          flex
-          items-center
+          h-[18rem]
+          w-[18rem]
 
-          gap-4
-        '
-      >
+          rounded-[1rem]
+
+          bg-[#f1c692]/22
+
+          blur-[80px]
+        "
+      />
+
+      {/* EYEBROW */}
+      <FadeIn delay={0.1}>
         <div
-          className='
-            h-[4px]
-            w-14
+          className="
+            mb-12
 
-            rounded-full
+            flex
+            items-center
 
-            bg-[#d96c3d]
-          '
-        />
-        <FadeIn delay={0.1}>
+            gap-4
+          "
+        >
+          <div
+            className="
+              h-[4px]
+              w-14
+
+              rounded-full
+
+              bg-[#d96c3d]
+            "
+          />
+
           <p
-            className='
-            rotate-[-2deg]
+            className="
+              rotate-[-2deg]
 
-            text-[11px]
-            font-black
-            uppercase
+              text-[11px]
+              font-black
+              uppercase
 
-            tracking-[0.34em]
+              tracking-[0.34em]
 
-            text-[#7a3b45]
-          '
+              text-[#7a3b45]
+            "
           >
             {scene.eyebrow}
           </p>
-        </FadeIn>
-      </div>
-      <FadeIn delay={0.2}>
-        {/* TITLE */}
+        </div>
+      </FadeIn>
+
+      {/* TITLE */}
+      <FadeIn delay={0.18}>
         <h1
-          className='
-          display
+          className="
+            display
 
-          relative
-
-          max-w-[860px]
-
-          text-[clamp(6rem,10vw,11rem)]
-
-          leading-[0.78]
-          tracking-[-0.09em]
-
-          text-[#1f1a17]
-        '
-        >
-          <span className='relative inline-block'>wild</span>
-
-          <br />
-
-          <span className='relative inline-block'>nutrition</span>
-
-          <br />
-
-          <span
-            className='
             relative
 
-            inline-block
+            text-[clamp(6rem,10vw,11rem)]
 
-            text-[#7a3b45]
-          '
+            leading-[0.74]
+            tracking-[-0.1em]
+
+            text-[#1f1a17]
+          "
+        >
+          <span className="block">wild</span>
+
+          <span className="block ml-[0.02em]">nutrition</span>
+
+          <span
+            className="
+              mt-2
+              block
+
+              text-[#7a3b45]
+            "
           >
             for modern dogs
           </span>
@@ -92,49 +107,34 @@ export function OpeningCopy() {
       </FadeIn>
 
       {/* DESCRIPTION */}
-      <div
-        className='
-          relative
-
-          mt-12
-
-          max-w-[560px]
-        '
-      >
-        {/* PAINT GLOW */}
+      <FadeIn delay={0.32}>
         <div
-          className='
-            absolute
-            left-[-2rem]
-            top-[-1rem]
-
-            h-[8rem]
-            w-[8rem]
-
-            rounded-full
-
-            bg-[#f4d7b8]/40
-
-            blur-[30px]
-          '
-        />
-        <FadeIn delay={0.35}>
-          <p
-            className='
+          className="
             relative
-            z-10
 
-            text-[1.08rem]
+            mt-14
 
-            leading-[1.9]
+            max-w-[560px]
+          "
+        >
+          <p
+            className="
+              relative
+              z-10
 
-            text-[#463c35]/82
-          '
+              text-[1.08rem]
+
+              leading-[1.95]
+
+              tracking-[-0.01em]
+
+              text-[#463c35]/82
+            "
           >
             {scene.description}
           </p>
-        </FadeIn>
-      </div>
+        </div>
+      </FadeIn>
     </div>
   );
 }

@@ -2,7 +2,7 @@
 
 import { type MouseEvent, type ReactNode, useRef } from "react";
 
-import { motion, useMotionValue, useSpring } from "framer-motion";
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 
 import { cn } from "@/lib/cn";
 
@@ -11,27 +11,37 @@ type MagneticProps = {
   className?: string;
 
   strength?: number;
+  rotation?: number;
 };
 
 export function Magnetic({
   children,
   className,
-  strength = 24,
+  strength = 10,
+  rotation = 2.5,
 }: MagneticProps) {
   const ref = useRef<HTMLDivElement>(null);
 
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
 
-  const springX = useSpring(x, {
-    stiffness: 180,
-    damping: 18,
+  const x = useSpring(mouseX, {
+    stiffness: 90,
+    damping: 22,
+    mass: 0.6,
   });
 
-  const springY = useSpring(y, {
-    stiffness: 180,
-    damping: 18,
+  const y = useSpring(mouseY, {
+    stiffness: 90,
+    damping: 22,
+    mass: 0.6,
   });
+
+  const rotate = useTransform(
+    mouseX,
+    [-strength, strength],
+    [-rotation, rotation],
+  );
 
   function handleMouseMove(event: MouseEvent<HTMLDivElement>) {
     const element = ref.current;
@@ -43,19 +53,19 @@ export function Magnetic({
     const width = rect.width;
     const height = rect.height;
 
-    const mouseX = event.clientX - rect.left;
-    const mouseY = event.clientY - rect.top;
+    const centerX = rect.left + width / 2;
+    const centerY = rect.top + height / 2;
 
-    const offsetX = mouseX - width / 2;
-    const offsetY = mouseY - height / 2;
+    const distanceX = event.clientX - centerX;
+    const distanceY = event.clientY - centerY;
 
-    x.set((offsetX / width) * strength);
-    y.set((offsetY / height) * strength);
+    mouseX.set((distanceX / width) * strength);
+    mouseY.set((distanceY / height) * strength);
   }
 
   function handleMouseLeave() {
-    x.set(0);
-    y.set(0);
+    mouseX.set(0);
+    mouseY.set(0);
   }
 
   return (
@@ -63,8 +73,10 @@ export function Magnetic({
       ref={ref}
       className={cn(className)}
       style={{
-        x: springX,
-        y: springY,
+        x,
+        y,
+        rotate,
+        transformPerspective: 1200,
       }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
