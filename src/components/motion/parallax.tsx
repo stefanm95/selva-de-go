@@ -3,13 +3,28 @@ import type { ReactNode } from "react";
 
 type ParallaxProps = {
   children: ReactNode;
-  offset?: number;
+  className?: string;
+
+  speed?: number;
+
+  direction?: "up" | "down";
 };
 
-export function Parallax({ children, offset = 100 }: ParallaxProps) {
+export function Parallax({
+  children,
+  className,
+  speed = 0.12,
+  direction = "up",
+}: ParallaxProps) {
   const { scrollY } = useScroll();
 
-  const y = useTransform(scrollY, [0, 2000], [0, offset]);
+  const distance = direction === "up" ? -200 * speed : 200 * speed;
 
-  return <motion.div style={{ y }}>{children}</motion.div>;
+  const y = useTransform(scrollY, [0, 2000], [0, distance]);
+
+  return (
+    <motion.div className={className} style={{ y }}>
+      {children}
+    </motion.div>
+  );
 }
