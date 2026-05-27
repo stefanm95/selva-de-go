@@ -1,57 +1,57 @@
 export function OpeningProduct() {
   return (
     <div
-      className='
+      className="
         relative
 
         flex
         items-center
         justify-center
-      '
+      "
     >
-      {/* HARD GROUND SHADOW */}
+      {/* CONTACT SHADOW */}
       <div
-        className='
+        className="
           absolute
-          bottom-[2%]
+          bottom-[4%]
           left-1/2
 
-          h-[16rem]
-          w-[42rem]
+          h-[10rem]
+          w-[34rem]
 
           -translate-x-1/2
 
           rounded-full
 
-          bg-[#2b1d18]/28
+          bg-[#2a1d18]/18
 
-          blur-[26px]
-        '
+          blur-[18px]
+        "
       />
 
-      {/* WARM SHADOW */}
+      {/* WARM PAPER SHADOW */}
       <div
-        className='
+        className="
           absolute
-          bottom-[8%]
+          bottom-[6%]
           left-1/2
 
-          h-[8rem]
-          w-[28rem]
+          h-[6rem]
+          w-[24rem]
 
           -translate-x-1/2
 
           rounded-full
 
-          bg-[#a14e31]/18
+          bg-[#b8643e]/10
 
-          blur-[34px]
-        '
+          blur-[28px]
+        "
       />
 
-      {/* AMBIENT BACK GLOW */}
+      {/* AMBIENT ATMOSPHERE */}
       <div
-        className='
+        className="
           absolute
           left-1/2
           top-1/2
@@ -64,43 +64,43 @@ export function OpeningProduct() {
 
           rounded-full
 
-          bg-[#d97b42]/10
+          bg-[#e09b67]/6
 
-          blur-[100px]
-        '
+          blur-[120px]
+        "
       />
 
-      {/* MAIN OBJECT */}
+      {/* MAIN PRODUCT */}
       <div
-        className='
+        className="
           relative
-
+        
           h-[34rem]
           w-[32rem]
-
-          rotate-[-1.2deg]
-
+        
+          rotate-[-1deg]
+        
           overflow-hidden
-
+        
           rounded-[2.7rem]
-
+        
           border-[4px]
           border-[#2f221d]
-
-          bg-[linear-gradient(165deg,#5a2435_0%,#8f3e35_28%,#c45f35_62%,#df8a45_100%)]
-
-          shadow-[0_10px_0_#2f221d,0_24px_0_#6a3429,0_42px_60px_rgba(0,0,0,0.18)]
-        '
+        
+          bg-[linear-gradient(165deg,#5b2634_0%,#8d4038_26%,#bf6037_60%,#de8b4a_100%)]
+        
+          shadow-[0_8px_0_#2f221d,0_28px_42px_rgba(35,18,12,0.14)]
+        "
       >
         {/* PAPER TEXTURE */}
         <div
-          className='
+          className="
             absolute
             inset-0
 
-            opacity-[0.16]
+            opacity-[0.1]
             mix-blend-multiply
-          '
+          "
           style={{
             backgroundImage: "url('/images/wrm-paper/carton.jfif')",
             backgroundSize: "cover",
@@ -108,15 +108,31 @@ export function OpeningProduct() {
           }}
         />
 
-        {/* HALFTONE */}
+        {/* CANVAS TEXTURE */}
         <div
-          className='
+          className="
             absolute
             inset-0
 
-            opacity-[0.08]
+            opacity-[0.06]
+            mix-blend-overlay
+          "
+          style={{
+            backgroundImage: "url('/images/canvas/canvas.jfif')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+
+        {/* HALFTONE */}
+        <div
+          className="
+            absolute
+            inset-0
+
+            opacity-[0.05]
             mix-blend-soft-light
-          '
+          "
           style={{
             backgroundImage:
               "url('/images/halftone-dots/monochrome-dots.jfif')",
@@ -125,9 +141,25 @@ export function OpeningProduct() {
           }}
         />
 
+        {/* ANALOG PRINT CLOUD */}
+        <div
+          className="
+            absolute
+            inset-0
+
+            opacity-[0.14]
+            mix-blend-soft-light
+          "
+          style={{
+            backgroundImage: "url('/images/screen-print/imperfect-cards.jfif')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+
         {/* PRINT BLOOM */}
         <div
-          className='
+          className="
             absolute
             left-[4%]
             top-[6%]
@@ -139,33 +171,33 @@ export function OpeningProduct() {
 
             rounded-full
 
-            bg-[#ffe3bc]/12
+            bg-[#ffe3bc]/10
 
-            blur-[20px]
-          '
+            blur-[22px]
+          "
         />
 
-        {/* OFFSET SHAPE */}
+        {/* OFFSET COLOR SHAPE */}
         <div
-          className='
+          className="
             absolute
-            right-[-8%]
+            right-[-12%]
             top-[18%]
 
-            h-[16rem]
-            w-[16rem]
+            h-[18rem]
+            w-[18rem]
 
             rounded-full
 
-            bg-[#ffcf8d]/10
+            bg-[#ffcf8d]/8
 
-            blur-[10px]
-          '
+            blur-[18px]
+          "
         />
 
-        {/* TOP SPECULAR */}
+        {/* SPECULAR LIGHT */}
         <div
-          className='
+          className="
             absolute
             left-[8%]
             top-[5%]
@@ -175,15 +207,15 @@ export function OpeningProduct() {
 
             rounded-full
 
-            bg-white/16
+            bg-white/14
 
-            blur-[40px]
-          '
+            blur-[42px]
+          "
         />
 
         {/* SIDE LIGHT */}
         <div
-          className='
+          className="
             absolute
             right-[-10%]
             top-[20%]
@@ -193,28 +225,28 @@ export function OpeningProduct() {
 
             rounded-full
 
-            bg-[#ffd6a8]/14
+            bg-[#ffd6a8]/10
 
             blur-[70px]
-          '
+          "
         />
 
         {/* INNER BORDER */}
         <div
-          className='
+          className="
             absolute
             inset-[14px]
 
             rounded-[2.2rem]
 
             border-[2px]
-            border-white/12
-          '
+            border-white/10
+          "
         />
 
-        {/* RETRO STRIPES */}
+        {/* PRINT STRIPES */}
         <div
-          className='
+          className="
             absolute
             right-[-6%]
             top-[12%]
@@ -223,25 +255,25 @@ export function OpeningProduct() {
             flex-col
             gap-4
 
-            opacity-[0.14]
-          '
+            opacity-[0.12]
+          "
         >
-          <div className='h-4 w-52 rounded-full bg-white' />
-          <div className='h-4 w-40 rounded-full bg-white' />
-          <div className='h-4 w-28 rounded-full bg-white' />
+          <div className="h-4 w-52 rounded-full bg-white" />
+          <div className="h-4 w-40 rounded-full bg-white" />
+          <div className="h-4 w-28 rounded-full bg-white" />
         </div>
 
-        {/* TYPOGRAPHY BLOCK */}
+        {/* TYPOGRAPHY */}
         <div
-          className='
+          className="
             absolute
             bottom-14
             left-12
             right-12
-          '
+          "
         >
           <p
-            className='
+            className="
               text-[11px]
               font-black
               uppercase
@@ -249,13 +281,13 @@ export function OpeningProduct() {
               tracking-[0.34em]
 
               text-[#ffe5c8]
-            '
+            "
           >
             Premium Nutrition
           </p>
 
           <h2
-            className='
+            className="
               mt-5
 
               text-[5.2rem]
@@ -264,7 +296,7 @@ export function OpeningProduct() {
               tracking-[-0.08em]
 
               text-white
-            '
+            "
           >
             Wild
             <br />
@@ -275,17 +307,17 @@ export function OpeningProduct() {
 
           {/* MICRO COPY */}
           <div
-            className='
+            className="
               mt-8
 
               flex
               items-center
 
               gap-4
-            '
+            "
           >
             <div
-              className='
+              className="
                 h-3.5
                 w-3.5
 
@@ -293,12 +325,12 @@ export function OpeningProduct() {
 
                 bg-[#ffd35e]
 
-                shadow-[0_0_18px_rgba(255,211,94,0.9)]
-              '
+                shadow-[0_0_18px_rgba(255,211,94,0.55)]
+              "
             />
 
             <p
-              className='
+              className="
                 text-sm
 
                 font-medium
@@ -306,7 +338,7 @@ export function OpeningProduct() {
                 tracking-[-0.01em]
 
                 text-white/72
-              '
+              "
             >
               Crafted for vitality & instinct
             </p>
