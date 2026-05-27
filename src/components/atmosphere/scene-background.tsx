@@ -11,131 +11,127 @@ export function SceneBackground({ className }: SceneBackgroundProps) {
         `
           absolute
           inset-0
-
           overflow-hidden
           pointer-events-none
         `,
         className,
       )}
     >
-      {/* BASE GRADIENT */}
+      {/* BASE PAPER */}
+      <div className="absolute inset-0 bg-[#f5e7d7]" />
+
+      {/* MAIN WARM RADIAL */}
       <div
-        className='
+        className="
           absolute
           inset-0
 
-          bg-[radial-gradient(circle_at_top_left,#f8efe4_0%,#f4e5d7_45%,#f1dcc9_100%)]
-        '
+          bg-[radial-gradient(circle_at_top_left,rgba(255,220,170,0.55)_0%,transparent_42%)]
+        "
       />
 
-      {/* TOP WARM LIGHT */}
+      {/* LARGE RETRO SHAPE */}
       <div
-        className='
+        className="
           absolute
-          left-[-10%]
-          top-[-20%]
+          left-[-12%]
+          top-[-10%]
 
-          h-[50rem]
-          w-[50rem]
+          h-[48rem]
+          w-[48rem]
 
           rounded-full
 
-          bg-[#ffe1ba]/40
+          bg-[#e2b87e]/28
 
-          blur-[120px]
-        '
+          blur-[4px]
+        "
       />
 
-      {/* RIGHT LIGHT */}
+      {/* BURNT ORANGE SHAPE */}
       <div
-        className='
+        className="
           absolute
-          right-[-12%]
-          top-[10%]
+          right-[-10%]
+          top-[6%]
 
           h-[42rem]
           w-[42rem]
 
-          rounded-full
+          rounded-[38%]
 
-          bg-[#ffb17a]/18
+          bg-[#b14d35]/14
 
-          blur-[120px]
-        '
+          rotate-[8deg]
+        "
       />
 
-      {/* CENTER FOG */}
+      {/* ORGANIC BOTTOM FORM */}
       <div
-        className='
+        className="
           absolute
-          left-1/2
-          top-1/2
+          bottom-[-16%]
+          left-[12%]
 
-          h-[40rem]
-          w-[40rem]
-
-          -translate-x-1/2
-          -translate-y-1/2
-
-          rounded-full
-
-          bg-white/18
-
-          blur-[100px]
-        '
-      />
-
-      {/* ANALOG SHAPE */}
-      <div
-        className='
-          absolute
-          left-[-6%]
-          top-[18%]
-
-          h-[24rem]
-          w-[24rem]
-
-          rounded-full
-
-          border-[2px]
-          border-[#7a3b45]/6
-
-          bg-[#f8ead7]/50
-
-          blur-[2px]
-        '
-      />
-
-      {/* OFFSET ORGANIC SHAPE */}
-      <div
-        className='
-          absolute
-          bottom-[-8%]
-          right-[8%]
-
-          h-[28rem]
-          w-[28rem]
+          h-[30rem]
+          w-[30rem]
 
           rounded-[42%]
 
-          border
-          border-[#7a3b45]/5
+          border-[2px]
+          border-[#5c2d28]/8
 
-          bg-[#f6dfc8]/34
-
-          blur-[4px]
-        '
+          bg-[#efe1d1]/80
+        "
       />
 
-      {/* CANVAS TEXTURE */}
+      {/* DARK EDITORIAL ANCHOR */}
       <div
-        className='
+        className="
+          absolute
+          right-[8%]
+          top-[14%]
+
+          h-[32rem]
+          w-[24rem]
+
+          rounded-[3rem]
+
+          bg-[#2a1d1b]/10
+
+          blur-[2px]
+        "
+      />
+
+      {/* HALFTONE */}
+      <div
+        className="
+          absolute
+          right-[8%]
+          top-[8%]
+
+          h-[22rem]
+          w-[22rem]
+
+          opacity-[0.08]
+          mix-blend-multiply
+        "
+        style={{
+          backgroundImage: "url('/images/halftone-dots/monochrome-dots.jfif')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      />
+
+      {/* PAINT TEXTURE */}
+      <div
+        className="
           absolute
           inset-0
 
-          opacity-[0.09]
+          opacity-[0.14]
           mix-blend-multiply
-        '
+        "
         style={{
           backgroundImage:
             "url('/images/organic-paint/organic-olive-paint.jfif')",
@@ -146,13 +142,13 @@ export function SceneBackground({ className }: SceneBackgroundProps) {
 
       {/* PAPER TEXTURE */}
       <div
-        className='
+        className="
           absolute
           inset-0
 
-          opacity-[0.08]
+          opacity-[0.12]
           mix-blend-multiply
-        '
+        "
         style={{
           backgroundImage: "url('/images/wrm-paper/basic-paper.jfif')",
           backgroundSize: "cover",
@@ -162,13 +158,13 @@ export function SceneBackground({ className }: SceneBackgroundProps) {
 
       {/* FILM GRAIN */}
       <div
-        className='
+        className="
           absolute
           inset-0
 
-          opacity-[0.05]
+          opacity-[0.09]
           mix-blend-soft-light
-        '
+        "
         style={{
           backgroundImage: "url('/images/film-grain/analog-noise-soft.jfif')",
           backgroundSize: "cover",
@@ -176,37 +172,19 @@ export function SceneBackground({ className }: SceneBackgroundProps) {
         }}
       />
 
-      {/* HALFTONE CLOUD */}
+      {/* FILM BURN */}
       <div
-        className='
-          absolute
-          right-[10%]
-          top-[8%]
-
-          h-[20rem]
-          w-[20rem]
-
-          opacity-[0.05]
-        '
-        style={{
-          backgroundImage: "url('/images/halftone-dots/monochrome-dots.jfif')",
-          backgroundSize: "cover",
-        }}
-      />
-
-      {/* LIGHT LEAK */}
-      <div
-        className='
+        className="
           absolute
           right-0
           top-0
 
           h-full
-          w-[30%]
+          w-[42%]
 
-          opacity-[0.12]
+          opacity-[0.18]
           mix-blend-screen
-        '
+        "
         style={{
           backgroundImage: "url('/images/light-leaks/film-burn-1.jfif')",
           backgroundSize: "cover",
@@ -214,14 +192,35 @@ export function SceneBackground({ className }: SceneBackgroundProps) {
         }}
       />
 
-      {/* EDGE VIGNETTE */}
+      {/* ATMOSPHERIC HAZE */}
       <div
-        className='
+        className="
+          absolute
+          left-1/2
+          top-1/2
+
+          h-[36rem]
+          w-[36rem]
+
+          -translate-x-1/2
+          -translate-y-1/2
+
+          rounded-full
+
+          bg-white/14
+
+          blur-[120px]
+        "
+      />
+
+      {/* VIGNETTE */}
+      <div
+        className="
           absolute
           inset-0
 
-          bg-[radial-gradient(circle_at_center,transparent_52%,rgba(0,0,0,0.08)_100%)]
-        '
+          bg-[radial-gradient(circle_at_center,transparent_55%,rgba(24,16,12,0.12)_100%)]
+        "
       />
     </div>
   );

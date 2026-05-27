@@ -3,94 +3,77 @@ import { SceneOrb } from "@/components/scene/scene-orb";
 export function OpeningAtmosphere() {
   return (
     <>
-      {/* TOP LIGHT */}
+      {/* SUN GLOW */}
       <SceneOrb
-        className='
+        className="
           left-[-10%]
-          top-[-10%]
+          top-[-8%]
 
-          h-[420px]
-          w-[420px]
+          h-[460px]
+          w-[460px]
 
-          bg-[#f0c59a]/30
-        '
+          bg-[#f0c59a]/32
+        "
       />
 
-      {/* RIGHT LIGHT */}
+      {/* BURNT LIGHT */}
       <SceneOrb
-        className='
-          right-[0%]
+        className="
+          right-[2%]
           top-[12%]
 
-          h-[340px]
-          w-[340px]
+          h-[320px]
+          w-[320px]
 
-          bg-[#d96c3d]/18
-        '
+          bg-[#c45a32]/20
+        "
       />
 
-      {/* BOTTOM GLOW */}
+      {/* LOWER HAZE */}
       <SceneOrb
-        className='
-          bottom-[-10%]
+        className="
+          bottom-[-12%]
           left-1/2
 
-          h-[520px]
-          w-[520px]
+          h-[560px]
+          w-[560px]
 
           -translate-x-1/2
 
-          bg-[#f4d7b8]/20
-        '
+          bg-[#f4d7b8]/18
+        "
       />
 
-      {/* FLOATING DUST */}
+      {/* EDITORIAL CIRCLE */}
       <div
-        className='
-    absolute
-    left-[34%]
-    top-[26%]
+        className="
+          absolute
+          left-[48%]
+          top-[48%]
 
-    h-[420px]
-    w-[420px]
+          h-[180px]
+          w-[180px]
 
-    rounded-full
+          rounded-full
 
-    bg-white/[0.04]
-
-    blur-[120px]
-  '
+          border
+          border-[#5a2e2a]/10
+        "
       />
 
+      {/* TYPOGRAPHIC WORLD */}
       <div
-        className='
-    absolute
-    left-[46%]
-    top-[48%]
-
-    h-[180px]
-    w-[180px]
-
-    rounded-full
-
-    border
-    border-[#7a3b45]/10
-  '
-      />
-
-      {/* MASSIVE TYPO */}
-      <div
-        className='
+        className="
           pointer-events-none
 
           absolute
           inset-0
 
           overflow-hidden
-        '
+        "
       >
         <p
-          className='
+          className="
             display
 
             absolute
@@ -102,14 +85,14 @@ export function OpeningAtmosphere() {
             leading-none
             tracking-[-0.12em]
 
-            text-black/[0.035]
-          '
+            text-black/[0.04]
+          "
         >
           WILD
         </p>
 
         <p
-          className='
+          className="
             display
 
             absolute
@@ -122,7 +105,7 @@ export function OpeningAtmosphere() {
             tracking-[-0.1em]
 
             text-black/[0.03]
-          '
+          "
         >
           INSTINCT
         </p>
