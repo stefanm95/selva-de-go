@@ -41,21 +41,22 @@ export function OpeningScene() {
             {/* COPY SIDE */}
             <SceneColumn
               className="
-    relative
-    z-30
+                relative
+                z-30
 
-    flex
-    items-start
+                flex
+                items-start
 
-    xl:col-span-5
+                xl:col-span-5
 
-    translate-x-[3rem]
-  "
+                translate-x-[3rem]
+              "
             >
               <div
                 className="relative  pl-2
-      md:pl-4
-      xl:pl-10"
+                  md:pl-4
+                  xl:pl-10
+                "
               >
                 {/* ORGANIC BACK GLOW */}
                 <Parallax speed={0.1}>

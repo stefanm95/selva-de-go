@@ -1,15 +1,28 @@
 import { FadeIn, Float } from "@/components/motion";
 
 import { Button } from "@/components/ui/button";
+import { useNavigationMode } from "@/features/navigation/use-navigation-mode";
+import { motion } from "framer-motion";
 
 import { Heart, Search, ShoppingBag, User } from "lucide-react";
 
 const links = ["Shop", "Formulas", "Journal", "About"];
 
 export function OpeningNavigation() {
+  const { isCompact } = useNavigationMode();
   return (
     <FadeIn delay={0.05}>
-      <header
+      <motion.header
+        initial={false}
+        animate={{
+          opacity: isCompact ? 0 : 1,
+          y: isCompact ? -20 : 0,
+          pointerEvents: isCompact ? "none" : "auto",
+        }}
+        transition={{
+          duration: 0.55,
+          ease: [0.22, 1, 0.36, 1],
+        }}
         className="
           absolute
           left-0
@@ -190,39 +203,39 @@ export function OpeningNavigation() {
                 {/* TYPO */}
                 <div
                   className="
-          flex
-          flex-col
-        "
+                   flex
+                   flex-col
+                 "
                 >
                   <span
                     className="
-            display
-
-            text-[1.72rem]
-
-            leading-[0.9]
-            tracking-[-0.09em]
-
-            text-[#2b211d]
-          "
+                     display
+                 
+                     text-[1.72rem]
+                 
+                     leading-[0.9]
+                     tracking-[-0.09em]
+                 
+                     text-[#2b211d]
+                   "
                   >
                     Selva de Go
                   </span>
 
                   <span
                     className="
-            mt-[0.22rem]
+                     mt-[0.22rem]
 
-            pl-[0.08rem]
+                     pl-[0.08rem]
 
-            text-[0.56rem]
-            font-black
-            uppercase
+                     text-[0.56rem]
+                     font-black
+                     uppercase
 
-            tracking-[0.34em]
+                     tracking-[0.34em]
 
-            text-[#6f5a50]
-          "
+                     text-[#6f5a50]
+                   "
                   >
                     Wild Nutrition Supply
                   </span>
@@ -403,7 +416,7 @@ export function OpeningNavigation() {
             </Button>
           </div>
         </div>
-      </header>
+      </motion.header>
     </FadeIn>
   );
 }
