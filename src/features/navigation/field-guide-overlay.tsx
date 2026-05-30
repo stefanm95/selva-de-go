@@ -13,14 +13,12 @@ export function FieldGuideOverlay({ open, onClose }: FieldGuideOverlayProps) {
   const [targetSection, setTargetSection] = useState<string | null>(null);
 
   const handleEntryClick = (sectionId: string) => {
-    onClose();
+    document.getElementById(sectionId)?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
 
-    setTimeout(() => {
-      document.getElementById(sectionId)?.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }, 650);
+    onClose();
   };
 
   return (
@@ -58,18 +56,15 @@ export function FieldGuideOverlay({ open, onClose }: FieldGuideOverlayProps) {
           <motion.div
             initial={{
               opacity: 0,
-              y: 40,
-              scale: 0.98,
+              y: 24,
             }}
             animate={{
               opacity: 1,
               y: 0,
-              scale: 1,
             }}
             exit={{
               opacity: 0,
-              y: -20,
-              scale: 1.02,
+              y: 12,
             }}
             transition={{
               duration: 0.7,
