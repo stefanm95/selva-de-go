@@ -58,8 +58,7 @@ export function SceneBackground({ className }: SceneBackgroundProps) {
           mix-blend-multiply
         '
         style={{
-          backgroundImage:
-            "url('/images/organic-paint/organic-olive-paint.jfif')",
+          backgroundImage: "url('/images/canvas/10428.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -75,7 +74,7 @@ export function SceneBackground({ className }: SceneBackgroundProps) {
           mix-blend-multiply
         '
         style={{
-          backgroundImage: "url('/images/wrm-paper/basic-paper.jfif')",
+          backgroundImage: "url('/images/canvas/pellissierjp-wall.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

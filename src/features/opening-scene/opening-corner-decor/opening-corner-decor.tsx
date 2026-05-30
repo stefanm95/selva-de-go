@@ -1,4 +1,3 @@
-import { FloatingFoodChunk } from "./floating-food-chunk";
 import { RegisteredMarkMonument } from "./registered-mark-monument";
 
 import { PawTrail } from "./paw-trail";
@@ -10,7 +9,6 @@ export function OpeningCornerDecor() {
       <RegisteredMarkMonument />
       <BotanicalSketch />
       <PawTrail />
-      <FloatingFoodChunk />\
     </>
   );
 }

@@ -8,7 +8,7 @@ import { Magnetic } from "@/components/motion";
 import { MenuCard } from "./menu-card";
 import { menuItems } from "./menu-items";
 
-export function FloatingFoodChunk() {
+export function FoodBagTrigger() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -42,7 +42,7 @@ export function FloatingFoodChunk() {
                 z-[1000000]
 
                 bg-[#120d0a]/60
-                backdrop-blur-md
+                backdrop-blur-sm
               '
             />
 
@@ -196,7 +196,7 @@ export function FloatingFoodChunk() {
 
                   bg-black/20
 
-                  blur-xl
+                  blur-sm
                 '
                 animate={{
                   scale: open ? 1.4 : 1,
@@ -212,7 +212,7 @@ export function FloatingFoodChunk() {
 
                   bg-[#d96c3d]/20
 
-                  blur-2xl
+                  blur-sm
 
                   opacity-0
 
