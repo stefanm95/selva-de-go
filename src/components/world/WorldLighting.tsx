@@ -12,8 +12,8 @@ export function WorldLighting() {
           w-[38vw]
 
           bg-gradient-to-r
-          from-[#d9a060]/18
-          via-[#d9a060]/6
+          from-[#a0d960]/18
+          via-[#b7d960]/6
           to-transparent
         '
       />
