@@ -1,40 +1,30 @@
 export function OpeningCopy() {
   return (
-    <>
+    <div className='py-4'>
       <p
         className='
           font-accent
-          text-xs
+          text-[11px]
           uppercase
-          tracking-[0.5em]
-          text-[#7a3b45]/80
+          tracking-[0.45em]
+          text-[#7a3b45]/75
         '
       >
         Freeze-Dried BARF Nutrition
       </p>
 
-      <p
-        className='
-          mt-12
-          font-accent
-          text-sm
-          uppercase
-          tracking-[0.4em]
-          text-[#463c35]/70
-        '
-      >
-        Selva de Go
-      </p>
-
       <h1
         className='
+          mt-6
+
           font-poster
-          mt-2
           uppercase
+
           leading-[0.82]
-          tracking-[-0.05em]
-          text-[clamp(6rem,12vw,12rem)]
-          text-[#2b211d]
+
+          text-[#241814]
+
+          text-[clamp(5rem,8vw,8rem)]
         '
       >
         THE WILD
@@ -42,18 +32,37 @@ export function OpeningCopy() {
         PRESERVED.
       </h1>
 
-      <p
+      <div
         className='
-          mt-12
-          max-w-[42rem]
-          text-[1.35rem]
-          leading-relaxed
-          text-[#463c35]
+          mt-10
+
+          max-w-[540px]
+
+          space-y-5
         '
       >
-        Freeze-dried nutrition inspired by ancestral feeding. Built around
-        instinct. Crafted for modern dogs.
-      </p>
-    </>
+        <p
+          className='
+            text-[1.55rem]
+            leading-[1.35]
+
+            text-[#3d332d]
+          '
+        >
+          Freeze-dried nutrition inspired by ancestral feeding.
+        </p>
+
+        <p
+          className='
+            text-[1.25rem]
+            leading-[1.55]
+
+            text-[#3d332d]/80
+          '
+        >
+          Built around instinct. Crafted for modern dogs.
+        </p>
+      </div>
+    </div>
   );
 }

@@ -1,41 +1,69 @@
 export function WorldLighting() {
   return (
     <div className='absolute inset-0 pointer-events-none'>
+      {/* WARM LEFT LIGHT */}
       <div
         className='
           absolute
-          inset-0
-          bg-[radial-gradient(circle_at_top_left,rgba(255,232,193,0.28)_0%,transparent_38%)]
+          left-0
+          top-0
+
+          h-full
+          w-[38vw]
+
+          bg-gradient-to-r
+          from-[#d9a060]/18
+          via-[#d9a060]/6
+          to-transparent
         '
       />
 
+      {/* RIGHT ATMOSPHERIC FILL */}
       <div
         className='
           absolute
-          inset-0
-          bg-[radial-gradient(circle_at_top_right,rgba(255,239,224,0.14)_0%,transparent_32%)]
+          right-0
+          top-0
+
+          h-full
+          w-[28vw]
+
+          bg-gradient-to-l
+          from-[#f4ede3]/18
+          via-transparent
+          to-transparent
         '
       />
 
+      {/* HERO GLOW */}
       <div
         className='
           absolute
+
           left-1/2
-          top-[56%]
-          h-[38rem]
-          w-[80rem]
+          top-1/2
+
+          h-[42rem]
+          w-[82rem]
+
           -translate-x-1/2
+          -translate-y-1/2
+
           rounded-full
-          bg-[#f4c28b]/10
-          blur-[150px]
+
+          bg-[#f0c48f]/8
+
+          blur-[180px]
         '
       />
 
+      {/* CINEMATIC VIGNETTE */}
       <div
         className='
           absolute
           inset-0
-          bg-[radial-gradient(circle_at_center,transparent_54%,rgba(21,16,14,0.12)_100%)]
+
+          bg-[radial-gradient(circle_at_center,transparent_58%,rgba(18,14,12,0.10)_100%)]
         '
       />
     </div>

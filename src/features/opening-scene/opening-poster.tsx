@@ -1,5 +1,5 @@
-import { OpeningCopy } from "./opening-copy";
 import { OpeningActions } from "./opening-actions";
+import { OpeningCopy } from "./opening-copy";
 import { OpeningPaperTexture } from "./opening-paper-texture";
 
 export function OpeningPoster() {
@@ -7,55 +7,204 @@ export function OpeningPoster() {
     <div
       className='
         relative
-        mx-auto
-        flex
-        min-h-screen
-        max-w-[1600px]
-        items-center
-        justify-center
-        px-8
+
+        w-full
+        max-w-[1450px]
       '
     >
       <div
         className='
           relative
 
-          flex
-          w-[85vw]
-          max-w-[1300px]
-          min-h-[72vh]
+          overflow-hidden
 
-          items-center
-
-          rounded-[3rem]
+          rounded-[14px]
 
           border
           border-black/5
 
-          bg-[#efe2d1]
+          bg-[#efe3d2]/95
 
-          shadow-[0_40px_120px_rgba(0,0,0,0.08)]
+          shadow-[0_60px_140px_rgba(0,0,0,0.12)]
 
-          overflow-hidden
+          before:absolute
+          before:inset-0
+          before:bg-gradient-to-br
+          before:from-white/20
+          before:to-transparent
+          before:pointer-events-none
         '
       >
         <OpeningPaperTexture />
+
+        {/* HUGE BACKGROUND WORD */}
+        <div
+          className='
+            absolute
+            right-[-40px]
+            top-[-40px]
+
+            z-10
+
+            font-poster
+
+            text-[22rem]
+            leading-none
+
+            uppercase
+
+            text-[#7a3b45]/[0.035]
+
+            select-none
+          '
+        >
+          03
+        </div>
+
+        <div
+          className='
+            absolute
+            right-20
+            top-16
+
+            z-20
+            text-right
+          '
+        >
+          <p
+            className='
+              text-[11px]
+              uppercase
+              tracking-[0.45em]
+
+              text-[#7a3b45]/70
+            '
+          >
+            Field Notes
+          </p>
+
+          <p
+            className='
+              mt-3
+
+              font-poster
+
+              text-[5rem]
+              leading-none
+
+              text-[#2a1d18]
+            '
+          >
+            03
+          </p>
+        </div>
 
         <div
           className='
             relative
             z-20
 
-            max-w-[900px]
+            grid
 
-            px-16
-            py-20
+            min-h-[74vh]
+
+            grid-cols-[620px_1fr]
           '
         >
-          <OpeningCopy />
+          {/* LEFT */}
+          <div
+            className='
+              flex
+              flex-col
+             
+            justify-center
+           relative
+           left-4
+            '
+          >
+            <OpeningCopy />
 
-          <div className='mt-16'>
-            <OpeningActions />
+            <div className='mt-14'>
+              <OpeningActions />
+            </div>
+          </div>
+
+          {/* RIGHT */}
+          <div
+            className='
+              relative
+              flex
+              items-end
+              justify-end
+              right-2
+              p-16
+            '
+          >
+            <div
+              className='
+                max-w-[320px]
+                
+                text-right
+              '
+            >
+              <p
+                className='
+                  text-[11px]
+                  uppercase
+                  tracking-[0.4em]
+
+                  text-[#7a3b45]/70
+                '
+              >
+                Recipe No. 01
+              </p>
+
+              <div
+                className='
+                  mt-6
+
+                  space-y-2
+
+                  text-[1rem]
+
+                  uppercase
+                  tracking-[0.16em]
+
+                  text-[#2a1d18]/75
+                '
+              >
+                <p>Beef</p>
+                <p>Heart</p>
+                <p>Liver</p>
+                <p>Green Tripe</p>
+                <p>Salmon Oil</p>
+              </div>
+
+              <div
+                className='
+                  mt-8
+
+                  h-px
+                  w-full
+
+                  bg-[#7a3b45]/15
+                '
+              />
+
+              <p
+                className='
+                  mt-8
+
+                  text-[1rem]
+                  leading-relaxed
+
+                  text-[#3d332d]/70
+                '
+              >
+                Inspired by the natural diet of working canines and preserved
+                through gentle freeze-drying.
+              </p>
+            </div>
           </div>
         </div>
       </div>

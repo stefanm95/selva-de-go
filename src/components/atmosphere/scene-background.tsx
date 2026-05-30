@@ -18,24 +18,24 @@ export function SceneBackground({ className }: SceneBackgroundProps) {
       )}
     >
       {/* BASE PAPER */}
-      <div className="absolute inset-0 bg-[#f5e7d7]" />
+      <div className='absolute inset-0 bg-[#f5e7d7]' />
 
       {/* WARM TOP LIGHT */}
       <div
-        className="
+        className='
           absolute
           inset-0
 
           bg-[radial-gradient(circle_at_top_left,rgba(255,220,170,0.55)_0%,transparent_42%)]
-        "
+        '
       />
 
       {/* LARGE LEFT ORGANIC SHAPE */}
       <div
-        className="
+        className='
           absolute
           left-[-12%]
-          top-[-10%]
+          bottom-[-8%]
 
           h-[48rem]
           w-[48rem]
@@ -45,37 +45,18 @@ export function SceneBackground({ className }: SceneBackgroundProps) {
           bg-[#e2b87e]/20
 
           blur-[6px]
-        "
-      />
-
-      {/* LOWER EDITORIAL FORM */}
-      <div
-        className="
-          absolute
-          bottom-[-16%]
-          left-[12%]
-
-          h-[30rem]
-          w-[30rem]
-
-          rounded-[42%]
-
-          border-[2px]
-          border-[#5c2d28]/[0.05]
-
-          bg-[#efe1d1]/70
-        "
+        '
       />
 
       {/* PAINT TEXTURE */}
       <div
-        className="
+        className='
           absolute
           inset-0
 
           opacity-[0.12]
           mix-blend-multiply
-        "
+        '
         style={{
           backgroundImage:
             "url('/images/organic-paint/organic-olive-paint.jfif')",
@@ -86,13 +67,13 @@ export function SceneBackground({ className }: SceneBackgroundProps) {
 
       {/* PAPER TEXTURE */}
       <div
-        className="
+        className='
           absolute
           inset-0
 
           opacity-[0.1]
           mix-blend-multiply
-        "
+        '
         style={{
           backgroundImage: "url('/images/wrm-paper/basic-paper.jfif')",
           backgroundSize: "cover",
@@ -102,13 +83,13 @@ export function SceneBackground({ className }: SceneBackgroundProps) {
 
       {/* FILM GRAIN */}
       <div
-        className="
+        className='
           absolute
           inset-0
 
           opacity-[0.08]
           mix-blend-soft-light
-        "
+        '
         style={{
           backgroundImage: "url('/images/film-grain/analog-noise-soft.jfif')",
           backgroundSize: "cover",
@@ -118,7 +99,7 @@ export function SceneBackground({ className }: SceneBackgroundProps) {
 
       {/* GLOBAL ATMOSPHERIC HAZE */}
       <div
-        className="
+        className='
           absolute
           left-1/2
           top-1/2
@@ -134,17 +115,17 @@ export function SceneBackground({ className }: SceneBackgroundProps) {
           bg-white/10
 
           blur-[120px]
-        "
+        '
       />
 
       {/* VIGNETTE */}
       <div
-        className="
+        className='
           absolute
           inset-0
 
           bg-[radial-gradient(circle_at_center,transparent_55%,rgba(24,16,12,0.10)_100%)]
-        "
+        '
       />
     </div>
   );

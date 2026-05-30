@@ -121,11 +121,11 @@ const sizeStyles: Record<ButtonSize, string> = {
 
 const shapeStyles: Record<ButtonShape, string> = {
   pill: `
-    rounded-full
+    rounded-[14px]
   `,
 
   circle: `
-    rounded-full
+    rounded-[16px]
 
     p-0
   `,
