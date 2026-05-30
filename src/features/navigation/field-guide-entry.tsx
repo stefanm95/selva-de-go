@@ -20,38 +20,42 @@ export function FieldGuideEntry({
       className='
         group
         w-full
-
+        cursor-pointer
+translate-y-1/2
         border-b
         border-[#e8d8c3]/15
 
-        py-8
+        py-4
+        md:py-8
 
         text-left
       '
     >
       <div
         className='
-          grid
-          gap-6
+    grid
 
-          md:grid-cols-[120px_1fr]
-        '
+    grid-cols-[36px_1fr]
+
+    md:grid-cols-[120px_1fr]
+
+    items-center
+
+    gap-2
+    md:gap-6
+  '
       >
         <div
           className='
-            font-poster
+  font-poster
 
-            text-[3rem]
-            leading-none
+  text-[1.25rem]
+  md:text-[3rem]
 
-            text-[#e8d8c3]/25
+  leading-none
 
-            transition-all
-            duration-300
-
-            group-hover:text-[#d96c3d]
-            group-hover:translate-x-1
-          '
+  text-[#e8d8c3]/25
+'
         >
           {number}
         </div>
@@ -59,26 +63,27 @@ export function FieldGuideEntry({
         <div>
           <h3
             className='
-              font-poster
+  font-poster
 
-              text-[clamp(1.8rem,3vw,3rem)]
+  text-[0.95rem]
+  sm:text-[1.05rem]
 
-              uppercase
-              leading-none
+  md:text-[clamp(1.8rem,3vw,3rem)]
 
-              text-[#efe2d1]
+  uppercase
+  leading-none
 
-              transition-colors
-              duration-300
-
-              group-hover:text-[#d96c3d]
-            '
+  text-[#efe2d1]
+'
           >
             {title}
           </h3>
 
           <p
             className='
+              hidden
+              md:block
+
               mt-3
 
               max-w-[560px]
