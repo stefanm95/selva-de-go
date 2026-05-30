@@ -11,6 +11,7 @@ export function OpeningScene() {
   return (
     <Scene className='relative min-h-screen overflow-hidden'>
       <OpeningNavigation />
+
       <OpeningCornerDecor />
       <Float intensity={12}>
         <SceneContainer
