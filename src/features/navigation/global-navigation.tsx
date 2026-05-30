@@ -1,24 +1,50 @@
+import { useEffect, useState } from "react";
+
 import { FoodBagTrigger } from "./food-bag-trigger";
+import { FieldGuideOverlay } from "./field-guide-overlay";
 
 export default function GlobalNavigation() {
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    function handleEscape(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setOpen(false);
+      }
+    }
+
+    window.addEventListener("keydown", handleEscape);
+
+    return () => {
+      window.removeEventListener("keydown", handleEscape);
+    };
+  }, []);
+
   return (
-    <div
-      className='
-        fixed
-        top-0
-        left-0
+    <>
+      <FieldGuideOverlay open={open} onClose={() => setOpen(false)} />
 
-        z-[999999]
+      <div
+        className='
+          fixed
+          bottom-4
+          right-4
 
-        pointer-events-none
+          md:bottom-6
+          md:right-6
 
-        h-screen
-        w-screen
-      '
-    >
-      <div className='pointer-events-auto'>
-        <FoodBagTrigger />
+          xl:bottom-10
+          xl:right-10
+
+          z-[300]
+
+          pointer-events-none
+        '
+      >
+        <div className='pointer-events-auto'>
+          <FoodBagTrigger open={open} onToggle={() => setOpen((v) => !v)} />
+        </div>
       </div>
-    </div>
+    </>
   );
 }

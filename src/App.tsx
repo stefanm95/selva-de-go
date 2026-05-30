@@ -10,7 +10,7 @@ import { ProductRitualScene } from "@/features/product-ritual-scene/product-ritu
 import { PhilosophyScene } from "@/features/philosophy-scene/philosophy-scene";
 import { TrustCommunityScene } from "@/features/trust-community-scene/trust-community-scene";
 import { ClosingManifestoScene } from "@/features/closing-manifesto-scene/closing-manifesto-scene";
-import { ProductJourneyScene } from "./features/product-journey-scene/product-journey-scene";
+
 import GlobalNavigation from "./features/navigation/global-navigation";
 
 export default function App() {
@@ -26,7 +26,6 @@ export default function App() {
           <IngredientWorldScene />
           <InstinctEnergyScene />
           <ProductRitualScene />
-          <ProductJourneyScene />
           <PhilosophyScene />
           <TrustCommunityScene />
           <ClosingManifestoScene />
