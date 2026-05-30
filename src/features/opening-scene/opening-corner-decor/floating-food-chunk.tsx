@@ -51,9 +51,9 @@ export function FloatingFoodChunk() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               className='
-                fixed
-                inset-0
-
+                
+               
+                relative
                 z-[1000001]
 
                 flex
