@@ -67,9 +67,7 @@ export function FieldGuideOverlay({ open, onClose }: FieldGuideOverlayProps) {
             className='
               fixed
               inset-0
-
               z-[401]
-
               h-dvh
               overflow-hidden
             '
@@ -78,7 +76,6 @@ export function FieldGuideOverlay({ open, onClose }: FieldGuideOverlayProps) {
               className='
                 absolute
                 inset-0
-
                 bg-[radial-gradient(circle_at_top,#1b2b13_0%,#0a120b_70%)]
               '
             />
@@ -87,14 +84,10 @@ export function FieldGuideOverlay({ open, onClose }: FieldGuideOverlayProps) {
             <div
               className='
                 pointer-events-none
-
                 absolute
                 inset-0
-
                 opacity-[0.03]
-
                 bg-[radial-gradient(circle,#ffffff_1px,transparent_1px)]
-
                 [background-size:12px_12px]
               '
             />
