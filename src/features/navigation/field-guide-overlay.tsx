@@ -2,6 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 import { FieldGuideEntry } from "./field-guide-entry";
 import { menuItems } from "./menu-items";
+import { useState } from "react";
 
 type FieldGuideOverlayProps = {
   open: boolean;
@@ -9,8 +10,32 @@ type FieldGuideOverlayProps = {
 };
 
 export function FieldGuideOverlay({ open, onClose }: FieldGuideOverlayProps) {
+  const [targetSection, setTargetSection] = useState<string | null>(null);
+
+  const handleEntryClick = (sectionId: string) => {
+    onClose();
+
+    setTimeout(() => {
+      document.getElementById(sectionId)?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }, 650);
+  };
+
   return (
-    <AnimatePresence>
+    <AnimatePresence
+      onExitComplete={() => {
+        if (!targetSection) return;
+
+        document.getElementById(targetSection)?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+
+        setTargetSection(null);
+      }}
+    >
       {open && (
         <>
           <motion.div
@@ -33,15 +58,18 @@ export function FieldGuideOverlay({ open, onClose }: FieldGuideOverlayProps) {
           <motion.div
             initial={{
               opacity: 0,
-              scale: 0.96,
+              y: 40,
+              scale: 0.98,
             }}
             animate={{
               opacity: 1,
+              y: 0,
               scale: 1,
             }}
             exit={{
               opacity: 0,
-              scale: 0.98,
+              y: -20,
+              scale: 1.02,
             }}
             transition={{
               duration: 0.7,
@@ -136,10 +164,10 @@ cursor-pointer
               className='
                 relative
                 z-10
-left-5
+   h-dvh
                 mx-auto
-top-12
-                h-full
+
+            
                 max-w-[1500px]
 
                 px-5
@@ -151,7 +179,7 @@ xl:top-0
               <div
                 className='
                   grid
-                  h-full
+                  h-dvh
 
                   lg:grid-cols-[380px_1fr]
                   lg:gap-20
@@ -272,7 +300,7 @@ xl:top-0
                 >
                   {/* Mobile header */}
 
-                  <div className='mb-8 lg:hidden'>
+                  <div className='mb-12 lg:hidden'>
                     <p
                       className='
       text-[10px]
@@ -325,7 +353,7 @@ xl:top-0
 
                      max-w-full
                     lg:max-w-[900px]
-
+space-y-2
                       lg:ml-auto
                     '
                   >
@@ -348,6 +376,7 @@ xl:top-0
                           number={item.number}
                           title={item.title}
                           description={item.description}
+                          onClick={() => handleEntryClick(item.id)}
                         />
                       </motion.div>
                     ))}

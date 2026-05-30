@@ -1,6 +1,6 @@
 export const menuItems = [
   {
-    id: "opening",
+    id: "opening-scene",
     number: "01",
     title: "The Wild Preserved",
     description:
@@ -8,7 +8,7 @@ export const menuItems = [
   },
 
   {
-    id: "ingredients",
+    id: "ingredient-wrold",
     number: "02",
     title: "Ingredient World",
     description:
@@ -16,7 +16,7 @@ export const menuItems = [
   },
 
   {
-    id: "instinct",
+    id: "instinct-energy",
     number: "03",
     title: "Instinct & Energy",
     description:
@@ -24,7 +24,7 @@ export const menuItems = [
   },
 
   {
-    id: "ritual",
+    id: "product-ritual",
     number: "04",
     title: "Product Ritual",
     description:
@@ -32,32 +32,24 @@ export const menuItems = [
   },
 
   {
-    id: "journey",
-    number: "05",
-    title: "Product Journey",
-    description:
-      "Follow the path from carefully selected ingredients to the final freeze-dried formula.",
-  },
-
-  {
     id: "philosophy",
-    number: "06",
+    number: "05",
     title: "Philosophy",
     description:
       "A commitment to species-appropriate nutrition, transparency, and respect for nature.",
   },
 
   {
-    id: "community",
-    number: "07",
+    id: "trust-community",
+    number: "06",
     title: "Trust & Community",
     description:
       "Stories, experiences, and shared values from the people who feed Selva de Go every day.",
   },
 
   {
-    id: "closing",
-    number: "08",
+    id: "closing-manifesto",
+    number: "07",
     title: "Closing Manifesto",
     description:
       "A final reflection on the future of pet nutrition and returning to what nature intended.",

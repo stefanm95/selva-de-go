@@ -17,15 +17,16 @@ export function FieldGuideEntry({
     <motion.button
       onClick={onClick}
       whileHover={{ x: 12 }}
+      whileTap={{ scale: 0.985 }}
       className='
         group
         w-full
         cursor-pointer
-translate-y-1/2
+
         border-b
         border-[#e8d8c3]/15
 
-        py-4
+        py-6
         md:py-8
 
         text-left
@@ -33,29 +34,27 @@ translate-y-1/2
     >
       <div
         className='
-    grid
+          grid
+          grid-cols-[48px_1fr]
+          md:grid-cols-[120px_1fr]
 
-    grid-cols-[36px_1fr]
+          items-center
 
-    md:grid-cols-[120px_1fr]
-
-    items-center
-
-    gap-2
-    md:gap-6
-  '
+          gap-4
+          md:gap-6
+        '
       >
         <div
           className='
-  font-poster
+            font-poster
 
-  text-[1.25rem]
-  md:text-[3rem]
+            text-[1.25rem]
+            md:text-[3rem]
 
-  leading-none
+            leading-none
 
-  text-[#e8d8c3]/25
-'
+            text-[#e8d8c3]/25
+          '
         >
           {number}
         </div>
@@ -63,18 +62,18 @@ translate-y-1/2
         <div>
           <h3
             className='
-  font-poster
+              font-poster
 
-  text-[0.95rem]
-  sm:text-[1.05rem]
+              text-[1rem]
+              sm:text-[1.1rem]
 
-  md:text-[clamp(1.8rem,3vw,3rem)]
+              md:text-[clamp(1.8rem,3vw,3rem)]
 
-  uppercase
-  leading-none
+              uppercase
+              leading-[1.05]
 
-  text-[#efe2d1]
-'
+              text-[#efe2d1]
+            '
           >
             {title}
           </h3>

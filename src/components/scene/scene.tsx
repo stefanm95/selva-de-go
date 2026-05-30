@@ -6,9 +6,10 @@ type SceneProps = {
   id: string;
 };
 
-export function Scene({ children, className }: SceneProps) {
+export function Scene({ children, className, id }: SceneProps) {
   return (
     <section
+      id={id}
       className={cn(
         `
           relative
