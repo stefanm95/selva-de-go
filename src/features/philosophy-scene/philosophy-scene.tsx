@@ -9,11 +9,11 @@ export function PhilosophyScene() {
   const scene = homepageData.philosophyScene;
 
   return (
-    <Scene className='relative overflow-visible py-32'>
+    <Scene className='relative overflow-visible py-40'>
       <SceneContainer tone='neutral' density='light' depth='far'>
-        <div className='pointer-events-none absolute right-0 top-[10%] h-[26rem] w-[26rem] rounded-full bg-[#7a3b45]/10 blur-[140px]' />
+        <div className='pointer-events-none absolute right-0 bottom-0 h-[30rem] w-[30rem] rounded-full bg-[#7a3b45]/10 blur-[120px]' />
         <Reveal variants={staggerContainer} className='relative z-20'>
-          <div className='mx-auto max-w-[780px]'>
+          <div className='mx-auto max-w-[760px]'>
             <Cinematic delay={0.1}>
               <p className='text-[11px] uppercase tracking-[0.34em] text-[#7a3b45]'>
                 {scene.eyebrow}
@@ -23,18 +23,18 @@ export function PhilosophyScene() {
                 {scene.title}
               </h2>
 
-              <p className='mt-12 text-[1.05rem] leading-[1.95] text-[#463c35]/82'>
+              <p className='mt-14 text-[1.05rem] leading-[1.95] text-[#463c35]/82'>
                 {scene.description}
               </p>
             </Cinematic>
 
-            <div className='mt-16 grid gap-6 sm:grid-cols-2'>
+            <div className='mt-24 grid gap-8 sm:grid-cols-2'>
               {scene.manifesto.map((item) => (
                 <div
                   key={item}
-                  className='rounded-[2.8rem] border border-white/10 bg-white/8 p-8 shadow-[0_28px_60px_rgba(30,18,10,0.08)] backdrop-blur-xl'
+                  className='rounded-[3rem] border border-white/10 bg-[#fffaf4]/75 p-10 shadow-[0_28px_60px_rgba(31,19,12,0.08)] backdrop-blur-xl'
                 >
-                  <p className='text-[1.02rem] leading-[1.9] text-[#463c35]/88'>
+                  <p className='text-[1.05rem] leading-[1.95] text-[#463c35]/88'>
                     {item}
                   </p>
                 </div>
