@@ -21,13 +21,10 @@ export function OpeningScene() {
       <OpeningNavigation />
 
       <SceneContainer tone='warm' density='light' depth='near'>
-        <Reveal
-          variants={staggerContainer}
-          className='relative z-20 pt-[10rem] pb-28'
-        >
-          <div className='absolute inset-x-0 top-0 h-[28rem] opacity-40 blur-[140px] bg-[radial-gradient(circle_at_top_left,rgba(255,232,193,0.24)_0%,transparent_45%)]' />
+        <Reveal variants={staggerContainer} className='relative z-20 pb-28'>
+          <div className='absolute h-[28rem] opacity-40 blur-[140px] bg-[radial-gradient(circle_at_top_left,rgba(255,232,193,0.24)_0%,transparent_45%)]' />
 
-          <div className='grid gap-24 xl:grid-cols-[1.2fr_0.8fr] items-start'>
+          <div className='grid gap-24 xl:grid-cols-[1.2fr_0.8fr] items-center'>
             <SceneColumn>
               <div className='relative max-w-[44rem]'>
                 <Parallax speed={0.08}>
