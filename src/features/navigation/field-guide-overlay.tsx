@@ -3,6 +3,9 @@ import { AnimatePresence, motion } from "framer-motion";
 import { FieldGuideEntry } from "./field-guide-entry";
 import { menuItems } from "./menu-items";
 import { useState } from "react";
+import { fadeUp, editorialSlide } from "@/components/motion/presets";
+import { staggerContainer, staggerItem } from "@/components/motion/stagger";
+import { transitions } from "@/components/motion/transitions";
 
 type FieldGuideOverlayProps = {
   open: boolean;
@@ -40,7 +43,7 @@ export function FieldGuideOverlay({ open, onClose }: FieldGuideOverlayProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={transitions.soft}
             onClick={onClose}
             className='
               fixed
@@ -54,22 +57,13 @@ export function FieldGuideOverlay({ open, onClose }: FieldGuideOverlayProps) {
           />
 
           <motion.div
-            initial={{
-              opacity: 0,
-              y: 24,
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-            }}
+            initial={fadeUp.initial}
+            animate={fadeUp.animate}
             exit={{
               opacity: 0,
               y: 12,
             }}
-            transition={{
-              duration: 0.7,
-              ease: [0.22, 1, 0.36, 1],
-            }}
+            transition={transitions.smooth}
             className='
               fixed
               inset-0
@@ -85,7 +79,7 @@ export function FieldGuideOverlay({ open, onClose }: FieldGuideOverlayProps) {
                 absolute
                 inset-0
 
-                bg-[radial-gradient(circle_at_top,#2b1a13_0%,#120d0a_70%)]
+                bg-[radial-gradient(circle_at_top,#1b2b13_0%,#0a120b_70%)]
               '
             />
 
@@ -110,19 +104,14 @@ export function FieldGuideOverlay({ open, onClose }: FieldGuideOverlayProps) {
               className='
                 fixed
                 top-4
-right-4
-
-md:top-8
-md:right-8
-
+                right-4
+                md:top-8
+                md:right-8
                 z-[402]
-cursor-pointer
+                cursor-pointer
                 group
-
                 text-[#efe2d1]/70
-
                 transition-colors
-
                 hover:text-[#efe2d1]
               '
             >
@@ -130,7 +119,6 @@ cursor-pointer
                 className='
                   text-[11px]
                   uppercase
-
                   tracking-[0.35em]
                 '
               >
@@ -142,7 +130,7 @@ cursor-pointer
                   mt-2
 
                   text-3xl
-                    md:text-4xl
+                  md:text-4xl
                   leading-none
 
                   transition-transform
@@ -159,14 +147,14 @@ cursor-pointer
               className='
                 relative
                 z-10
-   h-dvh
+                h-dvh
                 mx-auto
 
             
                 max-w-[1500px]
 
                 px-5
-xl:top-0
+                xl:top-0
                 md:px-16
                 xl:px-24
               '
@@ -183,18 +171,9 @@ xl:top-0
                 {/* LEFT COLUMN */}
 
                 <motion.div
-                  initial={{
-                    x: -40,
-                    opacity: 0,
-                  }}
-                  animate={{
-                    x: 0,
-                    opacity: 1,
-                  }}
-                  transition={{
-                    delay: 0.1,
-                    duration: 0.6,
-                  }}
+                  initial={editorialSlide.initial}
+                  animate={editorialSlide.animate}
+                  transition={transitions.editorial}
                   className='
                     hidden
                     relative
@@ -283,14 +262,14 @@ xl:top-0
                 <div
                   className='
                     flex
-  h-full
-  flex-col
+                    h-full
+                    flex-col
 
-  justify-start
-  pt-20
+                    justify-start
+                    pt-20
 
-  lg:justify-center
-  lg:py-16
+                    lg:justify-center
+                    lg:py-16
                   '
                 >
                   {/* Mobile header */}
@@ -298,75 +277,65 @@ xl:top-0
                   <div className='mb-12 lg:hidden'>
                     <p
                       className='
-      text-[10px]
-      uppercase
+                      text-[10px]
+                      uppercase
 
-      tracking-[0.4em]
+                      tracking-[0.4em]
 
-      text-[#efe2d1]/60
-    '
+                      text-[#efe2d1]/60
+                    '
                     >
                       Selva De Go
                     </p>
 
                     <h1
                       className='
-      mt-3
+                      mt-3
 
-      font-poster
+                      font-poster
 
-      text-[2.75rem]
+                      text-[2.75rem]
 
-      leading-none
+                      leading-none
 
-      text-[#efe2d1]
-    '
+                      text-[#efe2d1]
+                    '
                     >
                       FIELD GUIDE
                     </h1>
 
                     <p
                       className='
-      mt-2
+                          mt-2
 
-      text-[10px]
+                          text-[10px]
 
-      uppercase
+                          uppercase
 
-      tracking-[0.25em]
+                          tracking-[0.25em]
 
                          text-[#efe2d1]/45
-    '
+                        '
                     >
                       Issue Nº03
                     </p>
                   </div>
 
-                  <div
+                  <motion.div
+                    variants={staggerContainer}
+                    initial='hidden'
+                    animate='show'
                     className='
                       w-full
 
                      max-w-full
                     lg:max-w-[900px]
-space-y-2
+                    space-y-2
                       lg:ml-auto
                     '
                   >
-                    {menuItems.map((item, index) => (
-                      <motion.div
-                        key={item.id}
-                        initial={{
-                          opacity: 0,
-                          y: 24,
-                        }}
-                        animate={{
-                          opacity: 1,
-                          y: 0,
-                        }}
-                        transition={{
-                          delay: 0.4 + index * 0.08,
-                        }}
-                      >
+                    {menuItems.map((item) => (
+                      <motion.div key={item.id} variants={staggerItem}>
                         <FieldGuideEntry
                           number={item.number}
                           title={item.title}
@@ -375,7 +344,7 @@ space-y-2
                         />
                       </motion.div>
                     ))}
-                  </div>
+                  </motion.div>
                 </div>
               </div>
             </div>
