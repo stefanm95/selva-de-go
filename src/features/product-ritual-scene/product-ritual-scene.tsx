@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Scene } from "@/components/scene/scene";
 import { SceneColumn } from "@/components/scene/scene-column";
 import { SceneContainer } from "@/components/scene/scene-container";
-import { OpeningProduct } from "@/features/opening-scene/opening-product";
+import { ProductCard } from "@/features/product-ritual-scene/components/product-card";
 import { homepageData } from "@/data/homepage";
 
 const highlights = [
@@ -72,7 +72,7 @@ export function ProductRitualScene() {
                 <Float intensity={24}>
                   <Parallax speed={0.16}>
                     <div className='relative'>
-                      <OpeningProduct />
+                      <ProductCard />
                     </div>
                   </Parallax>
                 </Float>

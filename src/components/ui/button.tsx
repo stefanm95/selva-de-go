@@ -22,45 +22,51 @@ type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
 const variantStyles: Record<ButtonVariant, string> = {
   /* HERO CTA */
   primary: `
-    border-[3px]
-    border-[#2f221d]
+  border-[4px]
+  border-[#241915]
 
-    bg-[#d96c3d]
-    text-[#f6eadf]
+  bg-[#d96c3d]
+  text-[#fff7ef]
 
-    shadow-[0_8px_0_#2f221d,0_18px_40px_rgba(0,0,0,0.18)]
+  shadow-[8px_8px_0px_#241915]
 
-    hover:translate-y-[3px]
-    hover:shadow-[0_4px_0_#2f221d,0_10px_22px_rgba(0,0,0,0.18)]
-  `,
+  hover:translate-x-[2px]
+  hover:translate-y-[2px]
+
+  hover:shadow-[6px_6px_0px_#241915]
+`,
 
   /* LIGHT PAPER BUTTON */
   secondary: `
-    border-[3px]
-    border-[#2f221d]
+  border-[4px]
+  border-[#241915]
 
-    bg-[#f6eadf]
-    text-[#2f221d]
+  bg-[#f6eadf]
+  text-[#241915]
 
-    shadow-[0_8px_0_#2f221d,0_16px_30px_rgba(0,0,0,0.12)]
+  shadow-[8px_8px_0px_#241915]
 
-    hover:translate-y-[3px]
-    hover:shadow-[0_4px_0_#2f221d,0_10px_18px_rgba(0,0,0,0.14)]
-  `,
+  hover:translate-x-[2px]
+  hover:translate-y-[2px]
+
+  hover:shadow-[6px_6px_0px_#241915]
+`,
 
   /* NAV / SYSTEM BUTTON */
   editorial: `
-    border-[2px]
-    border-[#2b211d]
+  border-[3px]
+  border-[#241915]
 
-    bg-[#f7ecdf]
-    text-[#2b211d]
+  bg-[#efe1cf]
+  text-[#241915]
 
-    shadow-[0_5px_0_#2b211d,0_10px_24px_rgba(0,0,0,0.08)]
+  shadow-[5px_5px_0px_#241915]
 
-    hover:translate-y-[2px]
-    hover:shadow-[0_2px_0_#2b211d,0_6px_14px_rgba(0,0,0,0.08)]
-  `,
+  hover:translate-x-[1px]
+  hover:translate-y-[1px]
+
+  hover:shadow-[4px_4px_0px_#241915]
+`,
 
   /* FLOATING ICON UTILITIES */
   utility: `
@@ -106,20 +112,20 @@ const sizeStyles: Record<ButtonSize, string> = {
   `,
 
   lg: `
-    h-16
-    px-10
+  h-[72px]
+  px-12
 
-    text-[13px]
-  `,
+  text-[14px]
+`,
 };
 
 const shapeStyles: Record<ButtonShape, string> = {
   pill: `
-    rounded-[1rem]
+    rounded-full
   `,
 
   circle: `
-    rounded-[1rem]
+    rounded-full
 
     p-0
   `,
@@ -171,7 +177,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
             overflow-hidden
 
-            font-black
+            font-poster
             uppercase
 
             tracking-[0.18em]
@@ -205,73 +211,25 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           <>
             {/* PAPER TEXTURE */}
             <div
-              className="
+              className='
                 absolute
                 inset-0
 
                 opacity-[0.24]
                 mix-blend-multiply
-              "
+              '
               style={{
                 backgroundImage: "url('/images/wrm-paper/carton.jfif')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
             />
-
-            {/* HALFTONE */}
-            <div
-              className="
-                absolute
-                inset-0
-
-                opacity-[0.15]
-                mix-blend-soft-light
-              "
-              style={{
-                backgroundImage:
-                  "url('/images/halftone-dots/monochrome-dots.jfif')",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            />
-
-            {/* PRINT HIGHLIGHT */}
-            <div
-              className="
-                absolute
-                left-[6%]
-                top-[10%]
-
-                h-[34%]
-                w-[88%]
-
-                rounded-full
-
-                bg-white/16
-
-                blur-[6px]
-              "
-            />
-
-            {/* INNER BORDER */}
-            <div
-              className="
-                absolute
-                inset-[3px]
-
-                rounded-[inherit]
-
-                border-[2px]
-                border-white/10
-              "
-            />
           </>
         )}
 
         {/* LABEL */}
         <span
-          className="
+          className='
             relative
             z-20
 
@@ -280,7 +238,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             justify-center
 
             gap-3
-          "
+          '
         >
           {children}
         </span>
