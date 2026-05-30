@@ -22,7 +22,7 @@ export function ProductRitualScene() {
   const scene = homepageData.ritualScene;
 
   return (
-    <Scene className='relative overflow-visible py-36'>
+    <Scene id='product-ritual' className='relative overflow-visible py-36'>
       <SceneContainer tone='warm' density='light' depth='near'>
         <div className='pointer-events-none absolute inset-x-0 top-0 h-[32rem] opacity-30 blur-[130px] bg-[radial-gradient(circle_at_top_center,rgba(255,232,193,0.2)_0%,transparent_52%)]' />
 

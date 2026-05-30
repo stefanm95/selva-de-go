@@ -9,7 +9,7 @@ import { OpeningCornerDecor } from "./opening-corner-decor/opening-corner-decor"
 
 export function OpeningScene() {
   return (
-    <Scene className='relative min-h-screen overflow-hidden'>
+    <Scene id='opening-scene' className='relative min-h-screen overflow-hidden'>
       <OpeningNavigation />
 
       <OpeningCornerDecor />

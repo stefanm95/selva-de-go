@@ -9,7 +9,7 @@ export function PhilosophyScene() {
   const scene = homepageData.philosophyScene;
 
   return (
-    <Scene className='relative overflow-visible py-40'>
+    <Scene id='philosophy' className='relative overflow-visible py-40'>
       <SceneContainer tone='neutral' density='light' depth='far'>
         <div className='pointer-events-none absolute right-0 bottom-0 h-[30rem] w-[30rem] rounded-full bg-[#7a3b45]/10 blur-[120px]' />
         <Reveal variants={staggerContainer} className='relative z-20'>

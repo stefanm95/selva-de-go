@@ -13,7 +13,7 @@ export function ClosingManifestoScene() {
   const scene = homepageData.closingScene;
 
   return (
-    <Scene className='relative overflow-visible py-36'>
+    <Scene id='closing-manifesto' className='relative overflow-visible py-36'>
       <SceneContainer tone='warm' density='light' depth='far'>
         <div className='pointer-events-none absolute left-0 top-16 h-[24rem] w-[24rem] rounded-full bg-[#f4c28b]/10 blur-[120px]' />
         <Reveal variants={staggerContainer} className='relative z-20'>

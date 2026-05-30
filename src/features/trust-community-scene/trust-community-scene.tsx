@@ -27,7 +27,7 @@ export function TrustCommunityScene() {
   const scene = homepageData.trustScene;
 
   return (
-    <Scene className='relative overflow-visible py-28'>
+    <Scene id='trust-community' className='relative overflow-visible py-28'>
       <SceneContainer tone='neutral' density='medium' depth='far'>
         <div className='pointer-events-none absolute right-0 top-24 h-[26rem] w-[26rem] rounded-full bg-[#f1c692]/10 blur-[130px]' />
         <Reveal variants={staggerContainer} className='relative z-20'>

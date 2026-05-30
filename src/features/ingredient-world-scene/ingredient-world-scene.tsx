@@ -13,7 +13,7 @@ export function IngredientWorldScene() {
   const scene = homepageData.ingredientScene;
 
   return (
-    <Scene className='relative overflow-visible py-28'>
+    <Scene id='ingredient-world' className='relative overflow-visible py-28'>
       <SceneContainer tone='warm' density='light' depth='medium'>
         <div className='pointer-events-none absolute right-0 top-16 h-[28rem] w-[28rem] rounded-full bg-[#f4c28b]/10 blur-[130px]' />
 

@@ -12,7 +12,7 @@ export function InstinctEnergyScene() {
   const scene = homepageData.instinctScene;
 
   return (
-    <Scene className='relative overflow-visible py-32'>
+    <Scene id='instinct-energy' className='relative overflow-visible py-32'>
       <SceneContainer tone='cool' density='light' depth='medium'>
         <div className='pointer-events-none absolute left-0 top-24 h-[30rem] w-[30rem] rounded-full bg-[#d9b080]/10 blur-[140px]' />
 
