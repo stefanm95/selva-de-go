@@ -1,163 +1,46 @@
 import { Cinematic, Reveal, staggerContainer } from "@/components/motion";
 
 import { Scene } from "@/components/scene/scene";
-import { SceneColumn } from "@/components/scene/scene-column";
 import { SceneContainer } from "@/components/scene/scene-container";
-import { SceneGrid } from "@/components/scene/scene-grid";
 
 import { homepageData } from "@/data/homepage";
-
-import { PhilosophyEditorialCard } from "./philosophy-editorial-card";
 
 export function PhilosophyScene() {
   const scene = homepageData.philosophyScene;
 
   return (
-    <Scene
-      className="
-        relative
+    <Scene className='relative overflow-visible py-32'>
+      <SceneContainer tone='neutral' density='light' depth='far'>
+        <div className='pointer-events-none absolute right-0 top-[10%] h-[26rem] w-[26rem] rounded-full bg-[#7a3b45]/10 blur-[140px]' />
+        <Reveal variants={staggerContainer} className='relative z-20'>
+          <div className='mx-auto max-w-[780px]'>
+            <Cinematic delay={0.1}>
+              <p className='text-[11px] uppercase tracking-[0.34em] text-[#7a3b45]'>
+                {scene.eyebrow}
+              </p>
 
-        min-h-[120vh]
+              <h2 className='mt-8 display text-[clamp(4rem,8vw,6rem)] leading-[0.86] tracking-[-0.08em] text-[#1f1a17]'>
+                {scene.title}
+              </h2>
 
-        pt-[8rem]
-        pb-[10rem]
-      "
-    >
-      {/* ATMOSPHERIC LIGHT */}
-      <div
-        className="
-          absolute
-          right-[-12rem]
-          top-[10%]
+              <p className='mt-12 text-[1.05rem] leading-[1.95] text-[#463c35]/82'>
+                {scene.description}
+              </p>
+            </Cinematic>
 
-          h-[34rem]
-          w-[34rem]
-
-          rounded-full
-
-          bg-[#7a3b45]/10
-
-          blur-[120px]
-        "
-      />
-
-      <SceneContainer>
-        <Reveal
-          variants={staggerContainer}
-          className="
-            relative
-            z-30
-          "
-        >
-          <SceneGrid
-            className="
-              items-start
-              gap-y-24
-            "
-          >
-            {/* ======================================
-                LEFT EDITORIAL SIDE
-            ====================================== */}
-            <SceneColumn
-              className="
-                xl:col-span-5
-              "
-            >
-              <Cinematic delay={0.1}>
-                <div className="max-w-[640px]">
-                  {/* EYEBROW */}
-                  <div
-                    className="
-                      mb-10
-
-                      flex
-                      items-center
-
-                      gap-4
-                    "
-                  >
-                    <div
-                      className="
-                        h-[4px]
-                        w-14
-
-                        rounded-full
-
-                        bg-[#d96c3d]
-                      "
-                    />
-
-                    <p
-                      className="
-                        text-[11px]
-                        font-black
-                        uppercase
-
-                        tracking-[0.34em]
-
-                        text-[#7a3b45]
-                      "
-                    >
-                      {scene.eyebrow}
-                    </p>
-                  </div>
-
-                  {/* TITLE */}
-                  <h2
-                    className="
-                      display
-
-                      text-[clamp(4rem,7vw,7rem)]
-
-                      leading-[0.82]
-                      tracking-[-0.08em]
-
-                      text-[#1f1a17]
-                    "
-                  >
-                    nutrition
-                    <br />
-                    should feel
-                    <br />
-                    <span className="text-[#7a3b45]">intentional</span>
-                  </h2>
-
-                  {/* DESCRIPTION */}
-                  <p
-                    className="
-                      mt-12
-
-                      max-w-[560px]
-
-                      text-[1.02rem]
-
-                      leading-[1.95]
-
-                      text-[#463c35]/82
-                    "
-                  >
-                    {scene.description}
+            <div className='mt-16 grid gap-6 sm:grid-cols-2'>
+              {scene.manifesto.map((item) => (
+                <div
+                  key={item}
+                  className='rounded-[2.8rem] border border-white/10 bg-white/8 p-8 shadow-[0_28px_60px_rgba(30,18,10,0.08)] backdrop-blur-xl'
+                >
+                  <p className='text-[1.02rem] leading-[1.9] text-[#463c35]/88'>
+                    {item}
                   </p>
                 </div>
-              </Cinematic>
-            </SceneColumn>
-
-            {/* ======================================
-                RIGHT CARD SIDE
-            ====================================== */}
-            <SceneColumn
-              className="
-                flex
-                justify-center
-
-                xl:col-span-7
-              "
-            >
-              <Cinematic delay={0.24}>
-                <PhilosophyEditorialCard />
-              </Cinematic>
-            </SceneColumn>
-          </SceneGrid>
+              ))}
+            </div>
+          </div>
         </Reveal>
       </SceneContainer>
     </Scene>

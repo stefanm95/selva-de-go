@@ -83,6 +83,7 @@ body {
   --body-sm: 16px;
   --caption: 14px;
   --micro: 12px;
+  --world-scroll-progress: 0;
 
   /* Line Heights */
   --lh-display: 0.95;
