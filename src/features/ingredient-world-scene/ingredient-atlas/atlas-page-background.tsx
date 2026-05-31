@@ -59,13 +59,6 @@ export default function AtlasPageBackground({
       >
         {pageMark?.catalog}
       </div>
-
-      <div
-        className='absolute right-[8%] top-[12%] text-xs uppercase tracking-[0.35em]'
-        style={{ color: `${productColor}40` }}
-      >
-        Field Record
-      </div>
     </>
   );
 }

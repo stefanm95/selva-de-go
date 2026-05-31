@@ -8,7 +8,7 @@ export const menuItems = [
   },
 
   {
-    id: "ingredient-wrold",
+    id: "ingredient-world",
     number: "02",
     title: "Ingredient World",
     description:
@@ -62,7 +62,7 @@ export const navItems = [
     label: "Wild",
   },
   {
-    id: "ingredient-wrold",
+    id: "ingredient-world",
     label: "Ingredients",
   },
   {
@@ -92,7 +92,7 @@ export const openingNavItems = [
     label: "Wild",
   },
   {
-    id: "ingredient-wrold",
+    id: "ingredient-world",
     label: "Ingredients",
   },
   {
