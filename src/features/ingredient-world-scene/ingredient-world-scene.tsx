@@ -2,18 +2,17 @@ import { Scene } from "@/components/scene/scene";
 import { SceneContainer } from "@/components/scene/scene-container";
 import { products } from "@/data/products";
 
-import AtlasCover from "./ingredient-atlas/atlas-cover";
-import AtlasPage from "./ingredient-atlas/atlas-page";
-import AtlasClosingNote from "./ingredient-atlas/atlas-closing-note";
+import AtlasClosingNote from "./ingredient-world/atlas-closing-note/atlas-closing-note";
+import AtlasCover from "./ingredient-world/atlas-cover/atlas-cover";
+import AtlasPage from "./ingredient-world/atlas-page/atlas-page";
+import IngredientAtlasSpread from "./ingredient-world/atlas-spread/ingredient-atlas-spread";
 
 export function IngredientWorldScene() {
   return (
     <Scene id='ingredient-world' className='relative overflow-visible'>
-      <SceneContainer tone='warm' density='light' depth='medium'>
-        {/* Atlas Cover */}
+      <SceneContainer tone='neutral' density='light' depth='far'>
         <AtlasCover />
 
-        {/* Atlas Pages - with alternating layouts */}
         {products.map((product, index) => (
           <AtlasPage
             key={product.id}
@@ -23,7 +22,7 @@ export function IngredientWorldScene() {
           />
         ))}
 
-        {/* Atlas Closing Note */}
+        <IngredientAtlasSpread />
         <AtlasClosingNote />
       </SceneContainer>
     </Scene>

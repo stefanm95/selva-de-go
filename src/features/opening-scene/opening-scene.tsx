@@ -16,7 +16,7 @@ export function OpeningScene() {
       <Float intensity={12}>
         <SceneContainer
           tone='warm'
-          density='medium'
+          density='light'
           depth='far'
           className='relative min-h-screen'
         >
