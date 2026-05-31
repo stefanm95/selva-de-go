@@ -176,7 +176,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             justify-center
 
             overflow-hidden
-
+cursor-pointer
             font-poster
             uppercase
 

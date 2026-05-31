@@ -55,3 +55,34 @@ export const menuItems = [
       "A final reflection on the future of pet nutrition and returning to what nature intended.",
   },
 ];
+
+export const navItems = [
+  {
+    id: "opening-scene",
+    label: "Wild",
+  },
+  {
+    id: "ingredient-wrold",
+    label: "Ingredients",
+  },
+  {
+    id: "instinct-energy",
+    label: "Instinct",
+  },
+  {
+    id: "product-ritual",
+    label: "Ritual",
+  },
+  {
+    id: "philosophy",
+    label: "Philosophy",
+  },
+  {
+    id: "trust-community",
+    label: "Community",
+  },
+  {
+    id: "closing-manifesto",
+    label: "Manifesto",
+  },
+];

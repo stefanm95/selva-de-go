@@ -11,7 +11,7 @@ import { PhilosophyScene } from "@/features/philosophy-scene/philosophy-scene";
 import { TrustCommunityScene } from "@/features/trust-community-scene/trust-community-scene";
 import { ClosingManifestoScene } from "@/features/closing-manifesto-scene/closing-manifesto-scene";
 
-import GlobalNavigation from "./features/navigation/global-navigation";
+import GlobalNavigation from "./features/navigation/foodbag-navigation/global-navigation";
 
 export default function App() {
   return (

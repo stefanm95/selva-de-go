@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 
 import { FieldGuideEntry } from "./field-guide-entry";
-import { menuItems } from "./menu-items";
+import { menuItems } from "../navigation-data";
 import { useState } from "react";
 import { fadeUp, editorialSlide } from "@/components/motion/presets";
 import { staggerContainer, staggerItem } from "@/components/motion/stagger";
