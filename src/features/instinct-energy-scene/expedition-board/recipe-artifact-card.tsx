@@ -4,24 +4,22 @@ import { Pin } from "lucide-react";
 
 type RecipeArtifactCardProps = {
   recipe: Product;
-
   isSelected?: boolean;
-
   onClick?: () => void;
 };
 
 const positions: Record<string, string> = {
-  "wild-game-salmon": "left-[8%] top-[12%] rotate-[-4deg]",
+  "wild-game-salmon": "left-[12%] top-[18%] rotate-[-8deg]",
 
-  "beef-lamb": "left-[38%] top-[46%] rotate-[2deg]",
+  "beef-lamb": "left-1/2 top-[12%] -translate-x-1/2 rotate-[0deg] z-30",
 
-  "beef-chicken": "right-[8%] top-[22%] rotate-[5deg]",
+  "beef-chicken": "right-[12%] top-[18%] rotate-[8deg]",
 };
 
 export default function RecipeArtifactCard({
   recipe,
-  onClick,
   isSelected,
+  onClick,
 }: RecipeArtifactCardProps) {
   const position = positions[recipe.id] ?? "";
 
@@ -29,131 +27,243 @@ export default function RecipeArtifactCard({
     <motion.button
       onClick={onClick}
       whileHover={{
-        scale: 1.08,
+        y: -16,
+        scale: 1.04,
         rotate: 0,
-        zIndex: 50,
       }}
       animate={{
-        scale: isSelected ? 1.08 : 1,
+        y: isSelected ? -16 : 0,
+        scale: isSelected ? 1.04 : 1,
         rotate: isSelected ? 0 : undefined,
       }}
       transition={{
         type: "spring",
         stiffness: 260,
-        damping: 20,
+        damping: 22,
       }}
       className={`
         absolute
         ${position}
-        group
-        w-[260px]
+        w-[280px]
         text-left
-        cursor-pointer
+        z-20
       `}
     >
       <div
         className='
           relative
+          h-[420px]
           overflow-hidden
-          rounded-sm
-          border
-          border-[#6b1f2b]/20
-          bg-[#f4ead7]
-          p-6
-          shadow-[0_18px_40px_rgba(0,0,0,0.18)]
+          cursor-pointer
+          rounded-[2rem]
+          border-[3px]
+          border-[#2f221d]
+          shadow-[0_8px_0_#2f221d,0_28px_42px_rgba(35,18,12,0.18)]
         '
+        style={{
+          background: `linear-gradient(
+            165deg,
+            ${recipe.color} 0%,
+            ${recipe.color}dd 35%,
+            #d48a5a 100%
+          )`,
+        }}
       >
-        <div
-          className="
-            absolute
-            inset-0
-            opacity-20
-            mix-blend-multiply
-            bg-[url('/textures/paper-grain.png')]
-            bg-cover
-          "
-        />
+        {/* PAPER TEXTURE */}
 
         <div
           className='
             absolute
-            right-3
-            top-3
-            rotate-12
-            text-[#8d2036]
+            inset-0
+            opacity-[0.08]
+            mix-blend-multiply
+          '
+          style={{
+            backgroundImage: "url('/images/wrm-paper/carton.jfif')",
+            backgroundSize: "cover",
+          }}
+        />
+
+        {/* CANVAS */}
+
+        <div
+          className='
+            absolute
+            inset-0
+            opacity-[0.06]
+            mix-blend-overlay
+          '
+          style={{
+            backgroundImage: "url('/images/canvas/canvas.jfif')",
+            backgroundSize: "cover",
+          }}
+        />
+
+        {/* INNER FRAME */}
+
+        <div
+          className='
+            absolute
+            inset-[12px]
+            rounded-[1.5rem]
+            border
+            border-white/10
+          '
+        />
+
+        {/* PIN */}
+
+        <div
+          className='
+            absolute
+            left-1/2
+            top-4
+            -translate-x-1/2
+            z-20
+            text-[#ffe8c7]
           '
         >
           <Pin size={18} />
         </div>
 
-        <div className='relative z-10'>
+        {/* ARTWORK AREA */}
+
+        <div
+          className='
+    absolute
+    inset-0
+  '
+        >
+          <img
+            src='/images/products/board/cartoonish-bag.png'
+            alt=''
+            className='
+      absolute
+      inset-0
+      h-full
+      w-full
+      object-cover
+      opacity-45
+      scale-105
+    '
+          />
+
+          <div
+            className='
+      absolute
+      inset-0
+      bg-gradient-to-t
+      from-[#1d1512]
+      via-transparent
+      to-black/10
+    '
+          />
+
+          <div
+            className='
+      absolute
+      inset-0
+
+      opacity-[0.08]
+      mix-blend-overlay
+    '
+            style={{
+              backgroundImage:
+                "url('/images/halftone-dots/monochrome-dots.jfif')",
+              backgroundSize: "cover",
+            }}
+          />
+        </div>
+
+        {/* CONTENT */}
+
+        <div
+          className='
+    absolute
+    bottom-8
+    left-8
+    right-8
+    z-20
+  '
+        >
           <p
             className='
-              mb-2
-              text-[10px]
-              uppercase
-              tracking-[0.35em]
-              text-[#8d2036]
-            '
+      text-[10px]
+      uppercase
+      tracking-[0.35em]
+      text-[#ffe5c8]
+    '
           >
-            Recipe Archive
+            {recipe.badge}
           </p>
 
           <h3
             className='
-              mb-3
-              font-black
-              uppercase
-              leading-none
-              text-[#4f1823]
-            '
+      mt-3
+
+      text-[3rem]
+      leading-[0.82]
+      tracking-[-0.06em]
+
+      text-white
+    '
           >
             {recipe.name}
           </h3>
 
           <div
             className='
-              mb-4
-              inline-block
-              border-b
-              border-[#8d2036]/30
-              pb-1
-              text-xs
-              uppercase
-              tracking-[0.25em]
-              text-[#8d2036]
-            '
-          >
-            {recipe.badge}
-          </div>
+      mt-5
+      h-px
+      w-24
+      bg-white/20
+    '
+          />
 
           <div
             className='
-              mb-4
-              text-3xl
-              font-black
-              text-[#4f1823]
-            '
+      mt-5
+      flex
+      items-center
+      gap-3
+    '
           >
-            {recipe.analytics?.protein}
+            <div
+              className='
+        h-3
+        w-3
+        rounded-full
+        bg-[#ffd35e]
+      '
+            />
+
+            <span
+              className='
+        text-sm
+        font-medium
+        text-white/85
+      '
+            >
+              {recipe.analytics.protein} protein
+            </span>
           </div>
 
-          <div
+          <p
             className='
-              space-y-1
-              text-xs
-              uppercase
-              tracking-[0.18em]
-              text-[#6b1f2b]
-            '
+      mt-3
+
+      text-[11px]
+      uppercase
+      tracking-[0.22em]
+
+      text-white/75
+    '
           >
-            {recipe.ingredientSpotlights?.slice(0, 3).map((spotlight) => (
-              <div key={spotlight.title}>
-                <div>{spotlight.title}</div>
-                <div>{spotlight.description}</div>
-              </div>
-            ))}
-          </div>
+            {recipe.ingredientSpotlights
+              .slice(0, 3)
+              .map((item) => item.title)
+              .join(" • ")}
+          </p>
         </div>
       </div>
     </motion.button>

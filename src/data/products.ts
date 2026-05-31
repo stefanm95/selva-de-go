@@ -18,6 +18,9 @@ export const products = [
 
     headline: "Traditional nutrition powered by beef and lamb",
 
+    amazonUrl:
+      "https://www.amazon.it/SELVADEGO-Barf-Dried-Diet-Digestibility/dp/B0GY14R674?th=1",
+
     subheadline:
       "A protein-rich recipe combining beef, lamb and natural functional ingredients for everyday vitality.",
 
@@ -113,6 +116,9 @@ export const products = [
 
     headline: "Wild ingredients inspired by nature",
 
+    amazonUrl:
+      "https://www.amazon.it/SELVADEGO-Barf-Dried-Diet-Digestibility/dp/B0GY14R674?th=1",
+
     subheadline:
       "Venison, wild boar and salmon combined with fruits, vegetables and botanicals for exceptional variety.",
 
@@ -207,6 +213,9 @@ export const products = [
     color: "#C96A32",
 
     headline: "High-protein nutrition for active dogs",
+
+    amazonUrl:
+      "https://www.amazon.it/SELVADEGO-Barf-Dried-Diet-Digestibility/dp/B0GY14R674?th=1",
 
     subheadline:
       "Beef and chicken combined in a nutrient-dense recipe with functional ingredients and aromatic herbs.",

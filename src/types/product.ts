@@ -99,6 +99,8 @@ export type Product = {
 
   analytics: ProductAnalytics;
 
+  amazonUrl: string;
+
   energy: string;
 
   heroImage?: string;
