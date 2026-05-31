@@ -11,11 +11,13 @@ type NavigationProviderProps = {
 const COMPACT_THRESHOLD = 720;
 
 export function NavigationProvider({ children }: NavigationProviderProps) {
-  const [scrollY, setScrollY] = useState(0);
+  const [isCompact, setIsCompact] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrollY(window.scrollY);
+      const compact = window.scrollY > COMPACT_THRESHOLD;
+
+      setIsCompact((prev) => (prev === compact ? prev : compact));
     };
 
     handleScroll();
@@ -29,13 +31,7 @@ export function NavigationProvider({ children }: NavigationProviderProps) {
     };
   }, []);
 
-  const value = useMemo(
-    () => ({
-      scrollY,
-      isCompact: scrollY > COMPACT_THRESHOLD,
-    }),
-    [scrollY],
-  );
+  const value = useMemo(() => ({ isCompact }), [isCompact]);
 
   return (
     <NavigationContext.Provider value={value}>

@@ -1,38 +1,44 @@
-import { type ReactNode, useEffect } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
 import Lenis from "lenis";
+import { LenisContext } from "./lenis-context";
 
-type LenisProviderProps = {
-  children: ReactNode;
-};
+export function LenisProvider({ children }: { children: ReactNode }) {
+  const lenisRef = useRef<Lenis | null>(null);
 
-export function LenisProvider({ children }: LenisProviderProps) {
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.4,
-
       smoothWheel: true,
-
       wheelMultiplier: 0.9,
-
       touchMultiplier: 1.2,
-
       infinite: false,
-
       autoResize: true,
     });
 
-    function raf(time: number) {
+    lenisRef.current = lenis;
+
+    let rafId: number;
+
+    const raf = (time: number) => {
       lenis.raf(time);
+      rafId = requestAnimationFrame(raf);
+    };
 
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
+    rafId = requestAnimationFrame(raf);
 
     return () => {
+      cancelAnimationFrame(rafId);
       lenis.destroy();
     };
   }, []);
 
-  return children;
+  const scrollTo = (target: string | HTMLElement) => {
+    lenisRef.current?.scrollTo(target);
+  };
+
+  return (
+    <LenisContext.Provider value={{ scrollTo }}>
+      {children}
+    </LenisContext.Provider>
+  );
 }

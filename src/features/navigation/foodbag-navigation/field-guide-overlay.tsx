@@ -6,6 +6,7 @@ import { useState } from "react";
 import { fadeUp, editorialSlide } from "@/components/motion/presets";
 import { staggerContainer, staggerItem } from "@/components/motion/stagger";
 import { transitions } from "@/components/motion/transitions";
+import { useLenis } from "@/app/lenis-context";
 
 type FieldGuideOverlayProps = {
   open: boolean;
@@ -15,11 +16,10 @@ type FieldGuideOverlayProps = {
 export function FieldGuideOverlay({ open, onClose }: FieldGuideOverlayProps) {
   const [targetSection, setTargetSection] = useState<string | null>(null);
 
+  const { scrollTo } = useLenis();
+
   const handleEntryClick = (sectionId: string) => {
-    document.getElementById(sectionId)?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
+    scrollTo(`#${sectionId}`);
 
     onClose();
   };
@@ -29,9 +29,9 @@ export function FieldGuideOverlay({ open, onClose }: FieldGuideOverlayProps) {
       onExitComplete={() => {
         if (!targetSection) return;
 
-        document.getElementById(targetSection)?.scrollIntoView({
+        document.getElementById(targetSection)?.scrollTo({
+          top: 0,
           behavior: "smooth",
-          block: "start",
         });
 
         setTargetSection(null);

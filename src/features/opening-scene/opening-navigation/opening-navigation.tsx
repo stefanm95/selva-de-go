@@ -7,16 +7,17 @@ import { OpeningBrand } from "./opening-brand";
 import { OpeningLinks } from "./opening-links";
 
 import { OpeningNavActions } from "./opening-nav-actions";
+import { useLenis } from "@/app/lenis-context";
 
 export function OpeningNavigation() {
   const { isCompact } = useNavigationMode();
 
-  const scrollToSection = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
+  const { scrollTo } = useLenis();
+
+  const scrollToSection = (sectionId: string) => {
+    scrollTo(`#${sectionId}`);
   };
+
   return (
     <FadeIn delay={0.05}>
       <motion.header

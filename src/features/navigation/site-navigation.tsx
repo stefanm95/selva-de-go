@@ -3,15 +3,15 @@ import { useNavigationMode } from "./use-navigation-mode";
 import { NavigationBrand } from "./navigation-brand";
 import { NavigationLinks } from "./navigation-links";
 import { NavigationActions } from "./navigtion-actions";
+import { useLenis } from "@/app/lenis-context";
 
 export function SiteNavigation() {
   const { isCompact } = useNavigationMode();
 
-  const scrollToSection = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
+  const { scrollTo } = useLenis();
+
+  const scrollToSection = (sectionId: string) => {
+    scrollTo(`#${sectionId}`);
   };
 
   return (
