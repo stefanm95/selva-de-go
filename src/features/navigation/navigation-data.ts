@@ -86,3 +86,33 @@ export const navItems = [
     label: "Manifesto",
   },
 ];
+export const openingNavItems = [
+  {
+    id: "opening-scene",
+    label: "Wild",
+  },
+  {
+    id: "ingredient-wrold",
+    label: "Ingredients",
+  },
+  {
+    id: "instinct-energy",
+    label: "Instinct",
+  },
+  {
+    id: "product-ritual",
+    label: "Ritual",
+  },
+  {
+    id: "philosophy",
+    label: "Philosophy",
+  },
+  {
+    id: "trust-community",
+    label: "Community",
+  },
+  {
+    id: "closing-manifesto",
+    label: "Manifesto",
+  },
+];

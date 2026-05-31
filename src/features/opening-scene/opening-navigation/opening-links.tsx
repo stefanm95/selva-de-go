@@ -1,39 +1,37 @@
-import { navItems } from "./navigation-data";
+import { openingNavItems } from "@/features/navigation/navigation-data";
 
-type NavigationLinksProps = {
+type OpeningLinksProps = {
   onNavigate: (id: string) => void;
 };
 
-export function NavigationLinks({ onNavigate }: NavigationLinksProps) {
+export function OpeningLinks({ onNavigate }: OpeningLinksProps) {
   return (
     <nav
       className='
-              absolute
-              left-1/2
-              top-1/2
-
               hidden
 
-              -translate-x-1/2
-              -translate-y-1/2
-
+              flex-1
               items-center
+              justify-center
+              cursor-pointer
+              gap-12
 
-              gap-10
+              pl-24
+              pr-12
 
               lg:flex
             '
     >
-      {navItems.map((item) => (
+      {openingNavItems.map((item) => (
         <a
           key={item.id}
           onClick={() => onNavigate(item.id)}
           className='
                   group
-                  cursor-pointer
+
                   relative
 
-                  text-[0.64rem]
+                  text-[0.68rem]
                   font-black
                   uppercase
 
@@ -41,7 +39,7 @@ export function NavigationLinks({ onNavigate }: NavigationLinksProps) {
 
                   text-[#3d312c]/72
 
-                  transition-colors
+                  transition-all
                   duration-300
 
                   hover:text-[#7a3b45]
@@ -52,7 +50,7 @@ export function NavigationLinks({ onNavigate }: NavigationLinksProps) {
           <span
             className='
                     absolute
-                    bottom-[-0.85rem]
+                    bottom-[-0.7rem]
                     left-0
 
                     h-[2px]

@@ -3,7 +3,7 @@ import { Float, Reveal } from "@/components/motion";
 import { Scene } from "@/components/scene/scene";
 import { SceneContainer } from "@/components/scene/scene-container";
 
-import { OpeningNavigation } from "./opening-navigation";
+import { OpeningNavigation } from "./opening-navigation/opening-navigation";
 import { OpeningPoster } from "./opening-poster";
 import { OpeningCornerDecor } from "./opening-corner-decor/opening-corner-decor";
 
