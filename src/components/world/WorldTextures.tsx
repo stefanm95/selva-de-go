@@ -23,9 +23,21 @@ export function WorldTextures() {
           mix-blend-multiply
         '
         style={{
-          backgroundImage: "url('/images/light-leaks/model-light-leaks.jfif')",
+          backgroundImage: "url('/images/light-leaks/light.jfif')",
           backgroundSize: "cover",
-          backgroundPosition: "repeat",
+        }}
+      />
+
+      <div
+        className='
+          absolute
+          inset-0
+          opacity-[0.08]
+          mix-blend-multiply
+        '
+        style={{
+          backgroundImage: "url('/images/organic-paint/pexels-tiles.jpg')",
+          backgroundSize: "cover",
         }}
       />
 
