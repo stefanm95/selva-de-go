@@ -12,46 +12,69 @@ export default function AtlasPageLeft({
   pageNumber,
   alternateLayout = false,
 }: AtlasPageLeftProps) {
+  const spotlights = product.ingredientSpotlights.slice(0, 3);
+
   return (
     <FadeIn className={alternateLayout ? "lg:order-2" : ""}>
-      <div className='relative pt-8 lg:min-h-[42rem]'>
-        <div
-          className='stamp-text inline-block border border-[#2f221d]/45 bg-[#f4d15d]/70 px-4 py-2 text-[10px] text-[#2f221d]'
-          style={{ color: product.color }}
+      <div className='relative flex justify-center lg:justify-start'>
+        <div className='absolute bottom-2 left-1/2 h-[8rem] w-[24rem] -translate-x-1/2 rounded-full bg-[#2a1d18]/16 blur-[22px]' />
+
+        <article
+          className='relative h-[34rem] w-full max-w-[25rem] overflow-hidden rounded-[2rem] border-[4px] border-[#2f221d] shadow-[0_8px_0_#2f221d,0_30px_54px_rgba(35,18,12,0.18)]'
+          style={{
+            background: `linear-gradient(165deg, ${product.color} 0%, ${product.color}dd 42%, #d48a5a 100%)`,
+          }}
         >
-          Formula {String(pageNumber).padStart(2, "0")}
-        </div>
+          <div
+            className='absolute inset-0 opacity-[0.08] mix-blend-multiply'
+            style={{
+              backgroundImage: "url('/images/wrm-paper/carton.jfif')",
+              backgroundSize: "cover",
+            }}
+          />
+          <div
+            className='absolute inset-0 opacity-[0.06] mix-blend-overlay'
+            style={{
+              backgroundImage: "url('/images/canvas/canvas.jfif')",
+              backgroundSize: "cover",
+            }}
+          />
+          <img
+            src='/images/products/board/cartoonish-bag.png'
+            alt=''
+            aria-hidden
+            className='absolute inset-0 h-full w-full scale-105 object-cover opacity-35'
+          />
+          <div className='absolute inset-0 bg-gradient-to-t from-[#1d1512] via-[#1d1512]/20 to-black/10' />
+          <div className='absolute inset-[14px] rounded-[1.45rem] border border-white/12' />
 
-        <div className='mt-16 max-w-[40rem]'>
-          <p
-            className='stamp-text mb-8 text-[11px]'
-            style={{ color: `${product.color}CC` }}
-          >
-            {product.badge} / {product.highlight}
-          </p>
+          <div className='absolute left-7 right-7 top-7 z-10 flex items-center justify-between'>
+            <span className='stamp-text text-[10px] text-[#ffe5c8]'>
+              Formula {String(pageNumber).padStart(2, "0")}
+            </span>
+            <span className='h-3 w-3 rounded-full bg-[#ffd35e] shadow-[0_0_18px_rgba(255,211,94,0.55)]' />
+          </div>
 
-          <h2
-            className='text-[clamp(3.8rem,7vw,6.8rem)] uppercase leading-[0.82] tracking-[-0.04em]'
-            style={{ color: product.color }}
-          >
-            {product.name}
-          </h2>
+          <div className='absolute bottom-8 left-8 right-8 z-10'>
+            <p className='stamp-text text-[10px] text-[#ffe5c8]/85'>
+              {product.badge}
+            </p>
 
-          <p className='editorial-copy mt-14 max-w-xl text-[clamp(2rem,3.4vw,3rem)] leading-[1.08] text-[#2f221d]'>
-            {product.headline}
-          </p>
-        </div>
+            <h2 className='mt-4 text-[clamp(3.2rem,5vw,4.6rem)] uppercase leading-[0.8] tracking-[-0.06em] text-white'>
+              {product.name}
+            </h2>
 
-        <p className='mt-16 max-w-lg text-lg leading-9 text-[#2f221d]/75 md:ml-16'>
-          {product.story}
-        </p>
+            <div className='mt-6 h-px w-24 bg-white/20' />
 
-        <blockquote
-          className='editorial-copy mt-20 max-w-md border-l py-1 pl-7 text-2xl italic leading-snug text-[#2f221d]/85 md:ml-2'
-          style={{ borderColor: product.color }}
-        >
-          {product.quote}
-        </blockquote>
+            <p className='mt-5 text-sm font-medium text-white/82'>
+              {product.analytics.protein} protein / {product.highlight}
+            </p>
+
+            <p className='mt-4 text-[11px] uppercase tracking-[0.2em] text-white/70'>
+              {spotlights.map((item) => item.title).join(" / ")}
+            </p>
+          </div>
+        </article>
       </div>
     </FadeIn>
   );

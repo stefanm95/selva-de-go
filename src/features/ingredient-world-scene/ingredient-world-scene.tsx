@@ -5,7 +5,7 @@ import { products } from "@/data/products";
 import AtlasClosingNote from "./ingredient-world/atlas-closing-note/atlas-closing-note";
 import AtlasCover from "./ingredient-world/atlas-cover/atlas-cover";
 import AtlasPage from "./ingredient-world/atlas-page/atlas-page";
-import IngredientAtlasSpread from "./ingredient-world/atlas-spread/ingredient-atlas-spread";
+// import IngredientAtlasSpread from "./ingredient-world/atlas-spread/ingredient-atlas-spread";
 
 export function IngredientWorldScene() {
   return (
@@ -22,7 +22,7 @@ export function IngredientWorldScene() {
           />
         ))}
 
-        <IngredientAtlasSpread />
+        {/* <IngredientAtlasSpread /> */}
         <AtlasClosingNote />
       </SceneContainer>
     </Scene>
