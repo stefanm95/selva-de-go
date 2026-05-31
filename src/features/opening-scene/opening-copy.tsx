@@ -8,7 +8,7 @@ export function OpeningCopy() {
             z-20
 left-4
             grid
-            min-h-[82vh]
+            min-h-[42vh]
 
             lg:grid-cols-[1.1fr_0.9fr]
 
@@ -112,7 +112,7 @@ left-4
           ))}
         </div>
 
-        <div className='mt-16 relative top-4'>
+        <div className='mt-16 relative top-20'>
           <OpeningActions />
         </div>
       </div>
@@ -121,24 +121,24 @@ left-4
 
       <div
         className='
-              relative
+    relative
+    right-[-8%]
 
-              flex
-              items-center
-              justify-center
-            '
+    flex
+    items-center
+    justify-center
+  '
       >
         <img
           src='/images/products/board/cartoonish-bag.png'
           alt='Wild Game & Salmon'
           className='
-                w-[30rem]
-                max-w-full
+      w-[clamp(18rem,38vw,42rem)]
 
-                rotate-[4deg]
+      rotate-[4deg]
 
-                drop-shadow-[0_40px_60px_rgba(0,0,0,0.35)]
-              '
+      drop-shadow-[0_40px_60px_rgba(0,0,0,0.35)]
+    '
         />
       </div>
     </div>

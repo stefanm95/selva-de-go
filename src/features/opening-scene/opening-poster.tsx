@@ -8,15 +8,24 @@ export function OpeningPoster() {
       className='
         relative
         w-full
-        max-w-[1800px]
+        max-w-[1280px]
+ top-5
         mx-auto
       '
     >
       <div
         className='
           relative
+    z-20
 
-          min-h-[82vh]
+    grid
+    min-h-[82vh]
+
+
+    items-center
+
+    px-12
+    lg:px-20
 
           overflow-hidden
 
@@ -43,7 +52,7 @@ export function OpeningPoster() {
             h-[30rem]
             w-[30rem]
 
-            rounded-full
+            rounded-[1rem]
 
             bg-[#f0c15a]/15
 

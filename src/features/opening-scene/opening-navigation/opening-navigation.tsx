@@ -46,12 +46,12 @@ export function OpeningNavigation() {
           className='
             mx-auto
             flex
-            min-h-[92px]
+          
             max-w-[1680px]
             items-center
             justify-between
             translate-x-[3rem]
-            translate-y-[1rem]
+            
             px-6
             md:px-10
             xl:px-16

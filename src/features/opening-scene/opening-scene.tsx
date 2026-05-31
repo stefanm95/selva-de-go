@@ -16,28 +16,23 @@ export function OpeningScene() {
       <Float intensity={12}>
         <SceneContainer
           tone='warm'
-          density='light'
-          depth='near'
+          density='medium'
+          depth='far'
           className='relative min-h-screen'
         >
           <Reveal
             className='
-            relative
+               relative
 
-            flex
-            min-h-screen
+    flex
+    min-h-screen
 
-            flex-col
-            lg:flex-row
-            
-            items-center
-            justify-center
-            lg:justify-end
-            
-            px-4
-            sm:px-6
-            md:px-8
-            lg:px-0
+    items-center
+    justify-center
+
+    px-4
+    sm:px-6
+    md:px-8
           '
           >
             <OpeningPoster />
