@@ -1,16 +1,19 @@
+import { products } from "@/data/products";
+
 import { Scene } from "@/components/scene/scene";
 import { SceneContainer } from "@/components/scene/scene-container";
 
-import { FreezeDryingHero } from "./freeze-drying-hero";
-import { ExpeditionTimeline } from "./expedition-timeline";
-import { CertificationCard } from "./certification-card";
-import { IntegrityStrip } from "./integrity-strip";
+import { ResearchIntro } from "./research-intro";
+import { ExpeditionBoard } from "./expedition-board/expedition-board";
 
 export function InstinctEnergyScene() {
+  const recipe = products.find((product) => product.id === "wild-game-salmon");
+
+  if (!recipe) return null;
+
   return (
     <Scene id='instinct-energy' className='relative overflow-hidden py-32'>
       <SceneContainer tone='cool' density='light' depth='medium'>
-        {/* archive stamps */}
         <img
           src='/images/instinct/one.png'
           alt=''
@@ -18,45 +21,19 @@ export function InstinctEnergyScene() {
           className='
             pointer-events-none
             absolute
-            right-[6rem]
-            top-0
-            w-[26rem]
+            right-[4rem]
+            top-[4rem]
+            w-[24rem]
             rotate-[12deg]
             opacity-[0.05]
           '
         />
 
-        <img
-          src='/images/instinct/three.png'
-          alt=''
-          aria-hidden
-          className='
-            pointer-events-none
-            absolute
-            right-24
-            bottom-24
-            w-[18rem]
-            -rotate-[8deg]
-            opacity-[0.05]
-          '
-        />
+        <ResearchIntro />
 
-        <FreezeDryingHero />
-
-        <div
-          className='
-            mt-16
-            grid
-            gap-16
-            xl:grid-cols-[1fr_340px]
-          '
-        >
-          <ExpeditionTimeline />
-
-          {/* <CertificationCard /> */}
+        <div className='mt-20'>
+          <ExpeditionBoard recipes={products} />
         </div>
-        {/* 
-        <IntegrityStrip /> */}
       </SceneContainer>
     </Scene>
   );
