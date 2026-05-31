@@ -2,6 +2,8 @@ import { createContext, useContext } from "react";
 
 type LenisContextType = {
   scrollTo: (target: string | HTMLElement) => void;
+  stop: () => void;
+  start: () => void;
 };
 
 export const LenisContext = createContext<LenisContextType | null>(null);

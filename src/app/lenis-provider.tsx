@@ -36,8 +36,16 @@ export function LenisProvider({ children }: { children: ReactNode }) {
     lenisRef.current?.scrollTo(target);
   };
 
+  const stop = () => {
+    lenisRef.current?.stop();
+  };
+
+  const start = () => {
+    lenisRef.current?.start();
+  };
+
   return (
-    <LenisContext.Provider value={{ scrollTo }}>
+    <LenisContext.Provider value={{ scrollTo, stop, start }}>
       {children}
     </LenisContext.Provider>
   );

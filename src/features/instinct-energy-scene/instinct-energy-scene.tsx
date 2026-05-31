@@ -3,14 +3,9 @@ import { products } from "@/data/products";
 import { Scene } from "@/components/scene/scene";
 import { SceneContainer } from "@/components/scene/scene-container";
 
-import { ResearchIntro } from "./research-intro";
 import { ExpeditionBoard } from "./expedition-board/expedition-board";
 
 export function InstinctEnergyScene() {
-  const recipe = products.find((product) => product.id === "wild-game-salmon");
-
-  if (!recipe) return null;
-
   return (
     <Scene id='instinct-energy' className='relative overflow-hidden py-32'>
       <SceneContainer tone='cool' density='light' depth='medium'>
@@ -29,11 +24,7 @@ export function InstinctEnergyScene() {
           '
         />
 
-        <ResearchIntro />
-
-        <div className='mt-20'>
-          <ExpeditionBoard recipes={products} />
-        </div>
+        <ExpeditionBoard recipes={products} />
       </SceneContainer>
     </Scene>
   );

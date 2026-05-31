@@ -75,7 +75,7 @@ export function FoodBagTrigger({ open, onToggle }: FoodBagTriggerProps) {
           />
 
           <motion.img
-            src='/images/3d/selvadego-food-bag.png'
+            src='/images/products/board/cartoonish-bag.png'
             alt='Navigation'
             draggable={false}
             animate={{

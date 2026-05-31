@@ -1,4 +1,4 @@
-export function BoardAtmosphere() {
+export function ExpeditionAtmosphere() {
   return (
     <>
       {/* WOOD BASE */}
