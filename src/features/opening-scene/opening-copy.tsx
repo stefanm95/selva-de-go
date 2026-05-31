@@ -1,74 +1,145 @@
+import { OpeningActions } from "./opening-actions";
+
 export function OpeningCopy() {
   return (
-    <div className='py-4'>
-      <p
-        className='
-          font-accent
-          text-[9px]
-          sm:text-[10px]
-          md:text-[11px]
-          
-          uppercase
-          tracking-[0.45em]
-          text-[#7a3b45]/75
-        '
-      >
-        Freeze-Dried BARF Nutrition
-      </p>
+    <div
+      className='
+            relative
+            z-20
+left-4
+            grid
+            min-h-[82vh]
 
-      <h1
-        className='
-          mt-4
-          sm:mt-6
+            lg:grid-cols-[1.1fr_0.9fr]
 
-          font-poster
-          uppercase
+            items-center
 
-          leading-[0.82]
+            px-12
+            lg:px-20
+          '
+    >
+      {/* LEFT */}
 
-          text-[#241814]
+      <div className='max-w-[900px]'>
+        <p
+          className='
+                mb-8
 
-          text-[clamp(2.5rem,6vw,8rem)]
-        '
-      >
-        THE WILD
-        <br />
-        PRESERVED.
-      </h1>
+                text-[11px]
+                uppercase
+
+                tracking-[0.45em]
+
+                text-[#8d2036]
+              '
+        >
+          Wild Nutrition Supply
+        </p>
+
+        <h1
+          className='
+                font-display
+
+                text-7xl
+                lg:text-[9rem]
+
+                leading-[0.82]
+
+                text-[#6b1f2b]
+              '
+        >
+          Food For
+          <br />
+          Wild Instincts
+        </h1>
+
+        <p
+          className='
+                mt-10
+
+                max-w-[720px]
+
+                text-xl
+
+                leading-relaxed
+
+                text-[#4f1823]/75
+              '
+        >
+          Built from real ingredients, inspired by ancestral feeding patterns
+          and preserved through gentle freeze-drying for modern companions.
+        </p>
+
+        <div
+          className='
+                mt-12
+
+                flex
+                flex-wrap
+                gap-4
+              '
+        >
+          {[
+            "Novel Proteins",
+            "Omega Rich",
+            "Human Grade",
+            "No Artificial Additives",
+          ].map((tag) => (
+            <div
+              key={tag}
+              className='
+                    border-[3px]
+                    border-[#2f221d]
+
+                    bg-[#f0c15a]
+
+                    px-5
+                    py-3
+
+                    shadow-[3px_3px_0_#2f221d]
+
+                    text-[11px]
+                    font-black
+                    uppercase
+
+                    tracking-[0.18em]
+
+                    text-[#2f221d]
+                  '
+            >
+              {tag}
+            </div>
+          ))}
+        </div>
+
+        <div className='mt-16 relative top-4'>
+          <OpeningActions />
+        </div>
+      </div>
+
+      {/* RIGHT */}
 
       <div
         className='
-          mt-6
-          sm:mt-10
+              relative
 
-          max-w-full
-          lg:max-w-[540px]
-
-          space-y-3
-          sm:space-y-5
-        '
+              flex
+              items-center
+              justify-center
+            '
       >
-        <p
+        <img
+          src='/images/products/board/cartoonish-bag.png'
+          alt='Wild Game & Salmon'
           className='
-            text-[clamp(1rem,3.5vw,1.55rem)]
-            leading-[1.35]
+                w-[30rem]
+                max-w-full
 
-            text-[#3d332d]
-          '
-        >
-          Freeze-dried nutrition inspired by ancestral feeding.
-        </p>
+                rotate-[4deg]
 
-        <p
-          className='
-            text-[clamp(0.95rem,2.5vw,1.25rem)]
-            leading-[1.55]
-
-            text-[#3d332d]/80
-          '
-        >
-          Built around instinct. Crafted for modern dogs.
-        </p>
+                drop-shadow-[0_40px_60px_rgba(0,0,0,0.35)]
+              '
+        />
       </div>
     </div>
   );

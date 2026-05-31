@@ -1,244 +1,159 @@
-import { OpeningActions } from "./opening-actions";
+// import { OpeningActions } from "./opening-actions";
 import { OpeningCopy } from "./opening-copy";
 import { OpeningPaperTexture } from "./opening-paper-texture";
 
 export function OpeningPoster() {
   return (
-    <div
+    <section
       className='
         relative
-
         w-full
-        max-w-[1450px]
+        max-w-[1800px]
+        mx-auto
       '
     >
       <div
         className='
           relative
 
+          min-h-[82vh]
+
           overflow-hidden
 
-          rounded-[14px]
+          rounded-[2.5rem]
 
-          border
-          border-black/5
+          border-[4px]
+          border-[#2f221d]
 
-          bg-[#efe3d2]/95
+          bg-[#efe3cf]
 
-          shadow-[0_60px_140px_rgba(0,0,0,0.12)]
-
-          before:absolute
-          before:inset-0
-          before:bg-gradient-to-br
-          before:from-white/20
-          before:to-transparent
-          before:pointer-events-none
+          shadow-[0_8px_0_#2f221d,0_40px_70px_rgba(0,0,0,0.18)]
         '
       >
         <OpeningPaperTexture />
 
-        {/* HUGE BACKGROUND WORD - Hidden on mobile */}
+        {/* atmosphere */}
+
         <div
           className='
-            hidden
-            lg:block
-            
             absolute
-            right-[-40px]
-            top-[-40px]
+            left-[5%]
+            top-[10%]
 
-            z-10
+            h-[30rem]
+            w-[30rem]
 
-            font-poster
+            rounded-full
 
-            text-[22rem]
-            leading-none
+            bg-[#f0c15a]/15
+
+            blur-[120px]
+          '
+        />
+
+        <div
+          className='
+            absolute
+            right-[5%]
+            bottom-[10%]
+
+            h-[26rem]
+            w-[26rem]
+
+            rounded-full
+
+            bg-[#556b4e]/10
+
+            blur-[120px]
+          '
+        />
+
+        {/* watermark */}
+
+        <div
+          className='
+            pointer-events-none
+
+            absolute
+            inset-0
+
+            flex
+            items-center
+            justify-center
+
+            font-display
+
+            text-[24rem]
 
             uppercase
 
-            text-[#7a3b45]/[0.035]
+            text-[#6b1f2b]/[0.03]
 
             select-none
           '
         >
-          03
+          SELVA
         </div>
 
-        {/* FIELD NOTES LABEL - Hidden on mobile */}
+        {/* stickers */}
+
         <div
           className='
-            hidden
-            lg:block
-            
             absolute
-            right-20
-            top-16
+            left-[4rem]
+            top-[3rem]
 
-            z-20
-            text-right
+            rotate-[-6deg]
+
+            border-[3px]
+            border-[#2f221d]
+
+            bg-[#f0c15a]
+
+            px-5
+            py-3
+
+            shadow-[4px_4px_0_#2f221d]
+
+            text-[10px]
+            font-black
+            uppercase
+            tracking-[0.2em]
           '
         >
-          <p
-            className='
-              text-[11px]
-              uppercase
-              tracking-[0.45em]
-
-              text-[#7a3b45]/70
-            '
-          >
-            Field Notes
-          </p>
-
-          <p
-            className='
-              mt-3
-
-              font-poster
-
-              text-[5rem]
-              leading-none
-
-              text-[#2a1d18]
-            '
-          >
-            03
-          </p>
+          Freeze Dried
         </div>
 
-        {/* MAIN GRID - Responsive layout */}
         <div
           className='
-            relative
-            z-20
+            absolute
+            right-[8rem]
+            top-[5rem]
 
-            grid
+            rotate-[8deg]
 
-            min-h-screen
-            lg:min-h-[74vh]
+            border-[3px]
+            border-[#2f221d]
 
-            grid-cols-1
-            lg:grid-cols-[620px_1fr]
+            bg-[#f0c15a]
 
-            gap-8
-            lg:gap-0
+            px-5
+            py-3
 
-            px-4
-            sm:px-6
-            md:px-8
-            lg:px-0
+            shadow-[4px_4px_0_#2f221d]
 
-            py-12
-            lg:py-0
+            text-[10px]
+            font-black
+            uppercase
+            tracking-[0.2em]
           '
         >
-          {/* LEFT */}
-          <div
-            className='
-              flex
-              flex-col
-             
-            justify-center
-            relative
-            lg:left-4
-            '
-          >
-            <OpeningCopy />
-
-            <div className='mt-8 lg:mt-14'>
-              <OpeningActions />
-            </div>
-          </div>
-
-          {/* RIGHT */}
-          <div
-            className='
-              relative
-              flex
-              flex-col
-              lg:flex-col
-              items-start
-              lg:items-end
-              justify-start
-              lg:justify-end
-              lg:right-2
-              lg:p-16
-
-              order-2
-              lg:order-none
-            '
-          >
-            <div
-              className='
-                w-full
-                max-w-none
-                lg:max-w-[320px]
-                
-                text-left
-                lg:text-right
-              '
-            >
-              <p
-                className='
-                  text-[11px]
-                  uppercase
-                  tracking-[0.4em]
-
-                  text-[#7a3b45]/70
-                '
-              >
-                Recipe No. 01
-              </p>
-
-              <div
-                className='
-                  mt-6
-
-                  space-y-2
-
-                  text-[1rem]
-
-                  uppercase
-                  tracking-[0.16em]
-
-                  text-[#2a1d18]/75
-                '
-              >
-                <p>Beef</p>
-                <p>Heart</p>
-                <p>Liver</p>
-                <p>Green Tripe</p>
-                <p>Salmon Oil</p>
-              </div>
-
-              <div
-                className='
-                  mt-8
-
-                  h-px
-                  w-full
-
-                  bg-[#7a3b45]/15
-                '
-              />
-
-              <p
-                className='
-                  mt-8
-
-                  text-[1rem]
-                  leading-relaxed
-
-                  text-[#3d332d]/70
-                '
-              >
-                Inspired by the natural diet of working canines and preserved
-                through gentle freeze-drying.
-              </p>
-            </div>
-          </div>
+          Human Grade
         </div>
+
+        {/* content */}
+        <OpeningCopy />
       </div>
-    </div>
+    </section>
   );
 }
