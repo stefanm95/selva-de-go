@@ -8,22 +8,29 @@ export function OpeningActions() {
       className='
         relative
         z-30
-        mt-14
+        mt-6
+        sm:mt-8
+        lg:mt-14
+        
         flex
+        flex-col
+        sm:flex-row
         flex-wrap
-        items-center
+        items-stretch
+        sm:items-center
 
-        gap-5
+        gap-3
+        sm:gap-5
       '
     >
       <FadeIn delay={0.42}>
-        <Button variant='primary' size='lg'>
+        <Button variant='primary' size='lg' className='w-full sm:w-auto'>
           Explore Recipes
         </Button>
       </FadeIn>
 
       <FadeIn delay={0.5}>
-        <Button variant='secondary' size='lg'>
+        <Button variant='secondary' size='lg' className='w-full sm:w-auto'>
           Our Philosophy
         </Button>
       </FadeIn>

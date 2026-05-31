@@ -2,6 +2,9 @@ export function BotanicalSketch() {
   return (
     <div
       className='
+        hidden
+        lg:block
+        
         absolute
 
         left-[6%]

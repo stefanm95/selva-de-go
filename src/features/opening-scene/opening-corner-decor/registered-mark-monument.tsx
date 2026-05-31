@@ -2,6 +2,9 @@ export function RegisteredMarkMonument() {
   return (
     <div
       className='
+        hidden
+        lg:block
+        
         absolute
 
         bottom-[2rem]

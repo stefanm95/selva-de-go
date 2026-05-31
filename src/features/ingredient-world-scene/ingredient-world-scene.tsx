@@ -1,28 +1,30 @@
 import { Scene } from "@/components/scene/scene";
 import { SceneContainer } from "@/components/scene/scene-container";
+import { products } from "@/data/products";
 
-import { IngredientHero } from "./ingredient-hero";
-import { FormulaArchive } from "./formula-archive";
-import { ProteinCollection } from "./protein-collection";
-import { GardenCollection } from "./garden-collection";
-import { BotanicalCollection } from "./botanical-collection";
-import { ExpeditionNote } from "./expedition-note";
+import AtlasCover from "./ingredient-atlas/atlas-cover";
+import AtlasPage from "./ingredient-atlas/atlas-page";
+import AtlasClosingNote from "./ingredient-atlas/atlas-closing-note";
 
 export function IngredientWorldScene() {
   return (
-    <Scene id='ingredient-world' className='relative overflow-visible py-36'>
+    <Scene id='ingredient-world' className='relative overflow-visible'>
       <SceneContainer tone='warm' density='light' depth='medium'>
-        <IngredientHero />
+        {/* Atlas Cover */}
+        <AtlasCover />
 
-        <FormulaArchive />
+        {/* Atlas Pages - with alternating layouts */}
+        {products.map((product, index) => (
+          <AtlasPage
+            key={product.id}
+            product={product}
+            pageNumber={index + 1}
+            alternateLayout={index % 2 === 1}
+          />
+        ))}
 
-        <ProteinCollection />
-
-        <GardenCollection />
-
-        <BotanicalCollection />
-
-        <ExpeditionNote />
+        {/* Atlas Closing Note */}
+        <AtlasClosingNote />
       </SceneContainer>
     </Scene>
   );

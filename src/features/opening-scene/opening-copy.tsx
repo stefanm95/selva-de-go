@@ -4,7 +4,10 @@ export function OpeningCopy() {
       <p
         className='
           font-accent
-          text-[11px]
+          text-[9px]
+          sm:text-[10px]
+          md:text-[11px]
+          
           uppercase
           tracking-[0.45em]
           text-[#7a3b45]/75
@@ -15,7 +18,8 @@ export function OpeningCopy() {
 
       <h1
         className='
-          mt-6
+          mt-4
+          sm:mt-6
 
           font-poster
           uppercase
@@ -24,7 +28,7 @@ export function OpeningCopy() {
 
           text-[#241814]
 
-          text-[clamp(5rem,8vw,8rem)]
+          text-[clamp(2.5rem,6vw,8rem)]
         '
       >
         THE WILD
@@ -34,16 +38,19 @@ export function OpeningCopy() {
 
       <div
         className='
-          mt-10
+          mt-6
+          sm:mt-10
 
-          max-w-[540px]
+          max-w-full
+          lg:max-w-[540px]
 
-          space-y-5
+          space-y-3
+          sm:space-y-5
         '
       >
         <p
           className='
-            text-[1.55rem]
+            text-[clamp(1rem,3.5vw,1.55rem)]
             leading-[1.35]
 
             text-[#3d332d]
@@ -54,7 +61,7 @@ export function OpeningCopy() {
 
         <p
           className='
-            text-[1.25rem]
+            text-[clamp(0.95rem,2.5vw,1.25rem)]
             leading-[1.55]
 
             text-[#3d332d]/80

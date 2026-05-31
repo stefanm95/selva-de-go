@@ -31,6 +31,9 @@ export function OpeningNavigation() {
           ease: [0.22, 1, 0.36, 1],
         }}
         className='
+          hidden
+          lg:block
+          
           absolute
           left-0
           top-0

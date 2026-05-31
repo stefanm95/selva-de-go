@@ -37,9 +37,12 @@ export function OpeningPoster() {
       >
         <OpeningPaperTexture />
 
-        {/* HUGE BACKGROUND WORD */}
+        {/* HUGE BACKGROUND WORD - Hidden on mobile */}
         <div
           className='
+            hidden
+            lg:block
+            
             absolute
             right-[-40px]
             top-[-40px]
@@ -61,8 +64,12 @@ export function OpeningPoster() {
           03
         </div>
 
+        {/* FIELD NOTES LABEL - Hidden on mobile */}
         <div
           className='
+            hidden
+            lg:block
+            
             absolute
             right-20
             top-16
@@ -99,6 +106,7 @@ export function OpeningPoster() {
           </p>
         </div>
 
+        {/* MAIN GRID - Responsive layout */}
         <div
           className='
             relative
@@ -106,9 +114,22 @@ export function OpeningPoster() {
 
             grid
 
-            min-h-[74vh]
+            min-h-screen
+            lg:min-h-[74vh]
 
-            grid-cols-[620px_1fr]
+            grid-cols-1
+            lg:grid-cols-[620px_1fr]
+
+            gap-8
+            lg:gap-0
+
+            px-4
+            sm:px-6
+            md:px-8
+            lg:px-0
+
+            py-12
+            lg:py-0
           '
         >
           {/* LEFT */}
@@ -118,13 +139,13 @@ export function OpeningPoster() {
               flex-col
              
             justify-center
-           relative
-           left-4
+            relative
+            lg:left-4
             '
           >
             <OpeningCopy />
 
-            <div className='mt-14'>
+            <div className='mt-8 lg:mt-14'>
               <OpeningActions />
             </div>
           </div>
@@ -134,17 +155,27 @@ export function OpeningPoster() {
             className='
               relative
               flex
-              items-end
-              justify-end
-              right-2
-              p-16
+              flex-col
+              lg:flex-col
+              items-start
+              lg:items-end
+              justify-start
+              lg:justify-end
+              lg:right-2
+              lg:p-16
+
+              order-2
+              lg:order-none
             '
           >
             <div
               className='
-                max-w-[320px]
+                w-full
+                max-w-none
+                lg:max-w-[320px]
                 
-                text-right
+                text-left
+                lg:text-right
               '
             >
               <p

@@ -9,6 +9,9 @@ export function PawTrail() {
   return (
     <div
       className='
+        hidden
+        lg:block
+        
         absolute
 
         bottom-[10%]

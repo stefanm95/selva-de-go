@@ -27,8 +27,17 @@ export function OpeningScene() {
             flex
             min-h-screen
 
+            flex-col
+            lg:flex-row
+            
             items-center
-            justify-end
+            justify-center
+            lg:justify-end
+            
+            px-4
+            sm:px-6
+            md:px-8
+            lg:px-0
           '
           >
             <OpeningPoster />
