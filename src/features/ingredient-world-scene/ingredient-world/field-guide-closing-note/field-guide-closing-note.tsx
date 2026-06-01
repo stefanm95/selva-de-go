@@ -1,6 +1,5 @@
 import { FadeIn } from "@/components/motion/fade-in";
-import { Float } from "@/components/motion";
-import { stampAssets } from "../../../../lib/world-assets";
+import { stampAssets } from "@/lib/world-assets";
 
 export default function FieldGuideClosingNote() {
   return (
@@ -90,9 +89,8 @@ export default function FieldGuideClosingNote() {
               shadow-[4px_4px_0_#2f221d]
             '
           >
-            <Float intensity={6}>
-              <p
-                className='
+            <p
+              className='
                   text-[10px]
                   font-black
                   uppercase
@@ -100,10 +98,9 @@ export default function FieldGuideClosingNote() {
 
                   text-[#2f221d]
                 '
-              >
-                End Of The Expedition
-              </p>
-            </Float>
+            >
+              End Of The Expedition
+            </p>
           </div>
         </FadeIn>
 
@@ -158,10 +155,9 @@ export default function FieldGuideClosingNote() {
           </p>
         </FadeIn>
 
-        <Float intensity={6}>
-          <FadeIn delay={0.4}>
-            <div
-              className='
+        <FadeIn delay={0.4}>
+          <div
+            className='
                 mt-16
 
                 flex
@@ -171,54 +167,54 @@ export default function FieldGuideClosingNote() {
 
                 gap-6
               '
+          >
+            {/* Recipes */}
+
+            <div
+              className='
+                  -translate-y-6
+                  rotate-[4deg]
+
+                  border-[4px]
+                  border-[#2f221d]
+
+                  bg-[#f0c15a]
+
+                  px-8
+                  py-6
+
+                  shadow-[0_8px_0_#2f221d]
+                '
             >
-              {/* Recipes */}
+              <div
+                className='
+                  text-[clamp(2.8rem,6vw,5rem)]
+                  leading-none
+
+                  text-[#556b4e]
+                '
+              >
+                12+
+              </div>
 
               <div
                 className='
-    -translate-y-6
-    rotate-[4deg]
+                  mt-2
 
-    border-[4px]
-    border-[#2f221d]
+                  text-[11px]
+                  font-black
+                  uppercase
 
-    bg-[#f0c15a]
+                  tracking-[0.25em]
 
-    px-8
-    py-6
-
-    shadow-[0_8px_0_#2f221d]
-  '
+                  text-[#556b4e]/70
+                '
               >
-                <div
-                  className='
-      text-[clamp(2.8rem,6vw,5rem)]
-      leading-none
+                INGREDIENTS
+              </div>
 
-      text-[#556b4e]
-    '
-                >
-                  12+
-                </div>
-
-                <div
-                  className='
-      mt-2
-
-      text-[11px]
-      font-black
-      uppercase
-
-      tracking-[0.25em]
-
-      text-[#556b4e]/70
-    '
-                >
-                  INGREDIENTS
-                </div>
-
-                <div
-                  className='
+              <div
+                className='
       mt-3
 
       text-xs
@@ -228,15 +224,15 @@ export default function FieldGuideClosingNote() {
 
       text-[#3f3128]/60
     '
-                >
-                  Wild Discoveries
-                </div>
+              >
+                Wild Discoveries
               </div>
+            </div>
 
-              {/* Mission */}
+            {/* Mission */}
 
-              <div
-                className='
+            <div
+              className='
     translate-y-4
     rotate-[-2deg]
 
@@ -250,20 +246,20 @@ export default function FieldGuideClosingNote() {
 
     shadow-[0_8px_0_#2f221d]
   '
-              >
-                <div
-                  className='
+            >
+              <div
+                className='
       text-[clamp(2.5rem,5vw,4.5rem)]
       leading-none
 
       text-[#efe3cf]
     '
-                >
-                  WILD
-                </div>
+              >
+                WILD
+              </div>
 
-                <div
-                  className='
+              <div
+                className='
       mt-2
 
       text-[11px]
@@ -274,12 +270,12 @@ export default function FieldGuideClosingNote() {
 
       text-[#efe3cf]/80
     '
-                >
-                  FEED THE INSTINCT
-                </div>
+              >
+                FEED THE INSTINCT
+              </div>
 
-                <div
-                  className='
+              <div
+                className='
       mt-3
 
       text-xs
@@ -289,15 +285,15 @@ export default function FieldGuideClosingNote() {
 
       text-[#efe3cf]/60
     '
-                >
-                  Selva Philosophy
-                </div>
+              >
+                Selva Philosophy
               </div>
+            </div>
 
-              {/* Guide */}
+            {/* Guide */}
 
-              <div
-                className='
+            <div
+              className='
                   translate-y-4
                   rotate-[-2deg]
 
@@ -311,20 +307,20 @@ export default function FieldGuideClosingNote() {
 
                   shadow-[0_8px_0_#2f221d]
                 '
-              >
-                <div
-                  className='
+            >
+              <div
+                className='
                     text-[clamp(3rem,6vw,5rem)]
                     leading-none
 
                     text-[#556b4e]
                   '
-                >
-                  01
-                </div>
+              >
+                01
+              </div>
 
-                <div
-                  className='
+              <div
+                className='
                     mt-2
 
                     text-[11px]
@@ -335,13 +331,12 @@ export default function FieldGuideClosingNote() {
 
                     text-[#556b4e]/70
                   '
-                >
-                  FIELD GUIDE
-                </div>
+              >
+                FIELD GUIDE
               </div>
             </div>
-          </FadeIn>
-        </Float>
+          </div>
+        </FadeIn>
       </div>
     </section>
   );
