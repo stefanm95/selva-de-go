@@ -1,7 +1,7 @@
 import { FadeIn } from "@/components/motion";
 import type { Product } from "@/types/product";
 
-import { dividerAssets, stampAssets } from "../world-assets";
+import { dividerAssets, stampAssets } from "../../../../lib/world-assets";
 import FieldGuideActions from "./field-guide-actions";
 
 type FieldGuidePageRightProps = {

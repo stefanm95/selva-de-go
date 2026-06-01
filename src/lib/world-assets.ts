@@ -5,21 +5,22 @@ export const casingAssets = {
 };
 
 export const dividerAssets = {
-  small: "/images/world/elements/world-dividers/small-divider.PNG",
-  vintage: "/images/world/elements/world-dividers/vintage-divider.PNG",
-  berries: "/images/world/elements/world-dividers/berries.PNG",
-  fish: "/images/world/elements/world-dividers/fish.PNG",
-  redBerries: "/images/world/elements/world-dividers/red-berries.PNG",
-  redRoundBerries: "/images/world/elements/world-dividers/red-round-berries.PNG",
+  small: "/images/world/elements/world-dividers/small-divider.png",
+  vintage: "/images/world/elements/world-dividers/vintage-divider.png",
+  berries: "/images/world/elements/world-dividers/berries.png",
+  fish: "/images/world/elements/world-dividers/fish.png",
+  redBerries: "/images/world/elements/world-dividers/red-berries.png",
+  redRoundBerries:
+    "/images/world/elements/world-dividers/red-round-berries.png",
 };
 
 export const stampAssets = {
   guide: "/images/world/elements/new-logo.png",
-  sun: "/images/world/elements/world-stamps/sun.PNG",
+  sun: "/images/world/elements/world-stamps/sun.png",
   label: "/images/world/elements/world-stamps/sticket.PNG",
   mountainRoad: "/images/world/elements/world-stamps/mountains-road.PNG",
   squareLeafs: "/images/world/elements/world-stamps/square-leafs.PNG",
-  paw: "/images/world/elements/world-stamps/paw.PNG",
+  paw: "/images/world/elements/world-stamps/paw.png",
   pawPop: "/images/world/elements/world-stamps/paw-pop.PNG",
   seeds: "/images/world/elements/world-stamps/seeds.PNG",
   fourSeeds: "/images/world/elements/world-stamps/4-seeds.PNG",

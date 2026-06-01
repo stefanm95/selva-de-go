@@ -1,5 +1,5 @@
 import { FadeIn } from "@/components/motion/fade-in";
-import { stampAssets } from "../world-assets";
+import { stampAssets } from "../../../../lib/world-assets";
 import { Float } from "@/components/motion";
 
 export default function FieldGuideCover() {
@@ -27,31 +27,7 @@ export default function FieldGuideCover() {
         alt=''
         className='absolute top-[8%] left-1/2 w-36 -translate-x-1/2 rotate-[-6deg] opacity-25 md:w-48'
       />
-      <img
-        src={stampAssets.berryLeafes}
-        alt=''
-        className='absolute right-[8%] top-[18%] w-28 rotate-[12deg] opacity-20 md:w-40'
-      />
-      <img
-        src={stampAssets.flower}
-        alt=''
-        className='absolute left-[8%] top-[22%] w-24 rotate-[-14deg] opacity-20 md:w-36'
-      />
-      <img
-        src={stampAssets.seeds}
-        alt=''
-        className='absolute bottom-[18%] right-[12%] w-24 rotate-[10deg] opacity-15 md:w-32'
-      />
-      <img
-        src={stampAssets.leafBurnt}
-        alt=''
-        className='absolute left-[18%] bottom-[18%] w-20 rotate-[18deg] opacity-20 md:w-28'
-      />
-      <img
-        src={stampAssets.doubleFlower}
-        alt=''
-        className='absolute right-[18%] bottom-[22%] w-24 rotate-[-12deg] opacity-15 md:w-36'
-      />
+
       {/* Decorative assets */}
       {/* MAIN CONTENT */}
 

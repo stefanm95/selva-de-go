@@ -1,4 +1,4 @@
-import { stampAssets } from "../world-assets";
+import { stampAssets } from "../../../../lib/world-assets";
 
 export default function FieldGuidePageBackground() {
   return (

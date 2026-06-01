@@ -1,8 +1,6 @@
 import { FadeIn } from "@/components/motion";
 import type { Product } from "@/types/product";
 
-import { dividerAssets } from "../world-assets";
-
 type FieldGuidePageLeftProps = {
   product: Product;
   pageNumber: number;
@@ -87,33 +85,6 @@ export default function FieldGuidePageLeft({
           >
             {product.name}
           </h2>
-
-          <img
-            src={dividerAssets.vintage}
-            alt=''
-            className='
-              mx-auto
-              mt-5
-              w-44
-              opacity-60
-            '
-          />
-
-          <p
-            className='
-              mx-auto
-              mt-6
-
-              max-w-md
-
-              text-lg
-              leading-relaxed
-
-              text-[#3f3128]/80
-            '
-          >
-            {product.highlight}
-          </p>
         </div>
       </article>
     </FadeIn>
