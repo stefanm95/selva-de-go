@@ -2,9 +2,9 @@ import { Scene } from "@/components/scene/scene";
 import { SceneContainer } from "@/components/scene/scene-container";
 import { products } from "@/data/products";
 
-import AtlasClosingNote from "./ingredient-world/atlas-closing-note/atlas-closing-note";
-import AtlasCover from "./ingredient-world/atlas-cover/atlas-cover";
-import AtlasPage from "./ingredient-world/atlas-page/atlas-page";
+import AtlasClosingNote from "./ingredient-world/field-guide-closing-note/field-guide-closing-note";
+import AtlasCover from "./ingredient-world/field-guide-cover/field-guide-cover";
+import AtlasPage from "./ingredient-world/field-guide-page/field-guide-page";
 // import IngredientAtlasSpread from "./ingredient-world/atlas-spread/ingredient-atlas-spread";
 
 export function IngredientWorldScene() {
