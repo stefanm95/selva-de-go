@@ -92,21 +92,21 @@ export default function FieldGuideActions({ product }: FieldGuideActionsProps) {
                     text-[#2f221d]
                   '
                 >
-                  Explore This Recipe →
+                  Explore on Amazon →
                 </div>
               </div>
             </motion.a>
           </Magnetic>
         </Float>
 
-        <div className='flex flex-wrap gap-8'>
+        <div className='flex flex-wrap  gap-8'>
           <button
             className='
               stamp-text
 
               text-sm
               uppercase
-
+              cursor-pointer
               tracking-[0.18em]
 
               text-[#556b4e]
@@ -124,7 +124,7 @@ export default function FieldGuideActions({ product }: FieldGuideActionsProps) {
 
               text-sm
               uppercase
-
+              cursor-pointer
               tracking-[0.18em]
 
               text-[#556b4e]
