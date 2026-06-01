@@ -176,90 +176,121 @@ export default function FieldGuideClosingNote() {
 
               <div
                 className='
-                  rotate-[-5deg]
+    -translate-y-6
+    rotate-[4deg]
 
-                  border-[4px]
-                  border-[#2f221d]
+    border-[4px]
+    border-[#2f221d]
 
-                  bg-[#f0c15a]
+    bg-[#f0c15a]
 
-                  px-10
-                  py-7
+    px-8
+    py-6
 
-                  shadow-[0_8px_0_#2f221d]
-                '
+    shadow-[0_8px_0_#2f221d]
+  '
               >
                 <div
                   className='
-                    text-[clamp(4rem,8vw,7rem)]
-                    leading-none
+      text-[clamp(2.8rem,6vw,5rem)]
+      leading-none
 
-                    text-[#2f221d]
-                  '
-                >
-                  03
-                </div>
-
-                <div
-                  className='
-                    mt-2
-
-                    text-xs
-                    font-black
-                    uppercase
-
-                    tracking-[0.25em]
-
-                    text-[#2f221d]/75
-                  '
-                >
-                  RECIPES
-                </div>
-              </div>
-
-              {/* Discoveries */}
-
-              <div
-                className='
-                  -translate-y-6
-                  rotate-[4deg]
-
-                  border-[4px]
-                  border-[#2f221d]
-
-                  bg-[#efe3cf]
-
-                  px-8
-                  py-6
-
-                  shadow-[0_8px_0_#2f221d]
-                '
-              >
-                <div
-                  className='
-                    text-[clamp(3rem,6vw,5rem)]
-                    leading-none
-
-                    text-[#556b4e]
-                  '
+      text-[#556b4e]
+    '
                 >
                   12+
                 </div>
 
                 <div
                   className='
-                    mt-2
+      mt-2
 
-                    text-[11px]
-                    font-black
-                    uppercase
+      text-[11px]
+      font-black
+      uppercase
 
-                    tracking-[0.25em]
+      tracking-[0.25em]
 
-                    text-[#556b4e]/70
-                  '
+      text-[#556b4e]/70
+    '
                 >
-                  DISCOVERIES
+                  INGREDIENTS
+                </div>
+
+                <div
+                  className='
+      mt-3
+
+      text-xs
+      uppercase
+
+      tracking-[0.18em]
+
+      text-[#3f3128]/60
+    '
+                >
+                  Wild Discoveries
+                </div>
+              </div>
+
+              {/* Mission */}
+
+              <div
+                className='
+    translate-y-4
+    rotate-[-2deg]
+
+    border-[4px]
+    border-[#2f221d]
+
+    bg-[#556b4e]
+
+    px-8
+    py-6
+
+    shadow-[0_8px_0_#2f221d]
+  '
+              >
+                <div
+                  className='
+      text-[clamp(2.5rem,5vw,4.5rem)]
+      leading-none
+
+      text-[#efe3cf]
+    '
+                >
+                  WILD
+                </div>
+
+                <div
+                  className='
+      mt-2
+
+      text-[11px]
+      font-black
+      uppercase
+
+      tracking-[0.25em]
+
+      text-[#efe3cf]/80
+    '
+                >
+                  FEED THE INSTINCT
+                </div>
+
+                <div
+                  className='
+      mt-3
+
+      text-xs
+      uppercase
+
+      tracking-[0.18em]
+
+      text-[#efe3cf]/60
+    '
+                >
+                  Selva Philosophy
                 </div>
               </div>
 

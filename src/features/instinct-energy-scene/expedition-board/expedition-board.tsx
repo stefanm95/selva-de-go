@@ -20,7 +20,9 @@ export function ExpeditionBoard({ recipes }: ExpeditionBoardProps) {
       className='
     relative
     min-h-[85vh]
-
+    flex
+            justify-center
+            items-center
     max-w-[160vh]
     left-[15%]
 
