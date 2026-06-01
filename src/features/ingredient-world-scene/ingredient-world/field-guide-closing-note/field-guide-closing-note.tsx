@@ -7,7 +7,7 @@ export default function FieldGuideClosingNote() {
       {/* Atmosphere */}
 
       <div
-        className='absolute inset-0 opacity-[0.12] mix-blend-multiply'
+        className='absolute inset-0 opacity-[0.12] '
         style={{
           backgroundImage:
             "url('/images/film-grain/analog-noise-cartoonish.jfif')",
@@ -16,7 +16,7 @@ export default function FieldGuideClosingNote() {
       />
 
       <div
-        className='absolute inset-0 opacity-[0.08] mix-blend-multiply'
+        className='absolute inset-0 opacity-[0.08] '
         style={{
           backgroundImage: "url('/images/organic-paint/pexels-tiles.jpg')",
           backgroundSize: "cover",
@@ -45,7 +45,7 @@ export default function FieldGuideClosingNote() {
         alt=''
         className='
           absolute
-          bottom-0
+          bottom-20
           left-1/2
           w-[900px]
           max-w-none
