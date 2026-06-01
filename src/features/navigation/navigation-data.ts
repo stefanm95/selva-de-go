@@ -24,7 +24,7 @@ export const menuItems = [
   },
 
   {
-    id: "product-ritual",
+    id: "ritual-scene",
     number: "04",
     title: "Product Ritual",
     description:
@@ -70,7 +70,7 @@ export const navItems = [
     label: "Instinct",
   },
   {
-    id: "product-ritual",
+    id: "ritual-scene",
     label: "Ritual",
   },
   {
@@ -100,7 +100,7 @@ export const openingNavItems = [
     label: "Instinct",
   },
   {
-    id: "product-ritual",
+    id: "ritual-scene",
     label: "Ritual",
   },
   {
