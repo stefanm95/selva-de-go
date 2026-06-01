@@ -75,7 +75,7 @@ export const ingredients = {
 
     vegetablesAndFruits: ["Mixed fruits", "Mixed vegetables"],
 
-    grains: ["Buckwheat", "Rice"],
+    grains: [],
 
     functionalIngredients: [
       "Oilseeds",

@@ -1,18 +1,21 @@
 import type { Product } from "@/types/product";
-import { BoardCertifications } from "./modal-certifications";
-import { RecipeModalFooter } from "./recipe-modal-footer";
 
-type ArtifactRightPanelProps = {
+import { RecipeCertifications } from "./recipe-certifications";
+import { RecipeShowcaseFooter } from "./recipe-showcase-footer";
+
+type RecipeShowcaseRightPanelProps = {
   recipe: Product;
 };
 
-export const ArtifactRightPanel = ({ recipe }: ArtifactRightPanelProps) => {
+export const RecipeShowcaseRightPanel = ({
+  recipe,
+}: RecipeShowcaseRightPanelProps) => {
   return (
     <div
       className='
         relative
         h-full
-        left-2
+
         px-4
         py-5
 
@@ -23,10 +26,8 @@ export const ArtifactRightPanel = ({ recipe }: ArtifactRightPanelProps) => {
         xl:py-8
       '
     >
-      <BoardCertifications />
-
       <div className='relative z-10'>
-        {/* ARCHIVE NOTE */}
+        {/* STORY */}
 
         <section>
           <p
@@ -40,7 +41,7 @@ export const ArtifactRightPanel = ({ recipe }: ArtifactRightPanelProps) => {
               md:text-[10px]
             '
           >
-            Archive Entry
+            Recipe Story
           </p>
 
           <p
@@ -50,7 +51,7 @@ export const ArtifactRightPanel = ({ recipe }: ArtifactRightPanelProps) => {
               max-w-[58ch]
 
               text-[0.95rem]
-              leading-[1.6]
+              leading-[1.7]
 
               text-[#4f1823]
 
@@ -66,10 +67,11 @@ export const ArtifactRightPanel = ({ recipe }: ArtifactRightPanelProps) => {
 
         {/* BENEFITS */}
 
-        <section className='mt-8 relative top-20 md:mt-10'>
+        <section className='relative top-12'>
           <p
             className='
               text-[9px]
+              
               uppercase
               tracking-[0.45em]
 
@@ -78,7 +80,7 @@ export const ArtifactRightPanel = ({ recipe }: ArtifactRightPanelProps) => {
               md:text-[10px]
             '
           >
-            Expedition Traits
+            Why Dogs Love It
           </p>
 
           <div
@@ -137,10 +139,16 @@ export const ArtifactRightPanel = ({ recipe }: ArtifactRightPanelProps) => {
           </div>
         </section>
 
-        {/* FOOTER */}
+        {/* CERTIFICATIONS */}
 
-        <div className='mt-8 md:mt-10 relative top-20'>
-          <RecipeModalFooter recipe={recipe} />
+        <section className='mt-10'>
+          <RecipeCertifications />
+        </section>
+
+        {/* CTA */}
+
+        <div className='mt-10'>
+          <RecipeShowcaseFooter recipe={recipe} />
         </div>
       </div>
     </div>

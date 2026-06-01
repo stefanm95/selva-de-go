@@ -1,4 +1,4 @@
-export function BoardCertifications() {
+export function RecipeCertifications() {
   return (
     <>
       {/* salmon */}

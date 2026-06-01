@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Float } from "@/components/motion/float";
 import { Magnetic } from "@/components/motion/magnetic";
 
-type RecipeModalFooterProps = {
+type RecipeShowcaseFooterProps = {
   recipe: Product;
 };
 
@@ -18,7 +18,7 @@ const amazonLinks: Record<string, string> = {
   "beef-lamb": "https://www.amazon.it/",
 };
 
-export function RecipeModalFooter({ recipe }: RecipeModalFooterProps) {
+export function RecipeShowcaseFooter({ recipe }: RecipeShowcaseFooterProps) {
   return (
     <div
       className='

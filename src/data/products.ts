@@ -61,6 +61,8 @@ export const products = [
       },
     ],
 
+    ingredientsImage: "/images/products/recipes/beef-lamb-cover.png",
+
     journey: [
       {
         title: "Selected Proteins",
@@ -159,6 +161,8 @@ export const products = [
       },
     ],
 
+    ingredientsImage: "/images/products/recipes/salmon-game-cover.png",
+
     journey: [
       {
         title: "Wild Protein Selection",
@@ -255,6 +259,8 @@ export const products = [
         description: "Provide highly digestible protein.",
       },
     ],
+
+    ingredientsImage: "/images/products/recipes/beef-lamb-cover.png",
 
     journey: [
       {

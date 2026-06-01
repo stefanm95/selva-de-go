@@ -3,12 +3,15 @@ import { products } from "@/data/products";
 import { Scene } from "@/components/scene/scene";
 import { SceneContainer } from "@/components/scene/scene-container";
 
-import { ExpeditionBoard } from "./expedition-board/expedition-board";
+import { RecipeShowcase } from "./recipe-showcase/recipe-showcase";
 
 export function InstinctEnergyScene() {
   return (
-    <Scene id='instinct-energy' className='relative overflow-hidden py-32'>
-      <SceneContainer tone='cool' density='light' depth='medium'>
+    <Scene
+      id='instinct-energy'
+      className='relative left-40 overflow-hidden py-32'
+    >
+      <SceneContainer tone='cool' density='light' depth='far'>
         <img
           src='/images/instinct/one.png'
           alt=''
@@ -16,15 +19,11 @@ export function InstinctEnergyScene() {
           className='
             pointer-events-none
             absolute
-            right-[4rem]
-            top-[4rem]
-            w-[24rem]
-            rotate-[12deg]
             opacity-[0.05]
           '
         />
 
-        <ExpeditionBoard recipes={products} />
+        <RecipeShowcase recipes={products} />
       </SceneContainer>
     </Scene>
   );
