@@ -11,7 +11,7 @@ export default function FieldGuideClosingNote() {
         style={{
           backgroundImage:
             "url('/images/film-grain/analog-noise-cartoonish.jfif')",
-          backgroundSize: "320px",
+          backgroundSize: "80vh",
         }}
       />
 
