@@ -1,5 +1,7 @@
 import type { Product } from "@/types/product";
 import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
+import { RecipeShowcaseInspector } from "./recipe-showcase-inspector";
 
 type RecipeShowcaseLeftPanelProps = {
   recipe: Product;
@@ -8,6 +10,13 @@ type RecipeShowcaseLeftPanelProps = {
 export function RecipeShowcaseLeftPanel({
   recipe,
 }: RecipeShowcaseLeftPanelProps) {
+  const [showInspector, setShowInspector] = useState(false);
+
+  const [zoomPosition, setZoomPosition] = useState({
+    x: 0,
+    y: 0,
+  });
+
   return (
     <div
       className='
@@ -17,7 +26,7 @@ export function RecipeShowcaseLeftPanel({
         flex-col
         items-center
         justify-center
-        overflow-hidden
+        overflow-visible
       '
     >
       {/* COLOR AURA */}
@@ -78,6 +87,16 @@ export function RecipeShowcaseLeftPanel({
           key={recipe.id}
           src={recipe.ingredientsImage}
           alt={recipe.name}
+          onMouseEnter={() => setShowInspector(true)}
+          onMouseLeave={() => setShowInspector(false)}
+          onMouseMove={(e) => {
+            const rect = e.currentTarget.getBoundingClientRect();
+
+            setZoomPosition({
+              x: ((e.clientX - rect.left) / rect.width) * 100,
+              y: ((e.clientY - rect.top) / rect.height) * 100,
+            });
+          }}
           initial={{
             opacity: 0,
             scale: 0.92,
@@ -97,16 +116,12 @@ export function RecipeShowcaseLeftPanel({
             duration: 0.45,
             ease: "easeOut",
           }}
-          whileHover={{
-            scale: 1.06,
-            rotate: -1,
-          }}
           className='
             relative
             z-20
 
             w-[240px]
-  md:w-[240px]
+            md:w-[240px]
             max-w-full
 
             cursor-pointer
@@ -191,6 +206,13 @@ export function RecipeShowcaseLeftPanel({
       </AnimatePresence>
 
       {/* DECORATIVE STAMP */}
+
+      <RecipeShowcaseInspector
+        image={recipe.ingredientsImage ?? ""}
+        x={zoomPosition.x}
+        y={zoomPosition.y}
+        visible={showInspector}
+      />
 
       <div
         className='

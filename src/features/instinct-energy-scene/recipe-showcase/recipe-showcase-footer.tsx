@@ -22,10 +22,11 @@ export function RecipeShowcaseFooter({ recipe }: RecipeShowcaseFooterProps) {
   return (
     <div
       className='
-        mt-10
+        mt-2
 
         relative
         left-4
+        bottom-12
 
         border-t
         border-[#6b1f2b]/10
