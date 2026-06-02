@@ -3,26 +3,29 @@ import { Float, Reveal } from "@/components/motion";
 import { Scene } from "@/components/scene/scene";
 import { SceneContainer } from "@/components/scene/scene-container";
 
+import { OpeningCornerDecor } from "./opening-corner-decor/opening-corner-decor";
 import { OpeningNavigation } from "./opening-navigation/opening-navigation";
 import { OpeningPoster } from "./opening-poster";
-import { OpeningCornerDecor } from "./opening-corner-decor/opening-corner-decor";
 
 export function OpeningScene() {
   return (
-    <Scene id='opening-scene' className='relative min-h-screen overflow-hidden'>
+    <Scene
+      id="opening-scene"
+      className="relative min-h-screen py-28 overflow-hidden"
+    >
       <OpeningNavigation />
 
       <OpeningCornerDecor />
       <Float intensity={12}>
         <SceneContainer
-          tone='warm'
-          density='light'
-          depth='far'
-          size='wide'
-          className='relative min-h-screen'
+          tone="warm"
+          density="light"
+          depth="far"
+          size="wide"
+          className="relative min-h-screen"
         >
           <Reveal
-            className='
+            className="
                relative
 
     flex
@@ -30,7 +33,7 @@ export function OpeningScene() {
 
     items-center
     justify-center
-          '
+          "
           >
             <OpeningPoster />
           </Reveal>

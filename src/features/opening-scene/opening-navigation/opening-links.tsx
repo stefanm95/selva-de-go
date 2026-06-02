@@ -7,64 +7,69 @@ type OpeningLinksProps = {
 export function OpeningLinks({ onNavigate }: OpeningLinksProps) {
   return (
     <nav
-      className='
-              hidden
+      className="
+    hidden
+    lg:flex
 
-              flex-1
-              items-center
-              justify-center
-              cursor-pointer
-              gap-12
+    flex-1
+    justify-center
 
-              pl-24
-              pr-12
-
-              lg:flex
-            '
+    gap-8
+    xl:gap-10
+  "
     >
       {openingNavItems.map((item) => (
-        <a
+        <button
           key={item.id}
           onClick={() => onNavigate(item.id)}
-          className='
-                  group
+          className="
+        group
+        relative
+        cursor-pointer
 
-                  relative
+        py-2
 
-                  text-[0.68rem]
-                  font-black
-                  uppercase
+        text-[0.62rem]
+        font-black
+        uppercase
 
-                  tracking-[0.34em]
+        tracking-[0.28em]
 
-                  text-[var(--text-nav)]/72
+        text-[var(--text-nav)]
 
-                  transition-all
-                  duration-300
-
-                  hover:text-[var(--brand-berry)]
-                '
+        transition-all
+        duration-300
+      "
         >
-          {item.label}
+          <span
+            className="
+          relative
+          z-10
+        "
+          >
+            {item.label}
+          </span>
 
           <span
-            className='
-                    absolute
-                    bottom-[-0.7rem]
-                    left-0
+            className="
+          absolute
+          left-1/2
+          top-[55%]
 
-                    h-[2px]
-                    w-0
+          h-[0.55rem]
+          w-0
 
-                    bg-[var(--brand-berry)]
+          -translate-x-1/2
 
-                    transition-all
-                    duration-300
+          bg-[var(--brand-sun)]/70
 
-                    group-hover:w-full
-                  '
+          transition-all
+          duration-300
+
+          group-hover:w-[110%]
+        "
           />
-        </a>
+        </button>
       ))}
     </nav>
   );

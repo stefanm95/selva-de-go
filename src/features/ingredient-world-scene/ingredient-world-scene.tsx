@@ -10,22 +10,22 @@ import AtlasPage from "./ingredient-world/field-guide-page/field-guide-page";
 
 export function IngredientWorldScene() {
   return (
-    <Scene id='ingredient-world' className='relative overflow-visible'>
-      <SceneContainer tone='neutral' density='light' depth='far' size='wide'>
-        <SceneColumn spacing='none'>
-        <AtlasCover />
+    <Scene id="ingredient-world" className="relative py-32 overflow-visible">
+      <SceneContainer tone="neutral" density="light" depth="far" size="wide">
+        <SceneColumn spacing="none">
+          <AtlasCover />
 
-        {products.map((product, index) => (
-          <AtlasPage
-            key={product.id}
-            product={product}
-            pageNumber={index + 1}
-            alternateLayout={index % 2 === 1}
-          />
-        ))}
+          {products.map((product, index) => (
+            <AtlasPage
+              key={product.id}
+              product={product}
+              pageNumber={index + 1}
+              alternateLayout={index % 2 === 1}
+            />
+          ))}
 
-        {/* <IngredientAtlasSpread /> */}
-        <AtlasClosingNote />
+          {/* <IngredientAtlasSpread /> */}
+          <AtlasClosingNote />
         </SceneColumn>
       </SceneContainer>
     </Scene>

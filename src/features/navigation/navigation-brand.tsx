@@ -6,82 +6,71 @@ type NavigationBrandProps = {
 
 export function NavigationBrand({ isCompact }: NavigationBrandProps) {
   return (
-    <div>
-      <motion.a
-        href='/'
-        initial={false}
-        animate={{
-          opacity: isCompact ? 1 : 0.7,
-          scale: isCompact ? 1 : 0.96,
+    <motion.a
+      href="/"
+      initial={false}
+      animate={{
+        opacity: isCompact ? 1 : 0.85,
+      }}
+      transition={{
+        duration: 0.35,
+      }}
+      className="
+        group
+        flex
+        items-center
+        gap-2.5
+      "
+    >
+      <motion.img
+        src="/images/logo.png"
+        alt="SelvaDeGo"
+        whileHover={{
+          rotate: -2,
+          y: -1,
         }}
         transition={{
-          duration: 0.45,
+          duration: 0.25,
         }}
-        className='
-              group
+        className="
+          h-12
+          w-12
+          shrink-0
+          object-contain
+        "
+      />
 
-              relative
-
-              flex
-              items-center
-
-              gap-3
-            '
+      <div
+        className="
+          flex
+          flex-col
+          leading-none
+        "
       >
-        {/* ICON */}
-        <motion.img
-          src='/images/logo.png'
-          alt='Selva De Go'
-          className='
-                h-[8.25rem]
-                w-auto
-
-                transition-transform
-                duration-500
-
-                group-hover:scale-105
-              '
-        />
-
-        {/* TYPO */}
-        <div
-          className='
-                flex
-                flex-col
-              '
+        <span
+          className="
+            display
+            text-[1rem]
+            tracking-[-0.06em]
+            text-[var(--ink)]
+          "
         >
-          <span
-            className='
-                  display
+          SELVADEGO
+        </span>
 
-                  text-[1.02rem]
+        <span
+          className="
+            stamp-text
+            mt-1
 
-                  leading-none
-                  tracking-[-0.08em]
+            text-[0.42rem]
 
-                  text-[var(--ink-muted)]
-                '
-          >
-            SELVADEGO
-          </span>
-
-          <span
-            className='
-                  mt-[0.14rem]
-
-                  text-[0.5rem]
-                  font-black
-                  uppercase
-
-                  tracking-[0.3em]
-
-                  text-[var(--brand-berry)]/62
-                '
-          >
-            Wild Nutrition Supply
-          </span>
-        </div>
-      </motion.a>
-    </div>
+            text-[var(--brand-plum)]
+          "
+        >
+          FIELD GUIDE
+        </span>
+      </div>
+    </motion.a>
   );
 }

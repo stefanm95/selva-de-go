@@ -4,78 +4,115 @@ import { Heart, Search, ShoppingBag, User } from "lucide-react";
 export function NavigationActions() {
   return (
     <div
-      className='
-              flex
-              items-center
-
-              gap-2
-            '
+      className="
+        flex
+        items-center
+        gap-2
+      "
     >
-      {/* SEARCH */}
       <Button
-        variant='utility'
-        shape='circle'
-        size='sm'
-        aria-label='Search products'
+        variant="utility"
+        shape="circle"
+        size="sm"
+        aria-label="Search"
+        className="
+          border-[var(--border)]
+          bg-[var(--surface-paper)]
+
+          text-[var(--ink)]
+
+          transition-all
+          duration-200
+
+          hover:-translate-y-[1px]
+        "
       >
         <Search size={14} strokeWidth={2.5} />
       </Button>
 
-      {/* FAVORITES */}
-      <Button variant='utility' shape='circle' size='sm' aria-label='Wishlist'>
+      <Button
+        variant="utility"
+        shape="circle"
+        size="sm"
+        aria-label="Wishlist"
+        className="
+          border-[var(--border)]
+          bg-[var(--surface-paper)]
+
+          text-[var(--ink)]
+
+          transition-all
+          duration-200
+
+          hover:-translate-y-[1px]
+        "
+      >
         <Heart size={14} strokeWidth={2.5} />
       </Button>
 
-      {/* CART */}
       <Button
-        variant='editorial'
-        size='sm'
-        aria-label='Shopping cart'
-        className='
-                gap-2.5
+        variant="editorial"
+        size="sm"
+        aria-label="Cart"
+        className="
+          h-10
 
-                px-4
-              '
+          gap-2
+          px-4
+
+          border-2
+          border-[var(--ink)]
+
+          bg-[var(--brand-sun)]
+
+          text-[var(--ink)]
+
+          shadow-[3px_3px_0_var(--ink)]
+
+          transition-all
+          duration-200
+
+          hover:translate-x-[1px]
+          hover:translate-y-[1px]
+          hover:shadow-[2px_2px_0_var(--ink)]
+        "
       >
-        <ShoppingBag
-          size={14}
-          strokeWidth={2.7}
-          className='
-                  text-[var(--brand-berry)]
-                '
-        />
+        <ShoppingBag size={14} strokeWidth={2.8} />
 
         <span
-          className='
-                  text-[0.62rem]
-                  font-black
-                  uppercase
-
-                  tracking-[0.18em]
-
-                  text-[var(--ink-muted)]
-                '
+          className="
+            stamp-text
+            text-[0.52rem]
+          "
         >
-          0
+          CART · 0
         </span>
       </Button>
 
-      {/* ACCOUNT */}
       <Button
-        variant='editorial'
-        shape='circle'
-        size='sm'
-        aria-label='Account'
-        className='
-                bg-[var(--brand-berry)]
-                text-white
+        variant="editorial"
+        shape="circle"
+        size="sm"
+        aria-label="Account"
+        className="
+          border-2
+          border-[var(--ink)]
 
-                shadow-[0_4px_0_var(--brand-berry-shadow)]
+          bg-[var(--brand-plum)]
 
-                hover:shadow-[0_2px_0_var(--brand-berry-shadow)]
-              '
+          text-[var(--text-inverse)]
+
+          shadow-[3px_3px_0_var(--ink)]
+
+          transition-all
+          duration-200
+
+          hover:translate-x-[1px]
+          hover:translate-y-[1px]
+          hover:shadow-[2px_2px_0_var(--ink)]
+        "
       >
-        <User size={14} strokeWidth={2.6} />
+        <User size={14} strokeWidth={2.7} />
       </Button>
     </div>
   );

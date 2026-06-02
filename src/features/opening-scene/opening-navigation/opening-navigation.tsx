@@ -1,13 +1,11 @@
-import { FadeIn } from "@/components/motion";
-
 import { useNavigationMode } from "@/features/navigation/use-navigation-mode";
 import { motion } from "framer-motion";
 
 import { OpeningBrand } from "./opening-brand";
 import { OpeningLinks } from "./opening-links";
 
-import { OpeningNavActions } from "./opening-nav-actions";
 import { useLenis } from "@/app/lenis-context";
+import { OpeningNavActions } from "./opening-nav-actions";
 
 export function OpeningNavigation() {
   const { isCompact } = useNavigationMode();
@@ -19,51 +17,45 @@ export function OpeningNavigation() {
   };
 
   return (
-    <FadeIn delay={0.05}>
-      <motion.header
-        initial={false}
-        animate={{
-          opacity: isCompact ? 0 : 1,
-          y: isCompact ? -20 : 0,
-          pointerEvents: isCompact ? "none" : "auto",
-        }}
-        transition={{
-          duration: 0.55,
-          ease: [0.22, 1, 0.36, 1],
-        }}
-        className='
+    <motion.header
+      initial={false}
+      animate={{
+        opacity: isCompact ? 0 : 1,
+        y: isCompact ? 0 : -20,
+      }}
+      transition={{
+        duration: 0.5,
+        ease: [0.22, 1, 0.36, 1],
+      }}
+      className="
           hidden
           lg:block
           
           absolute
-          left-0
+          inset-x-0
           top-0
           z-[120]
-          w-full
-        '
-      >
-        <div
-          className='
+        "
+    >
+      <div
+        className="
             mx-auto
             flex
-          
-            max-w-[1680px]
             items-center
             justify-between
-            translate-x-[3rem]
+            py-4
             
             px-6
             md:px-10
             xl:px-16
-          '
-        >
-          <OpeningBrand />
+          "
+      >
+        <OpeningBrand />
 
-          <OpeningLinks onNavigate={scrollToSection} />
+        <OpeningLinks onNavigate={scrollToSection} />
 
-          <OpeningNavActions />
-        </div>
-      </motion.header>
-    </FadeIn>
+        <OpeningNavActions />
+      </div>
+    </motion.header>
   );
 }

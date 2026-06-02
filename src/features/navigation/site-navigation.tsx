@@ -1,9 +1,9 @@
+import { useLenis } from "@/app/lenis-context";
 import { motion } from "framer-motion";
-import { useNavigationMode } from "./use-navigation-mode";
 import { NavigationBrand } from "./navigation-brand";
 import { NavigationLinks } from "./navigation-links";
 import { NavigationActions } from "./navigtion-actions";
-import { useLenis } from "@/app/lenis-context";
+import { useNavigationMode } from "./use-navigation-mode";
 
 export function SiteNavigation() {
   const { isCompact } = useNavigationMode();
@@ -19,53 +19,49 @@ export function SiteNavigation() {
       initial={false}
       animate={{
         opacity: isCompact ? 1 : 0,
-        y: isCompact ? 0 : -24,
+        y: isCompact ? 0 : -20,
       }}
       transition={{
-        duration: 0.55,
+        duration: 0.5,
         ease: [0.22, 1, 0.36, 1],
       }}
       className={`
         fixed
-        left-0
+        inset-x-0
         top-0
         z-[140]
-
-        w-full
 
         ${isCompact ? "pointer-events-auto" : "pointer-events-none"}
       `}
     >
-      {/* ================================
-          NAV SHELL
-      ================================= */}
       <div
-        className='
+        className="
           border-b
-          border-[var(--ink-muted)]/8
+          border-[var(--border)]
 
-          bg-[var(--bg-primary)]/74
+          bg-[var(--surface-paper)]/92
 
-          backdrop-blur-[18px]
-        '
+          backdrop-blur-md
+        "
       >
         <div
-          className='
-            relative
-
+          className="
             mx-auto
 
-            flex
-            h-[78px]
-            max-w-[1720px]
+            grid
+            h-[72px]
 
+            max-w-[1440px]
+
+            grid-cols-[auto_1fr_auto]
             items-center
-            justify-between
+
+            gap-8
 
             px-6
             md:px-10
             xl:px-16
-          '
+          "
         >
           <NavigationBrand isCompact={isCompact} />
 

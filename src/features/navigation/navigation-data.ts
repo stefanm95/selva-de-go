@@ -59,33 +59,30 @@ export const menuItems = [
 export const navItems = [
   {
     id: "opening-scene",
-    label: "Wild",
+    label: "Home",
   },
+
   {
     id: "ingredient-world",
-    label: "Ingredients",
+    label: "Recipes",
   },
+
   {
     id: "instinct-energy",
-    label: "Instinct",
+    label: "Benefits",
   },
-  {
-    id: "ritual-scene",
-    label: "Ritual",
-  },
+
   {
     id: "philosophy",
-    label: "Philosophy",
+    label: "About",
   },
-  {
-    id: "trust-community",
-    label: "Community",
-  },
+
   {
     id: "closing-manifesto",
-    label: "Manifesto",
+    label: "Contact",
   },
 ];
+
 export const openingNavItems = [
   {
     id: "opening-scene",
