@@ -31,8 +31,7 @@ export function PhilosophyPrinciples() {
   return (
     <section
       className='
-        mx-auto
-        max-w-7xl
+        w-full
       '
     >
       <div

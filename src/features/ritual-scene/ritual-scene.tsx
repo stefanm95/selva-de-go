@@ -1,21 +1,17 @@
+import { Scene } from "@/components/scene/scene";
+import { SceneColumn } from "@/components/scene/scene-column";
+import { SceneContainer } from "@/components/scene/scene-container";
 import { RitualHeader } from "./ritual-header";
 import { RitualTimeline } from "./ritual-timeline";
 
 export function RitualScene() {
   return (
-    <section
+    <Scene
       id='ritual-scene'
       className='
         relative
-flex
-items-center
-justify-center
         overflow-hidden
-top-28
         py-28
-        px-6
-
-        lg:px-12
       '
     >
       {/* background glow */}
@@ -49,23 +45,14 @@ top-28
         />
       </div>
 
-      <div
-        className='
-          relative
-          z-10
-
-          mx-auto
-          max-w-7xl
-        '
-      >
+      <SceneContainer tone='warm' size='default'>
+        <SceneColumn spacing='lg'>
         <RitualHeader />
 
         <RitualTimeline />
 
         <div
           className='
-            mt-20
-
             text-center
           '
         >
@@ -103,7 +90,8 @@ top-28
             Adjust water quantity according to your dog's preference.
           </p>
         </div>
-      </div>
-    </section>
+        </SceneColumn>
+      </SceneContainer>
+    </Scene>
   );
 }

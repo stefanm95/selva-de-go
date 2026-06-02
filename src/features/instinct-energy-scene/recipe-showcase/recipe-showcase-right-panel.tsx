@@ -1,5 +1,6 @@
 import type { Product } from "@/types/product";
 
+import { SceneColumn } from "@/components/scene/scene-column";
 import { RecipeCertifications } from "./recipe-certifications";
 import { RecipeShowcaseFooter } from "./recipe-showcase-footer";
 
@@ -26,7 +27,7 @@ export const RecipeShowcaseRightPanel = ({
         xl:py-8
       '
     >
-      <div className='relative z-10'>
+      <SceneColumn spacing='sm'>
         {/* STORY */}
 
         <section>
@@ -67,7 +68,7 @@ export const RecipeShowcaseRightPanel = ({
 
         {/* BENEFITS */}
 
-        <section className='relative top-12'>
+        <section>
           <p
             className='
               text-[9px]
@@ -141,16 +142,16 @@ export const RecipeShowcaseRightPanel = ({
 
         {/* CERTIFICATIONS */}
 
-        <section className='mt-10'>
+        <section>
           <RecipeCertifications />
         </section>
 
         {/* CTA */}
 
-        <div className='mt-10'>
+        <div>
           <RecipeShowcaseFooter recipe={recipe} />
         </div>
-      </div>
+      </SceneColumn>
     </div>
   );
 };

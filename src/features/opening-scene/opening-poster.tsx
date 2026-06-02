@@ -8,8 +8,6 @@ export function OpeningPoster() {
       className='
         relative
         w-full
-        max-w-[1280px]
- top-5
         mx-auto
       '
     >

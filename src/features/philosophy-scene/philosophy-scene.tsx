@@ -1,20 +1,17 @@
+import { Scene } from "@/components/scene/scene";
+import { SceneColumn } from "@/components/scene/scene-column";
+import { SceneContainer } from "@/components/scene/scene-container";
 import { PhilosophyHeader } from "./philosophy-header";
 import { PhilosophyFeedingGuide } from "./philosophy-feeding-guide";
 import { PhilosophyPrinciples } from "./philosophy-principles";
 
 export function PhilosophyScene() {
   return (
-    <section
+    <Scene
       id='philosophy'
       className='
         relative
-flex
-justify-center
-items-center
         py-32
-        px-6
-
-        lg:px-12
       '
     >
       <div
@@ -42,21 +39,15 @@ items-center
         />
       </div>
 
-      <div
-        className='
-          relative
-          z-10
-
-          mx-auto
-          max-w-7xl
-        '
-      >
+      <SceneContainer tone='warm' size='default'>
+        <SceneColumn spacing='lg'>
         <PhilosophyHeader />
 
         <PhilosophyFeedingGuide />
 
         <PhilosophyPrinciples />
-      </div>
-    </section>
+        </SceneColumn>
+      </SceneContainer>
+    </Scene>
   );
 }

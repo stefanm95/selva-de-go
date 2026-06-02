@@ -7,6 +7,7 @@ import { ExpeditionAtmosphere } from "./recipe-showcase-atmosphere";
 import { RecipeShowcaseLeftPanel } from "./recipe-showcase-left-panel";
 import { RecipeShowcaseRightPanel } from "./recipe-showcase-right-panel";
 import { RecipeShowcaseNavigation } from "./recipe-showcase-navigation";
+import { SceneColumn } from "@/components/scene/scene-column";
 
 type RecipeShowcaseProps = {
   recipes: Product[];
@@ -25,7 +26,6 @@ export function RecipeShowcase({ recipes }: RecipeShowcaseProps) {
 
         min-h-[82vh]
         w-full
-        max-w-[1600px]
         mx-auto
 
         rounded-[2.5rem]
@@ -53,90 +53,87 @@ export function RecipeShowcase({ recipes }: RecipeShowcaseProps) {
           text-center
         '
       >
-        <p
-          className='
-            text-[11px]
-            uppercase
-            tracking-[0.45em]
-            text-[#6b1f2b]/60
-          '
-        >
-          SELVADEGO FIELD FORMULAS
-        </p>
+        <SceneColumn spacing='sm'>
+          <p
+            className='
+              text-[11px]
+              uppercase
+              tracking-[0.45em]
+              text-[#6b1f2b]/60
+            '
+          >
+            SELVADEGO FIELD FORMULAS
+          </p>
 
-        <h2
-          className='
-            mt-4
+          <h2
+            className='
+              font-display
 
-            font-display
+              text-5xl
+              md:text-7xl
 
-            text-5xl
-            md:text-7xl
+              leading-[0.9]
 
-            leading-[0.9]
+              text-[#6b1f2b]
+            '
+          >
+            THREE WAYS TO RUN WILD
+          </h2>
 
-            text-[#6b1f2b]
-          '
-        >
-          THREE WAYS TO RUN WILD
-        </h2>
+          <p
+            className='
+              mx-auto
+              max-w-2xl
 
-        <p
-          className='
-            mx-auto
-            mt-6
-            max-w-2xl
+              text-lg
+              text-[#6b1f2b]/70
+            '
+          >
+            Freeze dried formulas built from instinct.
+          </p>
 
-            text-lg
-            text-[#6b1f2b]/70
-          '
-        >
-          Freeze dried formulas built from instinct.
-        </p>
+          {/* RECIPE NAVIGATION */}
 
-        {/* RECIPE NAVIGATION */}
+          <div
+            className='
+              relative
 
-        <div
-          className='
-            mt-8
-            relative
-            bottom-4
+              flex
+              flex-wrap
+              justify-center
+              gap-3
+            '
+          >
+            {recipes.map((recipe, index) => (
+              <button
+                key={recipe.id}
+                onClick={() => setActiveRecipeIndex(index)}
+                className={`
+                  rounded-[1rem]
+                  border-[2px]
+                  border-[#2f221d]
 
-            flex
-            flex-wrap
-            justify-center
-            gap-3
-          '
-        >
-          {recipes.map((recipe, index) => (
-            <button
-              key={recipe.id}
-              onClick={() => setActiveRecipeIndex(index)}
-              className={`
-                rounded-[1rem]
-                border-[2px]
-                border-[#2f221d]
+                  px-5
+                  py-2
+                  text-[11px]
+                  font-bold
+                  uppercase
+                  tracking-[0.18em]
 
-                px-5
-                py-2
-                text-[11px]
-                font-bold
-                uppercase
-                tracking-[0.18em]
+                  transition-all
 
-                transition-all
-
-                ${
-                  activeRecipeIndex === index
-                    ? "bg-[#f0c15a] text-[#2f221d] shadow-[3px_3px_0_#2f221d]"
-                    : "bg-transparent text-[#2f221d]/70"
-                }
-              `}
-            >
-              {recipe.name}
-            </button>
-          ))}
-        </div>
+                  ${
+                    activeRecipeIndex === index
+                      ? "bg-[#f0c15a] text-[#2f221d] shadow-[3px_3px_0_#2f221d]"
+                      : "bg-transparent text-[#2f221d]/70"
+                  }
+                `}
+              >
+                {recipe.name}
+              </button>
+            ))}
+          </div>
+        </SceneColumn>
       </div>
 
       {/* SHOWCASE */}

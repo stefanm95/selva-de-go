@@ -1,4 +1,5 @@
 import { Scene } from "@/components/scene/scene";
+import { SceneColumn } from "@/components/scene/scene-column";
 import { SceneContainer } from "@/components/scene/scene-container";
 import { products } from "@/data/products";
 
@@ -10,7 +11,8 @@ import AtlasPage from "./ingredient-world/field-guide-page/field-guide-page";
 export function IngredientWorldScene() {
   return (
     <Scene id='ingredient-world' className='relative overflow-visible'>
-      <SceneContainer tone='neutral' density='light' depth='far'>
+      <SceneContainer tone='neutral' density='light' depth='far' size='wide'>
+        <SceneColumn spacing='none'>
         <AtlasCover />
 
         {products.map((product, index) => (
@@ -24,6 +26,7 @@ export function IngredientWorldScene() {
 
         {/* <IngredientAtlasSpread /> */}
         <AtlasClosingNote />
+        </SceneColumn>
       </SceneContainer>
     </Scene>
   );

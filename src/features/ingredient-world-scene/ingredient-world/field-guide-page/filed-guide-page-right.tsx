@@ -18,7 +18,7 @@ export default function FieldGuidePageRight({
 
   return (
     <FadeIn>
-      <div className='relative mx-auto max-w-2xl'>
+      <div className='relative w-full'>
         <img
           src={stampAssets.sun}
           alt=''

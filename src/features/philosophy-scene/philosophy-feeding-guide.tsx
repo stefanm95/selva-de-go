@@ -38,8 +38,7 @@ export function PhilosophyFeedingGuide() {
   return (
     <section
       className='
-        mx-auto
-        max-w-5xl
+        w-full
       '
     >
       <div

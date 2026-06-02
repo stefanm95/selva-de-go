@@ -9,9 +9,9 @@ export function InstinctEnergyScene() {
   return (
     <Scene
       id='instinct-energy'
-      className='relative left-40 overflow-hidden py-32'
+      className='relative overflow-hidden py-32'
     >
-      <SceneContainer tone='cool' density='light' depth='far'>
+      <SceneContainer tone='cool' density='light' depth='far' size='wide'>
         <img
           src='/images/instinct/one.png'
           alt=''

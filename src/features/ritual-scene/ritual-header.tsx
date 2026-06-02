@@ -3,7 +3,6 @@ export function RitualHeader() {
     <div
       className='
         mx-auto
-        max-w-3xl
         text-center
       '
     >

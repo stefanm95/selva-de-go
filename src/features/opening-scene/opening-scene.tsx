@@ -18,6 +18,7 @@ export function OpeningScene() {
           tone='warm'
           density='light'
           depth='far'
+          size='wide'
           className='relative min-h-screen'
         >
           <Reveal
@@ -29,10 +30,6 @@ export function OpeningScene() {
 
     items-center
     justify-center
-
-    px-4
-    sm:px-6
-    md:px-8
           '
           >
             <OpeningPoster />

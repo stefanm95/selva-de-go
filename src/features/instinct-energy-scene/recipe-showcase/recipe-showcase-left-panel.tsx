@@ -26,6 +26,7 @@ export function RecipeShowcaseLeftPanel({
         flex-col
         items-center
         justify-center
+        gap-6
         overflow-visible
       '
     >
@@ -157,7 +158,6 @@ export function RecipeShowcaseLeftPanel({
             relative
             z-20
 
-          top-6
             text-center
           '
         >

@@ -1,4 +1,5 @@
 import { OpeningActions } from "./opening-actions";
+import { SceneColumn } from "@/components/scene/scene-column";
 
 export function OpeningCopy() {
   return (
@@ -6,25 +7,20 @@ export function OpeningCopy() {
       className='
             relative
             z-20
-left-4
             grid
             min-h-[42vh]
 
             lg:grid-cols-[1.1fr_0.9fr]
 
             items-center
-
-            px-12
-            lg:px-20
+            gap-10
           '
     >
       {/* LEFT */}
 
-      <div className='max-w-[900px]'>
+      <SceneColumn spacing='sm'>
         <p
           className='
-                mb-8
-
                 text-[11px]
                 uppercase
 
@@ -55,8 +51,6 @@ left-4
 
         <p
           className='
-                mt-10
-
                 max-w-[720px]
 
                 text-xl
@@ -72,8 +66,6 @@ left-4
 
         <div
           className='
-                mt-12
-
                 flex
                 flex-wrap
                 gap-4
@@ -112,17 +104,16 @@ left-4
           ))}
         </div>
 
-        <div className='mt-16 relative top-20'>
+        <div>
           <OpeningActions />
         </div>
-      </div>
+      </SceneColumn>
 
       {/* RIGHT */}
 
       <div
         className='
     relative
-    right-[-8%]
 
     flex
     items-center

@@ -6,6 +6,7 @@ type SceneContainerProps = {
   tone?: "warm" | "cool" | "neutral";
   density?: "light" | "medium" | "dense";
   depth?: "near" | "medium" | "far";
+  size?: "default" | "wide";
 };
 
 const toneClasses: Record<NonNullable<SceneContainerProps["tone"]>, string> = {
@@ -14,30 +15,16 @@ const toneClasses: Record<NonNullable<SceneContainerProps["tone"]>, string> = {
   neutral: "text-[#1f1a17]",
 };
 
-const densityClasses: Record<
-  NonNullable<SceneContainerProps["density"]>,
-  string
-> = {
-  light: "space-y-10",
-  medium: "space-y-16",
-  dense: "space-y-24",
-};
-
-const depthClasses: Record<
-  NonNullable<SceneContainerProps["depth"]>,
-  string
-> = {
-  near: "max-w-[1480px]",
-  medium: "max-w-[1720px]",
-  far: "max-w-[1920px]",
+const sizeClasses: Record<NonNullable<SceneContainerProps["size"]>, string> = {
+  default: "max-w-[1440px]",
+  wide: "max-w-[1600px]",
 };
 
 export function SceneContainer({
   children,
   className,
   tone = "neutral",
-  density = "medium",
-  depth = "medium",
+  size = "default",
 }: SceneContainerProps) {
   return (
     <div
@@ -49,13 +36,15 @@ export function SceneContainer({
           mx-auto
 
           w-full
-          px-6
+          px-5
+          sm:px-6
           md:px-10
+          lg:px-12
           xl:px-16
+          2xl:px-20
         `,
         toneClasses[tone],
-        densityClasses[density],
-        depthClasses[depth],
+        sizeClasses[size],
         className,
       )}
     >
