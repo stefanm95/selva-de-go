@@ -25,7 +25,7 @@ export function RecipeShowcaseFooter({ recipe }: RecipeShowcaseFooterProps) {
         relative
 
         border-t
-        border-[#6b1f2b]/10
+        border-[var(--brand-plum)]/10
 
         pt-8
       '
@@ -37,7 +37,7 @@ export function RecipeShowcaseFooter({ recipe }: RecipeShowcaseFooterProps) {
             uppercase
             tracking-[0.35em]
 
-            text-[#8d2036]
+            text-[var(--brand-rose)]
           '
         >
           Available Online
@@ -49,7 +49,7 @@ export function RecipeShowcaseFooter({ recipe }: RecipeShowcaseFooterProps) {
 
             text-sm
 
-            text-[#6b1f2b]/70
+            text-[var(--brand-plum)]/70
           '
         >
           Discover the complete recipe on Amazon.
@@ -89,14 +89,14 @@ export function RecipeShowcaseFooter({ recipe }: RecipeShowcaseFooterProps) {
               rounded-[1.4rem]
 
               border-[3px]
-              border-[#2f221d]
+              border-[var(--ink)]
 
               bg-[linear-gradient(180deg,#f6c15b_0%,#e89c37_100%)]
 
               px-8
               py-5
 
-              shadow-[0_5px_0_#2f221d,0_14px_24px_rgba(0,0,0,0.18)]
+              shadow-[0_5px_0_var(--ink),0_14px_24px_rgba(0,0,0,0.18)]
             '
           >
             {/* texture */}
@@ -186,7 +186,7 @@ export function RecipeShowcaseFooter({ recipe }: RecipeShowcaseFooterProps) {
 
                   tracking-[0.06em]
 
-                  text-[#2f221d]
+                  text-[var(--ink)]
                 '
               >
                 Get The Recipe →

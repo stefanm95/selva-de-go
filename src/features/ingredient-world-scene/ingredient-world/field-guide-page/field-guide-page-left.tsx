@@ -30,13 +30,13 @@ export default function FieldGuidePageLeft({
               text-xs
               uppercase
               tracking-[0.28em]
-              text-[#556b4e]
+              text-[var(--brand-forest)]
             '
           >
             Field Record #{String(pageNumber).padStart(2, "0")}
           </span>
 
-          <div className='h-px flex-1 bg-[#556b4e]/15' />
+          <div className='h-px flex-1 bg-[var(--brand-forest)]/15' />
         </div>
 
         {/* specimen image */}
@@ -65,7 +65,7 @@ export default function FieldGuidePageLeft({
               text-xs
               uppercase
               tracking-[0.3em]
-              text-[#556b4e]/70
+              text-[var(--brand-forest)]/70
             '
           >
             {product.badge}
@@ -80,7 +80,7 @@ export default function FieldGuidePageLeft({
               leading-[0.88]
               tracking-[-0.06em]
 
-              text-[#556b4e]
+              text-[var(--brand-forest)]
             '
           >
             {product.name}

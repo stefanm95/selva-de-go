@@ -3,7 +3,7 @@ import { stampAssets } from "@/lib/world-assets";
 
 export default function FieldGuideClosingNote() {
   return (
-    <section className='relative flex min-h-[80vh] items-center justify-center overflow-hidden bg-[#d8c39a]'>
+    <section className='relative flex min-h-[80vh] items-center justify-center overflow-hidden bg-[var(--surface-field-guide)]'>
       {/* Atmosphere */}
 
       <div
@@ -79,14 +79,14 @@ export default function FieldGuideClosingNote() {
               rotate-[3deg]
 
               border-[3px]
-              border-[#2f221d]
+              border-[var(--ink)]
 
-              bg-[#f0c15a]
+              bg-[var(--brand-sun)]
 
               px-5
               py-3
 
-              shadow-[4px_4px_0_#2f221d]
+              shadow-[4px_4px_0_var(--ink)]
             '
           >
             <p
@@ -96,7 +96,7 @@ export default function FieldGuideClosingNote() {
                   uppercase
                   tracking-[0.25em]
 
-                  text-[#2f221d]
+                  text-[var(--ink)]
                 '
             >
               End Of The Expedition
@@ -114,7 +114,7 @@ export default function FieldGuideClosingNote() {
               leading-[0.78]
               tracking-[-0.08em]
 
-              text-[#6b1f2b]
+              text-[var(--brand-plum)]
             '
           >
             JOURNAL
@@ -131,7 +131,7 @@ export default function FieldGuideClosingNote() {
               h-[3px]
               w-32
 
-              bg-[#2f221d]/15
+              bg-[var(--ink)]/15
             '
           />
         </FadeIn>
@@ -146,7 +146,7 @@ export default function FieldGuideClosingNote() {
               text-[1.3rem]
               leading-relaxed
 
-              text-[#3f3128]/80
+              text-[var(--text-bark)]/80
             '
           >
             Three recipes. Twelve discoveries. One field guide.
@@ -176,14 +176,14 @@ export default function FieldGuideClosingNote() {
                   rotate-[4deg]
 
                   border-[4px]
-                  border-[#2f221d]
+                  border-[var(--ink)]
 
-                  bg-[#f0c15a]
+                  bg-[var(--brand-sun)]
 
                   px-8
                   py-6
 
-                  shadow-[0_8px_0_#2f221d]
+                  shadow-[0_8px_0_var(--ink)]
                 '
             >
               <div
@@ -191,7 +191,7 @@ export default function FieldGuideClosingNote() {
                   text-[clamp(2.8rem,6vw,5rem)]
                   leading-none
 
-                  text-[#556b4e]
+                  text-[var(--brand-forest)]
                 '
               >
                 12+
@@ -207,7 +207,7 @@ export default function FieldGuideClosingNote() {
 
                   tracking-[0.25em]
 
-                  text-[#556b4e]/70
+                  text-[var(--brand-forest)]/70
                 '
               >
                 INGREDIENTS
@@ -222,7 +222,7 @@ export default function FieldGuideClosingNote() {
 
       tracking-[0.18em]
 
-      text-[#3f3128]/60
+      text-[var(--text-bark)]/60
     '
               >
                 Wild Discoveries
@@ -237,14 +237,14 @@ export default function FieldGuideClosingNote() {
     rotate-[-2deg]
 
     border-[4px]
-    border-[#2f221d]
+    border-[var(--ink)]
 
-    bg-[#556b4e]
+    bg-[var(--brand-forest)]
 
     px-8
     py-6
 
-    shadow-[0_8px_0_#2f221d]
+    shadow-[0_8px_0_var(--ink)]
   '
             >
               <div
@@ -252,7 +252,7 @@ export default function FieldGuideClosingNote() {
       text-[clamp(2.5rem,5vw,4.5rem)]
       leading-none
 
-      text-[#efe3cf]
+      text-[var(--surface-paper)]
     '
               >
                 WILD
@@ -268,7 +268,7 @@ export default function FieldGuideClosingNote() {
 
       tracking-[0.25em]
 
-      text-[#efe3cf]/80
+      text-[var(--surface-paper)]/80
     '
               >
                 FEED THE INSTINCT
@@ -283,7 +283,7 @@ export default function FieldGuideClosingNote() {
 
       tracking-[0.18em]
 
-      text-[#efe3cf]/60
+      text-[var(--surface-paper)]/60
     '
               >
                 Selva Philosophy
@@ -298,14 +298,14 @@ export default function FieldGuideClosingNote() {
                   rotate-[-2deg]
 
                   border-[4px]
-                  border-[#2f221d]
+                  border-[var(--ink)]
 
-                  bg-[#efe3cf]
+                  bg-[var(--surface-paper)]
 
                   px-8
                   py-6
 
-                  shadow-[0_8px_0_#2f221d]
+                  shadow-[0_8px_0_var(--ink)]
                 '
             >
               <div
@@ -313,7 +313,7 @@ export default function FieldGuideClosingNote() {
                     text-[clamp(3rem,6vw,5rem)]
                     leading-none
 
-                    text-[#556b4e]
+                    text-[var(--brand-forest)]
                   '
               >
                 01
@@ -329,7 +329,7 @@ export default function FieldGuideClosingNote() {
 
                     tracking-[0.25em]
 
-                    text-[#556b4e]/70
+                    text-[var(--brand-forest)]/70
                   '
               >
                 FIELD GUIDE

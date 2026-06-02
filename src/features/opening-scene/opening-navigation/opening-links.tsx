@@ -37,12 +37,12 @@ export function OpeningLinks({ onNavigate }: OpeningLinksProps) {
 
                   tracking-[0.34em]
 
-                  text-[#3d312c]/72
+                  text-[var(--text-nav)]/72
 
                   transition-all
                   duration-300
 
-                  hover:text-[#7a3b45]
+                  hover:text-[var(--brand-berry)]
                 '
         >
           {item.label}
@@ -56,7 +56,7 @@ export function OpeningLinks({ onNavigate }: OpeningLinksProps) {
                     h-[2px]
                     w-0
 
-                    bg-[#7a3b45]
+                    bg-[var(--brand-berry)]
 
                     transition-all
                     duration-300

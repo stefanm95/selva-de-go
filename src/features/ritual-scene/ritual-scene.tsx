@@ -38,7 +38,7 @@ export function RitualScene() {
 
             rounded-full
 
-            bg-[#f0c15a]
+            bg-[var(--brand-sun)]
 
             blur-[180px]
           '
@@ -62,7 +62,7 @@ export function RitualScene() {
               uppercase
               tracking-[0.35em]
 
-              text-[#6b1f2b]/60
+              text-[var(--brand-plum)]/60
             '
           >
             Recommended Rehydration Time
@@ -74,7 +74,7 @@ export function RitualScene() {
 
               text-4xl
 
-              text-[#556b4e]
+              text-[var(--brand-forest)]
             '
           >
             5–10 Minutes
@@ -84,7 +84,7 @@ export function RitualScene() {
             className='
               mt-4
 
-              text-[#4f1823]/70
+              text-[var(--text-plum)]/70
             '
           >
             Adjust water quantity according to your dog's preference.

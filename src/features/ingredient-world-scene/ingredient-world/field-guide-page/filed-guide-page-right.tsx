@@ -38,7 +38,7 @@ export default function FieldGuidePageRight({
             text-xs
             uppercase
             tracking-[0.35em]
-            text-[#556b4e]
+            text-[var(--brand-forest)]
           '
         >
           Field Findings
@@ -53,7 +53,7 @@ export default function FieldGuidePageRight({
             leading-[0.8]
             tracking-[-0.07em]
 
-            text-[#556b4e]
+            text-[var(--brand-forest)]
           '
         >
           Built For
@@ -70,7 +70,7 @@ export default function FieldGuidePageRight({
             text-[1.35rem]
             leading-relaxed
 
-            text-[#3f3128]/80
+            text-[var(--text-bark)]/80
           '
         >
           {product.headline}
@@ -86,14 +86,14 @@ export default function FieldGuidePageRight({
             rounded-xl
 
             border-[3px]
-            border-[#2f221d]
+            border-[var(--ink)]
 
-            bg-[#f7d46b]
+            bg-[var(--brand-sun-hover)]
 
             px-5
             py-3
 
-            shadow-[0_4px_0_#2f221d]
+            shadow-[0_4px_0_var(--ink)]
           '
         >
           <span
@@ -102,7 +102,7 @@ export default function FieldGuidePageRight({
               font-black
               uppercase
               tracking-[0.08em]
-              text-[#2f221d]
+              text-[var(--ink)]
             '
           >
             {product.highlight}
@@ -122,7 +122,7 @@ export default function FieldGuidePageRight({
               text-xs
               uppercase
               tracking-[0.25em]
-              text-[#556b4e]
+              text-[var(--brand-forest)]
             '
           >
             Featured Ingredients
@@ -136,7 +136,7 @@ export default function FieldGuidePageRight({
                   text-[1.05rem]
                   font-semibold
 
-                  text-[#556b4e]
+                  text-[var(--brand-forest)]
                 '
               >
                 {item}
@@ -162,7 +162,7 @@ export default function FieldGuidePageRight({
 
             tracking-[-0.03em]
 
-            text-[#556b4e]
+            text-[var(--brand-forest)]
           '
         >
           “{product.quote}”
@@ -175,7 +175,7 @@ export default function FieldGuidePageRight({
             text-lg
             leading-relaxed
 
-            text-[#3f3128]/80
+            text-[var(--text-bark)]/80
           '
         >
           {product.description}

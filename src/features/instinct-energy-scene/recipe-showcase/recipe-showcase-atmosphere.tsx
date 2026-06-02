@@ -94,7 +94,7 @@ export function ExpeditionAtmosphere() {
 
           rounded-full
 
-          bg-[#556B4E]/10
+          bg-[var(--brand-forest)]/10
 
           blur-[120px]
         '
@@ -113,7 +113,7 @@ export function ExpeditionAtmosphere() {
 
           rounded-full
 
-          bg-[#8d2036]/8
+          bg-[var(--brand-rose)]/8
 
           blur-[120px]
         '

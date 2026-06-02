@@ -30,11 +30,11 @@ export function OpeningPoster() {
           rounded-[2.5rem]
 
           border-[4px]
-          border-[#2f221d]
+          border-[var(--ink)]
 
-          bg-[#efe3cf]
+          bg-[var(--surface-paper)]
 
-          shadow-[0_8px_0_#2f221d,0_40px_70px_rgba(0,0,0,0.18)]
+          shadow-[0_8px_0_var(--ink),0_40px_70px_rgba(0,0,0,0.18)]
         '
       >
         <OpeningPaperTexture />
@@ -52,7 +52,7 @@ export function OpeningPoster() {
 
             rounded-[1rem]
 
-            bg-[#f0c15a]/15
+            bg-[var(--brand-sun)]/15
 
             blur-[120px]
           '
@@ -69,7 +69,7 @@ export function OpeningPoster() {
 
             rounded-full
 
-            bg-[#556b4e]/10
+            bg-[var(--brand-forest)]/10
 
             blur-[120px]
           '
@@ -94,7 +94,7 @@ export function OpeningPoster() {
 
             uppercase
 
-            text-[#6b1f2b]/[0.03]
+            text-[var(--brand-plum)]/[0.03]
 
             select-none
           '
@@ -113,14 +113,14 @@ export function OpeningPoster() {
             rotate-[-6deg]
 
             border-[3px]
-            border-[#2f221d]
+            border-[var(--ink)]
 
-            bg-[#f0c15a]
+            bg-[var(--brand-sun)]
 
             px-5
             py-3
 
-            shadow-[4px_4px_0_#2f221d]
+            shadow-[4px_4px_0_var(--ink)]
 
             text-[10px]
             font-black
@@ -140,14 +140,14 @@ export function OpeningPoster() {
             rotate-[8deg]
 
             border-[3px]
-            border-[#2f221d]
+            border-[var(--ink)]
 
-            bg-[#f0c15a]
+            bg-[var(--brand-sun)]
 
             px-5
             py-3
 
-            shadow-[4px_4px_0_#2f221d]
+            shadow-[4px_4px_0_var(--ink)]
 
             text-[10px]
             font-black

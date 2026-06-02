@@ -26,7 +26,7 @@ export function OpeningCopy() {
 
                 tracking-[0.45em]
 
-                text-[#8d2036]
+                text-[var(--brand-rose)]
               '
         >
           Wild Nutrition Supply
@@ -41,7 +41,7 @@ export function OpeningCopy() {
 
                 leading-[0.82]
 
-                text-[#6b1f2b]
+                text-[var(--brand-plum)]
               '
         >
           Food For
@@ -57,7 +57,7 @@ export function OpeningCopy() {
 
                 leading-relaxed
 
-                text-[#4f1823]/75
+                text-[var(--text-plum)]/75
               '
         >
           Built from real ingredients, inspired by ancestral feeding patterns
@@ -81,14 +81,14 @@ export function OpeningCopy() {
               key={tag}
               className='
                     border-[3px]
-                    border-[#2f221d]
+                    border-[var(--ink)]
 
-                    bg-[#f0c15a]
+                    bg-[var(--brand-sun)]
 
                     px-5
                     py-3
 
-                    shadow-[3px_3px_0_#2f221d]
+                    shadow-[3px_3px_0_var(--ink)]
 
                     text-[11px]
                     font-black
@@ -96,7 +96,7 @@ export function OpeningCopy() {
 
                     tracking-[0.18em]
 
-                    text-[#2f221d]
+                    text-[var(--ink)]
                   '
             >
               {tag}

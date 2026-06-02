@@ -22,15 +22,15 @@ export function ClosingManifestoScene() {
             <SceneColumn spacing='sm'>
               <Cinematic delay={0.1}>
                 <SceneColumn spacing='sm'>
-                  <p className='text-[11px] uppercase tracking-[0.34em] text-[#7a3b45]'>
+                  <p className='text-[11px] uppercase tracking-[0.34em] text-[var(--brand-berry)]'>
                     {scene.eyebrow}
                   </p>
 
-                  <h2 className='display text-[clamp(4rem,8vw,6rem)] leading-[0.86] tracking-[-0.08em] text-[#1f1a17]'>
+                  <h2 className='display text-[clamp(4rem,8vw,6rem)] leading-[0.86] tracking-[-0.08em] text-[var(--text-primary)]'>
                     {scene.title}
                   </h2>
 
-                  <p className='text-[1.05rem] leading-[1.95] text-[#463c35]/82'>
+                  <p className='text-[1.05rem] leading-[1.95] text-[var(--text-earth)]/82'>
                     {scene.description}
                   </p>
                 </SceneColumn>
@@ -48,7 +48,7 @@ export function ClosingManifestoScene() {
             <div className='relative overflow-hidden rounded-[3rem] border border-white/10 bg-[#fff2e7]/70 p-10 shadow-[0_32px_70px_rgba(34,19,10,0.09)] backdrop-blur-xl'>
               <div className='absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,232,193,0.18),transparent_42%)]' />
               <div className='relative z-10 h-full flex items-center justify-center'>
-                <p className='text-[1.05rem] leading-[1.95] text-[#463c35]/88'>
+                <p className='text-[1.05rem] leading-[1.95] text-[var(--text-earth)]/88'>
                   The finale of the journey feels calm, decisive, and
                   intentionally restrained.
                 </p>

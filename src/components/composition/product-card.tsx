@@ -85,11 +85,11 @@ export function ProductCard() {
           rounded-[2.7rem]
         
           border-[4px]
-          border-[#2f221d]
+          border-[var(--ink)]
         
           bg-[linear-gradient(165deg,#5b2634_0%,#8d4038_26%,#bf6037_60%,#de8b4a_100%)]
         
-          shadow-[0_8px_0_#2f221d,0_28px_42px_rgba(35,18,12,0.14)]
+          shadow-[0_8px_0_var(--ink),0_28px_42px_rgba(35,18,12,0.14)]
         '
       >
         {/* PAPER TEXTURE */}

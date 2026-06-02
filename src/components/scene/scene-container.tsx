@@ -10,9 +10,9 @@ type SceneContainerProps = {
 };
 
 const toneClasses: Record<NonNullable<SceneContainerProps["tone"]>, string> = {
-  warm: "text-[#21170f]",
-  cool: "text-[#2e2d31]",
-  neutral: "text-[#1f1a17]",
+  warm: "text-[var(--text-warm)]",
+  cool: "text-[var(--text-cool)]",
+  neutral: "text-[var(--text-primary)]",
 };
 
 const sizeClasses: Record<NonNullable<SceneContainerProps["size"]>, string> = {

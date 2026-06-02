@@ -14,7 +14,7 @@ export function WorldShapes() {
           text-[52rem]
           leading-none
 
-          text-[#7a3b45]/[0.028]
+          text-[var(--brand-berry)]/[0.028]
 
           select-none
         '
@@ -33,7 +33,7 @@ export function WorldShapes() {
           h-px
           w-[260px]
 
-          bg-[#7a3b45]/10
+          bg-[var(--brand-berry)]/10
         '
       />
 
@@ -48,7 +48,7 @@ export function WorldShapes() {
           h-[120px]
           w-px
 
-          bg-[#7a3b45]/10
+          bg-[var(--brand-berry)]/10
         '
       />
 
@@ -68,7 +68,7 @@ export function WorldShapes() {
 
           tracking-[0.45em]
 
-          text-[#7a3b45]/40
+          text-[var(--brand-berry)]/40
         '
       >
         SELVADEGO
@@ -89,7 +89,7 @@ export function WorldShapes() {
 
           border
 
-          border-[#7a3b45]/[0.04]
+          border-[var(--brand-berry)]/[0.04]
         '
       />
 

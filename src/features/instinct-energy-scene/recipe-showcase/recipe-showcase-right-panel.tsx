@@ -37,7 +37,7 @@ export const RecipeShowcaseRightPanel = ({
               uppercase
               tracking-[0.45em]
 
-              text-[#8d2036]
+              text-[var(--brand-rose)]
 
               md:text-[10px]
             '
@@ -54,7 +54,7 @@ export const RecipeShowcaseRightPanel = ({
               text-[0.95rem]
               leading-[1.7]
 
-              text-[#4f1823]
+              text-[var(--text-plum)]
 
               md:mt-4
               md:text-[1rem]
@@ -76,7 +76,7 @@ export const RecipeShowcaseRightPanel = ({
               uppercase
               tracking-[0.45em]
 
-              text-[#8d2036]
+              text-[var(--brand-rose)]
 
               md:text-[10px]
             '
@@ -111,9 +111,9 @@ export const RecipeShowcaseRightPanel = ({
                     ${rotations[index % rotations.length]}
 
                     border-[2px]
-                    border-[#2f221d]
+                    border-[var(--ink)]
 
-                    bg-[#f0c15a]
+                    bg-[var(--brand-sun)]
 
                     px-3
                     py-2
@@ -121,14 +121,14 @@ export const RecipeShowcaseRightPanel = ({
                     md:px-4
                     md:py-2
 
-                    shadow-[3px_3px_0_#2f221d]
+                    shadow-[3px_3px_0_var(--ink)]
 
                     text-[9px]
                     font-semibold
                     uppercase
                     tracking-[0.15em]
 
-                    text-[#2f221d]
+                    text-[var(--ink)]
 
                     md:text-[10px]
                   `}

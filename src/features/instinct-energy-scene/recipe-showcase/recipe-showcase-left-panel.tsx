@@ -57,14 +57,14 @@ export function RecipeShowcaseLeftPanel({
           rotate-[-4deg]
 
           border-[3px]
-          border-[#2f221d]
+          border-[var(--ink)]
 
-          bg-[#f0c15a]
+          bg-[var(--brand-sun)]
 
           px-5
           py-3
 
-          shadow-[4px_4px_0_#2f221d]
+          shadow-[4px_4px_0_var(--ink)]
         '
       >
         <p
@@ -74,7 +74,7 @@ export function RecipeShowcaseLeftPanel({
             uppercase
             tracking-[0.25em]
 
-            text-[#2f221d]
+            text-[var(--ink)]
           '
         >
           Selva Formula
@@ -167,7 +167,7 @@ export function RecipeShowcaseLeftPanel({
               uppercase
               tracking-[0.4em]
 
-              text-[#6b1f2b]/60
+              text-[var(--brand-plum)]/60
             '
           >
             Freeze Dried Formula
@@ -182,7 +182,7 @@ export function RecipeShowcaseLeftPanel({
               leading-[0.82]
               tracking-[-0.08em]
 
-              text-[#556b4e]
+              text-[var(--brand-forest)]
             '
           >
             {recipe.name}
@@ -197,7 +197,7 @@ export function RecipeShowcaseLeftPanel({
               text-xl
               font-medium
 
-              text-[#4f1823]/80
+              text-[var(--text-plum)]/80
             '
           >
             {recipe.highlight}
@@ -223,7 +223,7 @@ export function RecipeShowcaseLeftPanel({
           rotate-[8deg]
 
           border-[3px]
-          border-[#2f221d]/20
+          border-[var(--ink)]/20
 
           px-5
           py-4
@@ -233,7 +233,7 @@ export function RecipeShowcaseLeftPanel({
           uppercase
           tracking-[0.25em]
 
-          text-[#6b1f2b]/35
+          text-[var(--brand-plum)]/35
         '
       >
         Since 1970

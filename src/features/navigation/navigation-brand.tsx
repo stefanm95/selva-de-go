@@ -59,7 +59,7 @@ export function NavigationBrand({ isCompact }: NavigationBrandProps) {
                   leading-none
                   tracking-[-0.08em]
 
-                  text-[#2b211d]
+                  text-[var(--ink-muted)]
                 '
           >
             SELVADEGO
@@ -75,7 +75,7 @@ export function NavigationBrand({ isCompact }: NavigationBrandProps) {
 
                   tracking-[0.3em]
 
-                  text-[#7a3b45]/62
+                  text-[var(--brand-berry)]/62
                 '
           >
             Wild Nutrition Supply

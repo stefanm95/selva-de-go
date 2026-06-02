@@ -46,14 +46,14 @@ export function PhilosophyFeedingGuide() {
           rounded-[2rem]
 
           border-[4px]
-          border-[#2f221d]
+          border-[var(--ink)]
 
-          bg-[#f6ead3]
+          bg-[var(--surface-recipe)]
 
           p-8
           md:p-12
 
-          shadow-[0_8px_0_#2f221d]
+          shadow-[0_8px_0_var(--ink)]
         '
       >
         <p
@@ -62,7 +62,7 @@ export function PhilosophyFeedingGuide() {
             uppercase
             tracking-[0.35em]
 
-            text-[#8d2036]/70
+            text-[var(--brand-rose)]/70
           '
         >
           Feeding Guide
@@ -74,7 +74,7 @@ export function PhilosophyFeedingGuide() {
 
             text-5xl
 
-            text-[#556b4e]
+            text-[var(--brand-forest)]
           '
         >
           Feed By Instinct
@@ -85,7 +85,7 @@ export function PhilosophyFeedingGuide() {
             mt-4
             max-w-2xl
 
-            text-[#4f1823]/80
+            text-[var(--text-plum)]/80
           '
         >
           Every dog runs a different trail. Use this guide as a starting point
@@ -99,7 +99,7 @@ export function PhilosophyFeedingGuide() {
               grid-cols-2
 
               border-b-2
-              border-[#2f221d]
+              border-[var(--ink)]
 
               pb-4
 
@@ -123,7 +123,7 @@ export function PhilosophyFeedingGuide() {
 
                   text-lg
 
-                  text-[#4f1823]
+                  text-[var(--text-plum)]
                 '
               >
                 <span>{row.weight}</span>
@@ -150,9 +150,9 @@ export function PhilosophyFeedingGuide() {
                 rounded-xl
 
                 border-[2px]
-                border-[#2f221d]
+                border-[var(--ink)]
 
-                bg-[#efe3cf]
+                bg-[var(--surface-paper)]
 
                 p-4
 
@@ -163,7 +163,7 @@ export function PhilosophyFeedingGuide() {
                 className='
                   text-lg
 
-                  text-[#556b4e]
+                  text-[var(--brand-forest)]
                 '
               >
                 {size.label}
@@ -177,7 +177,7 @@ export function PhilosophyFeedingGuide() {
                   uppercase
                   tracking-[0.15em]
 
-                  text-[#4f1823]/70
+                  text-[var(--text-plum)]/70
                 '
               >
                 {size.range}

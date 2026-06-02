@@ -103,9 +103,9 @@ export function FieldGuideOverlay({ open, onClose }: FieldGuideOverlayProps) {
                 z-[402]
                 cursor-pointer
                 group
-                text-[#efe2d1]/70
+                text-[var(--surface-cream)]/70
                 transition-colors
-                hover:text-[#efe2d1]
+                hover:text-[var(--surface-cream)]
               '
             >
               <span
@@ -178,7 +178,7 @@ export function FieldGuideOverlay({ open, onClose }: FieldGuideOverlayProps) {
                     py-20
 
                     border-r
-                    border-[#efe2d1]/10
+                    border-[var(--surface-cream)]/10
 
                     pr-12
                   '
@@ -191,7 +191,7 @@ export function FieldGuideOverlay({ open, onClose }: FieldGuideOverlayProps) {
 
                         tracking-[0.45em]
 
-                        text-[#efe2d1]/60
+                        text-[var(--surface-cream)]/60
                       '
                     >
                       Selva De Go
@@ -207,7 +207,7 @@ export function FieldGuideOverlay({ open, onClose }: FieldGuideOverlayProps) {
 
                         leading-none
 
-                        text-[#efe2d1]
+                        text-[var(--surface-cream)]
                       '
                     >
                       FIELD
@@ -226,7 +226,7 @@ export function FieldGuideOverlay({ open, onClose }: FieldGuideOverlayProps) {
 
                         tracking-[0.25em]
 
-                        text-[#efe2d1]/45
+                        text-[var(--surface-cream)]/45
                       '
                     >
                       <p>Issue Nº03</p>
@@ -242,7 +242,7 @@ export function FieldGuideOverlay({ open, onClose }: FieldGuideOverlayProps) {
                       text-sm
                       leading-relaxed
 
-                      text-[#efe2d1]/45
+                      text-[var(--surface-cream)]/45
                     '
                   >
                     Explore the complete Selva De Go world through stories,
@@ -275,7 +275,7 @@ export function FieldGuideOverlay({ open, onClose }: FieldGuideOverlayProps) {
 
                       tracking-[0.4em]
 
-                      text-[#efe2d1]/60
+                      text-[var(--surface-cream)]/60
                     '
                     >
                       Selva De Go
@@ -291,7 +291,7 @@ export function FieldGuideOverlay({ open, onClose }: FieldGuideOverlayProps) {
 
                       leading-none
 
-                      text-[#efe2d1]
+                      text-[var(--surface-cream)]
                     '
                     >
                       FIELD GUIDE
@@ -307,7 +307,7 @@ export function FieldGuideOverlay({ open, onClose }: FieldGuideOverlayProps) {
 
                           tracking-[0.25em]
 
-                         text-[#efe2d1]/45
+                         text-[var(--surface-cream)]/45
                         '
                     >
                       Issue Nº03

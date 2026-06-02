@@ -38,16 +38,16 @@ export function RitualTimeline() {
               rounded-full
 
               border-[4px]
-              border-[#2f221d]
+              border-[var(--ink)]
 
-              bg-[#f0c15a]
+              bg-[var(--brand-sun)]
 
               text-2xl
               font-black
 
-              text-[#2f221d]
+              text-[var(--ink)]
 
-              shadow-[4px_4px_0_#2f221d]
+              shadow-[4px_4px_0_var(--ink)]
             '
           >
             {step.number}
@@ -70,7 +70,7 @@ export function RitualTimeline() {
 
               text-3xl
 
-              text-[#556b4e]
+              text-[var(--brand-forest)]
             '
           >
             {step.title}
@@ -85,7 +85,7 @@ export function RitualTimeline() {
               text-sm
               leading-relaxed
 
-              text-[#4f1823]/75
+              text-[var(--text-plum)]/75
             '
           >
             {step.text}
@@ -103,7 +103,7 @@ export function RitualTimeline() {
                 h-[3px]
                 w-full
 
-                bg-[#2f221d]/20
+                bg-[var(--ink)]/20
 
                 lg:block
               '

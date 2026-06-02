@@ -23,58 +23,58 @@ const variantStyles: Record<ButtonVariant, string> = {
   /* HERO CTA */
   primary: `
   border-[4px]
-  border-[#241915]
+  border-[var(--ink-deep)]
 
-  bg-[#d96c3d]
-  text-[#fff7ef]
+  bg-[var(--brand-orange-hot)]
+  text-[var(--text-button-inverse)]
 
-  shadow-[8px_8px_0px_#241915]
+  shadow-[8px_8px_0px_var(--ink-deep)]
 
   hover:translate-x-[2px]
   hover:translate-y-[2px]
 
-  hover:shadow-[6px_6px_0px_#241915]
+  hover:shadow-[6px_6px_0px_var(--ink-deep)]
 `,
 
   /* LIGHT PAPER BUTTON */
   secondary: `
   border-[4px]
-  border-[#241915]
+  border-[var(--ink-deep)]
 
-  bg-[#f6eadf]
-  text-[#241915]
+  bg-[var(--bg-primary)]
+  text-[var(--ink-deep)]
 
-  shadow-[8px_8px_0px_#241915]
+  shadow-[8px_8px_0px_var(--ink-deep)]
 
   hover:translate-x-[2px]
   hover:translate-y-[2px]
 
-  hover:shadow-[6px_6px_0px_#241915]
+  hover:shadow-[6px_6px_0px_var(--ink-deep)]
 `,
 
   /* NAV / SYSTEM BUTTON */
   editorial: `
   border-[3px]
-  border-[#241915]
+  border-[var(--ink-deep)]
 
-  bg-[#efe1cf]
-  text-[#241915]
+  bg-[var(--surface-button)]
+  text-[var(--ink-deep)]
 
-  shadow-[5px_5px_0px_#241915]
+  shadow-[5px_5px_0px_var(--ink-deep)]
 
   hover:translate-x-[1px]
   hover:translate-y-[1px]
 
-  hover:shadow-[4px_4px_0px_#241915]
+  hover:shadow-[4px_4px_0px_var(--ink-deep)]
 `,
 
   /* FLOATING ICON UTILITIES */
   utility: `
     border
-    border-[#2b211d]/10
+    border-[var(--ink-muted)]/10
 
     bg-white/40
-    text-[#2b211d]
+    text-[var(--ink-muted)]
 
     backdrop-blur-[8px]
 
@@ -90,7 +90,7 @@ const variantStyles: Record<ButtonVariant, string> = {
     border-transparent
 
     bg-transparent
-    text-[#2f221d]
+    text-[var(--ink)]
 
     hover:bg-black/[0.04]
   `,
@@ -199,7 +199,7 @@ cursor-pointer
 
           !isUtility &&
             `
-              active:shadow-[0_2px_0_#2f221d]
+              active:shadow-[0_2px_0_var(--ink)]
             `,
 
           className,

@@ -24,7 +24,7 @@ export function FieldGuideEntry({
         cursor-pointer
 
         border-b
-        border-[#e8d8c3]/15
+        border-[var(--surface-muted)]/15
 
         py-6
         md:py-8
@@ -53,7 +53,7 @@ export function FieldGuideEntry({
 
             leading-none
 
-            text-[#e8d8c3]/25
+            text-[var(--surface-muted)]/25
           '
         >
           {number}
@@ -72,7 +72,7 @@ export function FieldGuideEntry({
               uppercase
               leading-[1.05]
 
-              text-[#efe2d1]
+              text-[var(--surface-cream)]
             '
           >
             {title}
@@ -90,7 +90,7 @@ export function FieldGuideEntry({
               text-sm
               leading-relaxed
 
-              text-[#efe2d1]/60
+              text-[var(--surface-cream)]/60
             '
           >
             {description}

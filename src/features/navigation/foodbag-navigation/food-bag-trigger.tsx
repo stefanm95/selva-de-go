@@ -63,7 +63,7 @@ export function FoodBagTrigger({ open, onToggle }: FoodBagTriggerProps) {
 
               rounded-full
 
-              bg-[#d96c3d]/20
+              bg-[var(--brand-orange-hot)]/20
 
               blur-sm
 

@@ -19,7 +19,7 @@ export function RegisteredMarkMonument() {
         text-[24rem]
         leading-none
 
-        text-[#7a3b45]/[0.05]
+        text-[var(--brand-berry)]/[0.05]
       '
     >
       ®

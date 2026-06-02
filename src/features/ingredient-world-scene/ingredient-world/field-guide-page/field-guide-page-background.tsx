@@ -83,7 +83,7 @@ export default function FieldGuidePageBackground() {
         '
       />
 
-      <div className='stamp-text absolute left-[6%] top-[6%] text-[10px] text-[#2f221d]/25'>
+      <div className='stamp-text absolute left-[6%] top-[6%] text-[10px] text-[var(--ink)]/25'>
         SELVA FIELD NOTES
       </div>
     </>

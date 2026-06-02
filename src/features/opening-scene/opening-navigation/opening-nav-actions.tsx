@@ -24,7 +24,7 @@ export function OpeningNavActions() {
           size={15}
           strokeWidth={2.8}
           className='
-                  text-[#7a3b45]
+                  text-[var(--brand-berry)]
                 '
         />
 
@@ -42,7 +42,7 @@ export function OpeningNavActions() {
                     uppercase
                     leading-none
                     tracking-[0.24em]
-                    text-[#7a3b45]/70
+                    text-[var(--brand-berry)]/70
                   '
           >
             Supply Cart
@@ -56,7 +56,7 @@ export function OpeningNavActions() {
                     uppercase
                     leading-none
                     tracking-[0.16em]
-                    text-[#2b211d]
+                    text-[var(--ink-muted)]
                   '
           >
             0 Items
@@ -71,9 +71,9 @@ export function OpeningNavActions() {
         size='sm'
         aria-label='Account'
         className='
-                bg-[#7a3b45]
+                bg-[var(--brand-berry)]
                 text-white
-                shadow-[0_4px_0_#5d2832]
+                shadow-[0_4px_0_var(--brand-berry-shadow)]
               '
       >
         <User size={15} strokeWidth={2.6} />

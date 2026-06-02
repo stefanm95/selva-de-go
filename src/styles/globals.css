@@ -10,11 +10,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
-.film-grain {
-  background-image: src("/images/film-grain/analog-noise-cartoonish.jfif");
-  background-repeat: repeat;
-  background-size: 180px;
-}
 
 html.lenis,
 html.lenis body {
@@ -47,28 +42,58 @@ body {
   --brand-gold: #d8a63d;
   --brand-olive: #6f7b52;
   --brand-berry: #7a3b45;
+  --brand-forest: #556b4e;
+  --brand-plum: #6b1f2b;
+  --brand-rose: #8d2036;
+  --brand-sun: #f0c15a;
+  --brand-sun-hover: #f7d46b;
+  --brand-orange-hot: #d96c3d;
+  --brand-berry-shadow: #5d2832;
 
   /* Semantic Colors */
   --muted: #dccfc2;
   --border: #d2c2b2;
+  --ink: #2f221d;
+  --ink-deep: #241915;
+  --ink-muted: #2b211d;
 
   /* Backgrounds */
   --bg-primary: #f6eadf;
   --bg-secondary: #faf7f3;
   --bg-elevated: #ffffff;
   --bg-overlay: rgba(31, 26, 23, 0.8);
+  --surface-paper: #efe3cf;
+  --surface-button: #efe1cf;
+  --surface-recipe: #f6ead3;
+  --surface-warm: #fff6ef;
+  --surface-field-guide: #d8c39a;
+  --surface-cream: #efe2d1;
+  --surface-muted: #e8d8c3;
 
   /* Text Colors */
   --text-primary: #1f1a17;
   --text-secondary: #5a5450;
   --text-muted: #8b8580;
   --text-inverse: #f6eadf;
+  --text-button-inverse: #fff7ef;
+  --text-plum: #4f1823;
+  --text-earth: #463c35;
+  --text-bark: #3f3128;
+  --text-nav: #3d312c;
+  --text-warm: #21170f;
+  --text-cool: #2e2d31;
 
   /* Font Families */
   --font-display: "Anton", sans-serif;
   --font-body: "Inter", sans-serif;
   --font-accent: "Staatliches", sans-serif;
   --font-editorial: "Cormorant Garamond", serif;
+
+  --body-lg: 1.125rem;
+  --body-md: 1rem;
+  --body-sm: 0.875rem;
+  --caption: 0.75rem;
+  --micro: 0.625rem;
 
   --display-2xl: clamp(8rem, 18vw, 14rem);
   --display-xl: clamp(6rem, 13vw, 11rem);
@@ -94,9 +119,9 @@ body {
    2. BASE STYLES
    ============================================================================ */
 
-* {
-  margin: 0;
-  padding: 0;
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -107,6 +132,7 @@ html {
 }
 
 body {
+  margin: 0;
   font-family: var(--font-body);
   background-color: var(--bg-primary);
   color: var(--text-primary);
@@ -117,126 +143,7 @@ body {
 }
 
 /* ============================================================================
-   3. TYPOGRAPHY SCALE UTILITIES
-   ============================================================================ */
-
-/* Display Scale - Headlines */
-.display-2xl {
-  font-family: var(--font-display);
-  font-size: var(--display-2xl);
-  font-weight: 500;
-  line-height: var(--lh-display);
-  letter-spacing: var(--ls-display);
-}
-
-.display-xl {
-  font-family: var(--font-display);
-  font-size: var(--display-xl);
-  font-weight: 500;
-  line-height: var(--lh-display);
-  letter-spacing: var(--ls-display);
-}
-
-.display-lg {
-  font-family: var(--font-display);
-  font-size: var(--display-lg);
-  font-weight: 500;
-  line-height: var(--lh-display);
-  letter-spacing: var(--ls-display);
-}
-
-.display-md {
-  font-family: var(--font-display);
-  font-size: var(--display-md);
-  font-weight: 500;
-  line-height: var(--lh-display);
-  letter-spacing: var(--ls-display);
-}
-
-.display-sm {
-  font-family: var(--font-display);
-  font-size: var(--display-sm);
-  font-weight: 500;
-  line-height: var(--lh-display);
-  letter-spacing: var(--ls-display);
-}
-
-/* Headings - Recoleta */
-.h1 {
-  font-family: var(--font-display);
-  font-size: var(--heading-1);
-  font-weight: 500;
-  line-height: var(--lh-heading);
-  letter-spacing: var(--ls-display);
-}
-
-.h2 {
-  font-family: var(--font-display);
-  font-size: var(--heading-2);
-  font-weight: 500;
-  line-height: var(--lh-heading);
-  letter-spacing: var(--ls-display);
-}
-
-.h3 {
-  font-family: var(--font-display);
-  font-size: var(--heading-3);
-  font-weight: 500;
-  line-height: var(--lh-heading);
-  letter-spacing: var(--ls-display);
-}
-
-.h4 {
-  font-family: var(--font-display);
-  font-size: var(--heading-4);
-  font-weight: 500;
-  line-height: var(--lh-heading);
-  letter-spacing: var(--ls-normal);
-}
-
-/* Body Text - Satoshi */
-.body-lg {
-  font-family: var(--font-body);
-  font-size: var(--body-lg);
-  font-weight: 400;
-  line-height: var(--lh-body);
-  letter-spacing: var(--ls-normal);
-}
-
-.body-md {
-  font-family: var(--font-body);
-  font-size: var(--body-md);
-  font-weight: 400;
-  line-height: var(--lh-body);
-  letter-spacing: var(--ls-normal);
-}
-
-.body-sm {
-  font-family: var(--font-body);
-  font-size: var(--body-sm);
-  font-weight: 400;
-  line-height: var(--lh-body);
-  letter-spacing: var(--ls-normal);
-}
-
-.caption {
-  font-family: var(--font-body);
-  font-size: var(--caption);
-  font-weight: 400;
-  line-height: 1.4;
-  letter-spacing: var(--ls-normal);
-}
-
-.micro {
-  font-family: var(--font-body);
-  font-size: var(--micro);
-  font-weight: 400;
-  line-height: 1.4;
-  letter-spacing: var(--ls-wide);
-}
-
-/* ============================================================================
-   4. HEADINGS - Semantic HTML
+   3. HEADINGS - Semantic HTML
    ============================================================================ */
 
 h1 {
@@ -245,7 +152,7 @@ h1 {
   font-weight: 500;
   line-height: var(--lh-heading);
   letter-spacing: var(--ls-display);
-  margin-bottom: 1rem;
+  margin: 0;
 }
 
 h2 {
@@ -254,7 +161,7 @@ h2 {
   font-weight: 500;
   line-height: var(--lh-heading);
   letter-spacing: var(--ls-display);
-  margin-bottom: 0.875rem;
+  margin: 0;
 }
 
 h3 {
@@ -263,7 +170,7 @@ h3 {
   font-weight: 500;
   line-height: var(--lh-heading);
   letter-spacing: var(--ls-display);
-  margin-bottom: 0.75rem;
+  margin: 0;
 }
 
 h4 {
@@ -272,7 +179,7 @@ h4 {
   font-weight: 500;
   line-height: var(--lh-heading);
   letter-spacing: var(--ls-normal);
-  margin-bottom: 0.5rem;
+  margin: 0;
 }
 
 h5,
@@ -280,16 +187,16 @@ h6 {
   font-family: var(--font-body);
   font-weight: 600;
   line-height: var(--lh-heading);
-  margin-bottom: 0.5rem;
+  margin: 0;
 }
 
 p {
-  margin-bottom: 1rem;
+  margin: 0;
   line-height: var(--lh-body);
 }
 
 /* ============================================================================
-   5. REUSABLE UTILITY CLASSES
+   4. REUSABLE UTILITY CLASSES
    ============================================================================ */
 
 /* Display Typography Container */
@@ -297,79 +204,6 @@ p {
   font-family: var(--font-display);
   letter-spacing: var(--ls-display);
   line-height: var(--lh-display);
-}
-
-/* Brand Accent Text */
-.text-brand-orange {
-  color: var(--brand-orange);
-}
-
-.text-brand-gold {
-  color: var(--brand-gold);
-}
-
-.text-brand-olive {
-  color: var(--brand-olive);
-}
-
-.text-brand-berry {
-  color: var(--brand-berry);
-}
-
-/* Text Color Variants */
-.text-primary {
-  color: var(--text-primary);
-}
-
-.text-secondary {
-  color: var(--text-secondary);
-}
-
-.text-muted {
-  color: var(--text-muted);
-}
-
-.text-inverse {
-  color: var(--text-inverse);
-}
-
-/* Font Weights */
-.font-light {
-  font-weight: 300;
-}
-
-.font-normal {
-  font-weight: 400;
-}
-
-.font-medium {
-  font-weight: 500;
-}
-
-.font-semibold {
-  font-weight: 600;
-}
-
-.font-bold {
-  font-weight: 700;
-}
-
-.font-black {
-  font-weight: 900;
-}
-
-.hero-title {
-  font-family: var(--font-display);
-
-  text-transform: uppercase;
-
-  line-height: 0.88;
-
-  letter-spacing: -0.04em;
-}
-
-.editorial-copy {
-  font-family: var(--font-editorial);
 }
 
 .stamp-text {
@@ -380,12 +214,8 @@ p {
   letter-spacing: 0.28em;
 }
 
-.poster-shadow {
-  filter: drop-shadow(0 18px 30px rgba(65, 35, 20, 0.12));
-}
-
 /* ============================================================================
-   6. LINKS & INTERACTIVE
+   5. LINKS & INTERACTIVE
    ============================================================================ */
 
 a {
@@ -405,43 +235,7 @@ a:focus-visible {
 }
 
 /* ============================================================================
-   7. SPACING & RHYTHM
-   ============================================================================ */
-
-/* Creates luxury through restraint and breathing room */
-
-section {
-  padding: 3rem 0;
-}
-
-@media (max-width: 768px) {
-  section {
-    padding: 2rem 0;
-  }
-}
-
-/* ============================================================================
-   8. SEMANTIC BACKGROUNDS
-   ============================================================================ */
-
-.bg-primary {
-  background-color: var(--bg-primary);
-}
-
-.bg-secondary {
-  background-color: var(--bg-secondary);
-}
-
-.bg-elevated {
-  background-color: var(--bg-elevated);
-}
-
-.bg-overlay {
-  background-color: var(--bg-overlay);
-}
-
-/* ============================================================================
-   9. ACCESSIBILITY
+   6. ACCESSIBILITY
    ============================================================================ */
 
 @media (prefers-reduced-motion: reduce) {

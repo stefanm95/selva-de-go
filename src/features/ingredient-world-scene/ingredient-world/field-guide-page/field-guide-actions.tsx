@@ -29,7 +29,7 @@ export default function FieldGuideActions({ product }: FieldGuideActionsProps) {
           text-[10px]
           uppercase
           tracking-[0.35em]
-          text-[#556b4e]
+          text-[var(--brand-forest)]
         '
       >
         Continue The Trail
@@ -55,14 +55,14 @@ export default function FieldGuideActions({ product }: FieldGuideActionsProps) {
                 rounded-[1.6rem]
 
                 border-[4px]
-                border-[#2f221d]
+                border-[var(--ink)]
 
                 bg-[linear-gradient(180deg,#f5d86f_0%,#efc04f_100%)]
 
                 px-8
                 py-7
 
-                shadow-[0_6px_0_#2f221d]
+                shadow-[0_6px_0_var(--ink)]
               '
             >
               <div className='relative z-10'>
@@ -89,7 +89,7 @@ export default function FieldGuideActions({ product }: FieldGuideActionsProps) {
 
                     tracking-[-0.03em]
 
-                    text-[#2f221d]
+                    text-[var(--ink)]
                   '
                 >
                   Explore on Amazon →
@@ -109,7 +109,7 @@ export default function FieldGuideActions({ product }: FieldGuideActionsProps) {
               cursor-pointer
               tracking-[0.18em]
 
-              text-[#556b4e]
+              text-[var(--brand-forest)]
 
               transition-opacity
               hover:opacity-70
@@ -127,7 +127,7 @@ export default function FieldGuideActions({ product }: FieldGuideActionsProps) {
               cursor-pointer
               tracking-[0.18em]
 
-              text-[#556b4e]
+              text-[var(--brand-forest)]
 
               transition-opacity
               hover:opacity-70

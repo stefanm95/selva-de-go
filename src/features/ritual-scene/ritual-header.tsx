@@ -13,14 +13,14 @@ export function RitualHeader() {
           rotate-[-3deg]
 
           border-[3px]
-          border-[#2f221d]
+          border-[var(--ink)]
 
-          bg-[#f0c15a]
+          bg-[var(--brand-sun)]
 
           px-4
           py-2
 
-          shadow-[4px_4px_0_#2f221d]
+          shadow-[4px_4px_0_var(--ink)]
         '
       >
         <span
@@ -29,7 +29,7 @@ export function RitualHeader() {
             font-black
             uppercase
             tracking-[0.3em]
-            text-[#2f221d]
+            text-[var(--ink)]
           '
         >
           Feeding Ritual
@@ -47,7 +47,7 @@ export function RitualHeader() {
 
           leading-[0.9]
 
-          text-[#6b1f2b]
+          text-[var(--brand-plum)]
         '
       >
         Every Expedition
@@ -64,7 +64,7 @@ export function RitualHeader() {
           text-lg
           leading-relaxed
 
-          text-[#4f1823]/75
+          text-[var(--text-plum)]/75
         '
       >
         Rehydrate. Wait. Serve. A simple ritual designed to restore texture,

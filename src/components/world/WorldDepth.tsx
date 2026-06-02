@@ -27,7 +27,7 @@ export function WorldDepth() {
             h-[28rem]
             w-[28rem]
             rounded-full
-            bg-[#7a3b45]/8
+            bg-[var(--brand-berry)]/8
             blur-[110px]
           '
         />
@@ -43,7 +43,7 @@ export function WorldDepth() {
             w-[70rem]
             -translate-x-1/2
             rounded-full
-            bg-[#2b211d]/6
+            bg-[var(--ink-muted)]/6
             blur-[130px]
           '
         />

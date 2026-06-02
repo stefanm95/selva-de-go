@@ -45,7 +45,7 @@ export function PhilosophyPrinciples() {
             uppercase
             tracking-[0.35em]
 
-            text-[#8d2036]/70
+            text-[var(--brand-rose)]/70
           '
         >
           Core Principles
@@ -57,7 +57,7 @@ export function PhilosophyPrinciples() {
 
             text-5xl
 
-            text-[#6b1f2b]
+            text-[var(--brand-plum)]
           '
         >
           Why Freeze Dried?
@@ -84,13 +84,13 @@ export function PhilosophyPrinciples() {
               rounded-[1.5rem]
 
               border-[3px]
-              border-[#2f221d]
+              border-[var(--ink)]
 
-              bg-[#f6ead3]
+              bg-[var(--surface-recipe)]
 
               p-6
 
-              shadow-[4px_4px_0_#2f221d]
+              shadow-[4px_4px_0_var(--ink)]
             `}
           >
             <div className='text-4xl'>{principle.icon}</div>
@@ -101,7 +101,7 @@ export function PhilosophyPrinciples() {
 
                 text-2xl
 
-                text-[#556b4e]
+                text-[var(--brand-forest)]
               '
             >
               {principle.title}
@@ -114,7 +114,7 @@ export function PhilosophyPrinciples() {
                 text-sm
                 leading-relaxed
 
-                text-[#4f1823]/80
+                text-[var(--text-plum)]/80
               '
             >
               {principle.description}

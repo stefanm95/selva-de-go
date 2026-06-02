@@ -31,11 +31,11 @@ export function RecipeShowcase({ recipes }: RecipeShowcaseProps) {
         rounded-[2.5rem]
 
         border-[4px]
-        border-[#2f221d]
+        border-[var(--ink)]
 
-        bg-[#f6ead3]
+        bg-[var(--surface-recipe)]
 
-        shadow-[0_8px_0_#2f221d,0_40px_70px_rgba(0,0,0,0.18)]
+        shadow-[0_8px_0_var(--ink),0_40px_70px_rgba(0,0,0,0.18)]
       '
     >
       <ExpeditionAtmosphere />
@@ -59,7 +59,7 @@ export function RecipeShowcase({ recipes }: RecipeShowcaseProps) {
               text-[11px]
               uppercase
               tracking-[0.45em]
-              text-[#6b1f2b]/60
+              text-[var(--brand-plum)]/60
             '
           >
             SELVADEGO FIELD FORMULAS
@@ -74,7 +74,7 @@ export function RecipeShowcase({ recipes }: RecipeShowcaseProps) {
 
               leading-[0.9]
 
-              text-[#6b1f2b]
+              text-[var(--brand-plum)]
             '
           >
             THREE WAYS TO RUN WILD
@@ -86,7 +86,7 @@ export function RecipeShowcase({ recipes }: RecipeShowcaseProps) {
               max-w-2xl
 
               text-lg
-              text-[#6b1f2b]/70
+              text-[var(--brand-plum)]/70
             '
           >
             Freeze dried formulas built from instinct.
@@ -111,7 +111,7 @@ export function RecipeShowcase({ recipes }: RecipeShowcaseProps) {
                 className={`
                   rounded-[1rem]
                   border-[2px]
-                  border-[#2f221d]
+                  border-[var(--ink)]
 
                   px-5
                   py-2
@@ -124,8 +124,8 @@ export function RecipeShowcase({ recipes }: RecipeShowcaseProps) {
 
                   ${
                     activeRecipeIndex === index
-                      ? "bg-[#f0c15a] text-[#2f221d] shadow-[3px_3px_0_#2f221d]"
-                      : "bg-transparent text-[#2f221d]/70"
+                      ? "bg-[var(--brand-sun)] text-[var(--ink)] shadow-[3px_3px_0_var(--ink)]"
+                      : "bg-transparent text-[var(--ink)]/70"
                   }
                 `}
               >

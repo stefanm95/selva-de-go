@@ -32,17 +32,17 @@ export function RecipeShowcaseNavigation({
               duration-300
               cursor-pointer
               border-[3px]
-              border-[#2f221d]
+              border-[var(--ink)]
 
               px-6
               py-4
 
-              shadow-[4px_4px_0_#2f221d]
+              shadow-[4px_4px_0_var(--ink)]
 
               ${
                 active
-                  ? "bg-[#f0c15a] rotate-[-2deg] scale-105"
-                  : "bg-[#efe3cf] hover:bg-[#f7d46b] hover:-translate-y-1"
+                  ? "bg-[var(--brand-sun)] rotate-[-2deg] scale-105"
+                  : "bg-[var(--surface-paper)] hover:bg-[var(--brand-sun-hover)] hover:-translate-y-1"
               }
             `}
           >
@@ -52,7 +52,7 @@ export function RecipeShowcaseNavigation({
                 font-black
                 uppercase
                 tracking-[0.25em]
-                text-[#2f221d]
+                text-[var(--ink)]
               '
             >
               Formula {index + 1}
@@ -65,7 +65,7 @@ export function RecipeShowcaseNavigation({
                 text-xl
                 leading-none
 
-                text-[#556b4e]
+                text-[var(--brand-forest)]
               '
             >
               {recipe.name}

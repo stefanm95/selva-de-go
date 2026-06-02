@@ -37,7 +37,7 @@ export function PawTrail() {
 
               rounded-full
 
-              bg-[#7a3b45]/[0.05]
+              bg-[var(--brand-berry)]/[0.05]
             '
           />
         </div>

@@ -32,7 +32,7 @@ export function OpeningBrand() {
                   uppercase
                   leading-none
                   tracking-[0.34em]
-                  text-[#7a3b45]/72
+                  text-[var(--brand-berry)]/72
                 '
           >
             EST. 2026
@@ -43,7 +43,7 @@ export function OpeningBrand() {
                   mt-[1px]
                   h-[1px]
                   w-5
-                  bg-[#7a3b45]/18
+                  bg-[var(--brand-berry)]/18
                 '
           />
 
@@ -54,7 +54,7 @@ export function OpeningBrand() {
                     uppercase
                     leading-none
                     tracking-[0.24em]
-                    text-[#7a3b45]/42
+                    text-[var(--brand-berry)]/42
                   '
           >
             FIELD ISSUE Nº 03
@@ -102,7 +102,7 @@ export function OpeningBrand() {
                 text-[1.72rem]
                 leading-[0.9]
                 tracking-[-0.09em]
-                text-[#2b211d]
+                text-[var(--ink-muted)]
               '
             >
               SELVADEGO

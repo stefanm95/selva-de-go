@@ -4,7 +4,7 @@ import { Float } from "@/components/motion";
 
 export default function FieldGuideCover() {
   return (
-    <section className='relative flex min-h-screen items-center justify-center overflow-hidden bg-[#d8c39a]'>
+    <section className='relative flex min-h-screen items-center justify-center overflow-hidden bg-[var(--surface-field-guide)]'>
       {/* Atmosphere */}
       <div
         className='absolute inset-0 opacity-[0.12] mix-blend-multiply'
@@ -52,14 +52,14 @@ export default function FieldGuideCover() {
         rotate-[-3deg]
 
         border-[3px]
-        border-[#2f221d]
+        border-[var(--ink)]
 
-        bg-[#f0c15a]
+        bg-[var(--brand-sun)]
 
         px-5
         py-3
 
-        shadow-[4px_4px_0_#2f221d]
+        shadow-[4px_4px_0_var(--ink)]
       '
           >
             <Float intensity={6}>
@@ -69,7 +69,7 @@ export default function FieldGuideCover() {
           font-black
           uppercase
           tracking-[0.25em]
-          text-[#2f221d]
+          text-[var(--ink)]
         '
               >
                 Selvadego Field Guide
@@ -87,7 +87,7 @@ export default function FieldGuideCover() {
         leading-[0.78]
         tracking-[-0.08em]
 
-        text-[#556b4e]
+        text-[var(--brand-forest)]
       '
           >
             WILD
@@ -105,7 +105,7 @@ export default function FieldGuideCover() {
         h-[3px]
         w-32
 
-        bg-[#2f221d]/15
+        bg-[var(--ink)]/15
       '
           />
         </FadeIn>
@@ -119,7 +119,7 @@ export default function FieldGuideCover() {
         text-[1.3rem]
         leading-relaxed
 
-        text-[#3f3128]/80
+        text-[var(--text-bark)]/80
       '
           >
             Collected across forests, rivers and hidden trails. A field journal
@@ -149,21 +149,21 @@ export default function FieldGuideCover() {
         rotate-[-5deg]
 
         border-[4px]
-        border-[#2f221d]
+        border-[var(--ink)]
 
-        bg-[#f0c15a]
+        bg-[var(--brand-sun)]
 
         px-10
         py-7
 
-        shadow-[0_8px_0_#2f221d]
+        shadow-[0_8px_0_var(--ink)]
       '
               >
                 <div
                   className='
           text-[clamp(4rem,8vw,7rem)]
           leading-none
-          text-[#2f221d]
+          text-[var(--ink)]
         '
                 >
                   03
@@ -179,7 +179,7 @@ export default function FieldGuideCover() {
 
           tracking-[0.25em]
 
-          text-[#2f221d]/75
+          text-[var(--ink)]/75
         '
                 >
                   RECIPES
@@ -194,21 +194,21 @@ export default function FieldGuideCover() {
         rotate-[4deg]
 
         border-[4px]
-        border-[#2f221d]
+        border-[var(--ink)]
 
-        bg-[#efe3cf]
+        bg-[var(--surface-paper)]
 
         px-8
         py-6
 
-        shadow-[0_8px_0_#2f221d]
+        shadow-[0_8px_0_var(--ink)]
       '
               >
                 <div
                   className='
           text-[clamp(3rem,6vw,5rem)]
           leading-none
-          text-[#556b4e]
+          text-[var(--brand-forest)]
         '
                 >
                   12+
@@ -224,7 +224,7 @@ export default function FieldGuideCover() {
 
           tracking-[0.25em]
 
-          text-[#556b4e]/70
+          text-[var(--brand-forest)]/70
         '
                 >
                   DISCOVERIES
@@ -239,21 +239,21 @@ export default function FieldGuideCover() {
         rotate-[-2deg]
 
         border-[4px]
-        border-[#2f221d]
+        border-[var(--ink)]
 
-        bg-[#efe3cf]
+        bg-[var(--surface-paper)]
 
         px-8
         py-6
 
-        shadow-[0_8px_0_#2f221d]
+        shadow-[0_8px_0_var(--ink)]
       '
               >
                 <div
                   className='
           text-[clamp(3rem,6vw,5rem)]
           leading-none
-          text-[#556b4e]
+          text-[var(--brand-forest)]
         '
                 >
                   01
@@ -269,7 +269,7 @@ export default function FieldGuideCover() {
 
           tracking-[0.25em]
 
-          text-[#556b4e]/70
+          text-[var(--brand-forest)]/70
         '
                 >
                   FIELD GUIDE

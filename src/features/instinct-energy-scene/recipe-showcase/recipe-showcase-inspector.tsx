@@ -50,11 +50,11 @@ export function RecipeShowcaseInspector({
             overflow-hidden
 
             border-[3px]
-            border-[#2f221d]
+            border-[var(--ink)]
 
             bg-[#f7eed8]
 
-            shadow-[8px_8px_0_#2f221d]
+            shadow-[8px_8px_0_var(--ink)]
           '
         >
           {/* TAPE */}
@@ -86,7 +86,7 @@ export function RecipeShowcaseInspector({
                 uppercase
                 tracking-[0.35em]
 
-                text-[#8d2036]
+                text-[var(--brand-rose)]
               '
             >
               FIELD NOTE #03
@@ -98,7 +98,7 @@ export function RecipeShowcaseInspector({
 
                 text-2xl
 
-                text-[#2f221d]
+                text-[var(--ink)]
               '
             >
               Field Inspection
@@ -112,7 +112,7 @@ export function RecipeShowcaseInspector({
                 uppercase
                 tracking-[0.25em]
 
-                text-[#6b1f2b]/60
+                text-[var(--brand-plum)]/60
               '
             >
               Ingredient Label Analysis
@@ -131,7 +131,7 @@ export function RecipeShowcaseInspector({
               overflow-hidden
 
               border-[2px]
-              border-[#2f221d]
+              border-[var(--ink)]
 
               bg-white
             '
@@ -156,7 +156,7 @@ export function RecipeShowcaseInspector({
             <div
               className='
                 border-t
-                border-[#2f221d]/10
+                border-[var(--ink)]/10
 
                 pt-4
               '
@@ -167,7 +167,7 @@ export function RecipeShowcaseInspector({
                   uppercase
                   tracking-[0.25em]
 
-                  text-[#6b1f2b]/60
+                  text-[var(--brand-plum)]/60
                 '
               >
                 Move cursor to inspect details

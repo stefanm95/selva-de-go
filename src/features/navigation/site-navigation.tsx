@@ -42,9 +42,9 @@ export function SiteNavigation() {
       <div
         className='
           border-b
-          border-[#2b211d]/8
+          border-[var(--ink-muted)]/8
 
-          bg-[#f6eadf]/74
+          bg-[var(--bg-primary)]/74
 
           backdrop-blur-[18px]
         '

@@ -27,7 +27,7 @@ export function BotanicalSketch() {
           h-full
           w-px
 
-          bg-[#7a3b45]
+          bg-[var(--brand-berry)]
         '
       />
 
@@ -42,7 +42,7 @@ export function BotanicalSketch() {
             w-8
 
             border
-            border-[#7a3b45]
+            border-[var(--brand-berry)]
 
             rounded-full
           '

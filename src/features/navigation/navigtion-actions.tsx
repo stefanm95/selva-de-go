@@ -41,7 +41,7 @@ export function NavigationActions() {
           size={14}
           strokeWidth={2.7}
           className='
-                  text-[#7a3b45]
+                  text-[var(--brand-berry)]
                 '
         />
 
@@ -53,7 +53,7 @@ export function NavigationActions() {
 
                   tracking-[0.18em]
 
-                  text-[#2b211d]
+                  text-[var(--ink-muted)]
                 '
         >
           0
@@ -67,12 +67,12 @@ export function NavigationActions() {
         size='sm'
         aria-label='Account'
         className='
-                bg-[#7a3b45]
+                bg-[var(--brand-berry)]
                 text-white
 
-                shadow-[0_4px_0_#5d2832]
+                shadow-[0_4px_0_var(--brand-berry-shadow)]
 
-                hover:shadow-[0_2px_0_#5d2832]
+                hover:shadow-[0_2px_0_var(--brand-berry-shadow)]
               '
       >
         <User size={14} strokeWidth={2.6} />

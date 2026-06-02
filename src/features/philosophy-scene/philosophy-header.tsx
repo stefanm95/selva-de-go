@@ -13,7 +13,7 @@ export function PhilosophyHeader() {
           uppercase
           tracking-[0.45em]
 
-          text-[#6b1f2b]/60
+          text-[var(--brand-plum)]/60
         '
       >
         Feed By Instinct
@@ -28,7 +28,7 @@ export function PhilosophyHeader() {
 
           leading-[0.9]
 
-          text-[#556b4e]
+          text-[var(--brand-forest)]
         '
       >
         Every Dog
@@ -45,7 +45,7 @@ export function PhilosophyHeader() {
 
           text-lg
 
-          text-[#4f1823]/75
+          text-[var(--text-plum)]/75
         '
       >
         Activity, age and lifestyle influence daily portions. Use the guide

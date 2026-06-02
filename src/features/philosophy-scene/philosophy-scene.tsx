@@ -32,7 +32,7 @@ export function PhilosophyScene() {
 
             rounded-full
 
-            bg-[#556b4e]
+            bg-[var(--brand-forest)]
 
             blur-[180px]
           '

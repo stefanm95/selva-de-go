@@ -11,13 +11,13 @@ export function DeerFieldStamp() {
 
         rotate-[-8deg]
 
-        text-[#7a3b45]/20
+        text-[var(--brand-berry)]/20
       '
     >
       <div
         className='
           border
-          border-[#7a3b45]/10
+          border-[var(--brand-berry)]/10
 
           px-6
           py-4
