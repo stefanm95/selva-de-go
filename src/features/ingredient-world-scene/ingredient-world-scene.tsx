@@ -12,7 +12,13 @@ import FieldGuidePage from "./ingredient-world/field-guide-page/field-guide-page
 export function IngredientWorldScene() {
   return (
     <Scene id="ingredient-world" className="relative py-32 overflow-visible">
-      <SceneContainer tone="neutral" density="light" depth="far" size="wide">
+      <SceneContainer
+        tone="neutral"
+        density="light"
+        depth="far"
+        size="wide"
+        className="px-0 sm:px-0 md:px-0 lg:px-0 xl:px-0 2xl:px-0"
+      >
         <SceneColumn spacing="none">
           <FieldGuideCover />
 
