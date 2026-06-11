@@ -16,18 +16,30 @@ export default function FieldGuidePage({
   alternateLayout = false,
 }: FieldGuidePageProps) {
   return (
-    <section className="relative flex items-center justify-center overflow-hidden py-24 md:py-36">
+    <section
+      className="
+    relative
+    overflow-hidden
+
+    py-20
+    md:py-24
+  "
+    >
       <FieldGuidePageBackground />
 
-      <div className="relative z-10 w-full">
-        <div className="grid items-center gap-20 lg:grid-cols-[0.9fr_1fr] lg:gap-24">
-          <FieldGuidePageLeft
-            product={product}
-            pageNumber={pageNumber}
-            alternateLayout={alternateLayout}
-          />
-          <FieldGuidePageRight product={product} />
-        </div>
+      <div
+        className="
+      relative
+      z-10
+
+      mx-auto
+
+      max-w-[900px]
+    "
+      >
+        <FieldGuidePageLeft product={product} pageNumber={pageNumber} />
+
+        <FieldGuidePageRight product={product} />
       </div>
     </section>
   );

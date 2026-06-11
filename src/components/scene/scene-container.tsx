@@ -6,7 +6,7 @@ type SceneContainerProps = {
   tone?: "warm" | "cool" | "neutral";
   density?: "light" | "medium" | "dense";
   depth?: "near" | "medium" | "far";
-  size?: "default" | "wide";
+  size?: "default" | "wide" | "full";
 };
 
 const toneClasses: Record<NonNullable<SceneContainerProps["tone"]>, string> = {
@@ -18,6 +18,7 @@ const toneClasses: Record<NonNullable<SceneContainerProps["tone"]>, string> = {
 const sizeClasses: Record<NonNullable<SceneContainerProps["size"]>, string> = {
   default: "max-w-[1440px]",
   wide: "max-w-[1600px]",
+  full: "max-w-none",
 };
 
 export function SceneContainer({

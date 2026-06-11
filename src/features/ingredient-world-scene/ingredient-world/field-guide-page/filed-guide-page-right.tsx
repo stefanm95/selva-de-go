@@ -1,7 +1,7 @@
 import { FadeIn } from "@/components/motion";
 import type { Product } from "@/types/product";
 
-import { dividerAssets, stampAssets } from "../../../../lib/world-assets";
+import { stampAssets } from "../../../../lib/world-assets";
 import FieldGuideActions from "./field-guide-actions";
 
 type FieldGuidePageRightProps = {
@@ -18,171 +18,167 @@ export default function FieldGuidePageRight({
 
   return (
     <FadeIn>
-      <div className='relative w-full'>
+      <article
+        className="
+          relative
+          mx-auto
+          flex
+          max-w-[28rem]
+          flex-col
+          gap-8
+        "
+      >
         <img
           src={stampAssets.sun}
-          alt=''
-          className='
+          alt=""
+          className="
             absolute
-            right-0
+            -right-4
             top-0
-            w-24
-            opacity-15
+            w-16
+            opacity-10
             pointer-events-none
-          '
+          "
         />
 
-        <p
-          className='
-            stamp-text
-            text-xs
-            uppercase
-            tracking-[0.35em]
-            text-[var(--brand-forest)]
-          '
-        >
-          Field Findings
-        </p>
+        {/* label */}
 
-        <h3
-          className='
-            mt-5
-
-            text-[clamp(4rem,7vw,6.5rem)]
-
-            leading-[0.8]
-            tracking-[-0.07em]
-
-            text-[var(--brand-forest)]
-          '
-        >
-          Built For
-          <br />
-          Wild Instincts
-        </h3>
-
-        <p
-          className='
-            mt-7
-
-            max-w-xl
-
-            text-[1.35rem]
-            leading-relaxed
-
-            text-[var(--text-bark)]/80
-          '
-        >
-          {product.headline}
-        </p>
-
-        <div
-          className='
-            mt-8
-            inline-flex
-
-            rotate-[-1deg]
-
-            rounded-xl
-
-            border-[3px]
-            border-[var(--ink)]
-
-            bg-[var(--brand-sun-hover)]
-
-            px-5
-            py-3
-
-            shadow-[0_4px_0_var(--ink)]
-          '
-        >
-          <span
-            className='
-              text-sm
-              font-black
+        <div>
+          <p
+            className="
+              stamp-text
+              text-[10px]
               uppercase
-              tracking-[0.08em]
-              text-[var(--ink)]
-            '
+              tracking-[0.35em]
+              text-[var(--brand-forest)]/60
+            "
           >
-            {product.highlight}
-          </span>
+            GOOD STUFF INSIDE
+          </p>
         </div>
 
-        <img
-          src={dividerAssets.small}
-          alt=''
-          className='mt-10 w-40 opacity-60'
-        />
+        {/* headline */}
 
-        <div className='mt-10'>
-          <p
-            className='
-              stamp-text
-              text-xs
-              uppercase
-              tracking-[0.25em]
+        <div className="space-y-4">
+          <h3
+            className="
+              max-w-[18rem]
+
+              text-[clamp(2.8rem,4vw,4rem)]
+
+              leading-[0.9]
+              tracking-[-0.05em]
+
               text-[var(--brand-forest)]
-            '
+            "
           >
-            Featured Ingredients
+            Rich proteins.
+            <br />
+            Honest ingredients.
+          </h3>
+
+          <p
+            className="
+              max-w-[24rem]
+
+              text-[1.1rem]
+              leading-relaxed
+
+              text-[var(--text-bark)]/80
+            "
+          >
+            {product.headline}
+          </p>
+        </div>
+
+        {/* ingredients */}
+
+        <div className="space-y-4">
+          <p
+            className="
+              stamp-text
+              text-[10px]
+              uppercase
+              tracking-[0.3em]
+              text-[var(--brand-forest)]/60
+            "
+          >
+            WHAT'S INSIDE
           </p>
 
-          <div className='mt-4 flex flex-wrap gap-x-6 gap-y-3'>
+          <div className="space-y-3">
             {featuredIngredients.map((item) => (
-              <span
+              <div
                 key={item}
-                className='
-                  text-[1.05rem]
-                  font-semibold
-
-                  text-[var(--brand-forest)]
-                '
+                className="
+                  flex
+                  items-center
+                  gap-3
+                "
               >
-                {item}
-              </span>
+                <div
+                  className="
+                    h-2.5
+                    w-2.5
+                    rounded-full
+
+                    bg-[var(--brand-sun)]
+                  "
+                />
+
+                <span
+                  className="
+                    text-[1.2rem]
+
+                    text-[var(--brand-forest)]
+                  "
+                >
+                  {item}
+                </span>
+              </div>
             ))}
           </div>
         </div>
 
-        <img
-          src={dividerAssets.small}
-          alt=''
-          className='mt-10 w-40 opacity-60'
-        />
+        {/* fun copy */}
 
-        <blockquote
-          className='
-            mt-10
+        <div
+          className="
+            max-w-[20rem]
 
-            max-w-xl
+            rotate-[-1deg]
 
-            text-[2rem]
-            leading-[1.1]
+            rounded-2xl
 
-            tracking-[-0.03em]
+            border-[3px]
+            border-[var(--ink)]
 
-            text-[var(--brand-forest)]
-          '
+            bg-[var(--surface-cream)]
+
+            px-5
+            py-4
+
+            shadow-[0_4px_0_var(--ink)]
+          "
         >
-          “{product.quote}”
-        </blockquote>
+          <p
+            className="
+              text-sm
+              leading-relaxed
 
-        <p
-          className='
-            mt-8
-
-            text-lg
-            leading-relaxed
-
-            text-[var(--text-bark)]/80
-          '
-        >
-          {product.description}
-        </p>
+              text-[var(--text-bark)]
+            "
+          >
+            No fillers.
+            <br />
+            No nonsense.
+            <br />
+            Just real food.
+          </p>
+        </div>
 
         <FieldGuideActions product={product} />
-      </div>
+      </article>
     </FadeIn>
   );
 }

@@ -16,7 +16,7 @@ export function IngredientWorldScene() {
         tone="neutral"
         density="light"
         depth="far"
-        size="wide"
+        size="full"
         className="px-0 sm:px-0 md:px-0 lg:px-0 xl:px-0 2xl:px-0"
       >
         <SceneColumn spacing="none">
