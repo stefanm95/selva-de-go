@@ -1,7 +1,6 @@
 import type { Product } from "@/types/product";
 
 import { SceneColumn } from "@/components/scene/scene-column";
-import { RecipeCertifications } from "./recipe-certifications";
 import { RecipeShowcaseFooter } from "./recipe-showcase-footer";
 
 type RecipeShowcaseRightPanelProps = {
@@ -13,7 +12,7 @@ export const RecipeShowcaseRightPanel = ({
 }: RecipeShowcaseRightPanelProps) => {
   return (
     <div
-      className='
+      className="
         relative
         h-full
 
@@ -25,14 +24,14 @@ export const RecipeShowcaseRightPanel = ({
 
         xl:px-8
         xl:py-8
-      '
+      "
     >
-      <SceneColumn spacing='sm'>
+      <SceneColumn spacing="sm">
         {/* STORY */}
 
         <section>
           <p
-            className='
+            className="
               text-[9px]
               uppercase
               tracking-[0.45em]
@@ -40,27 +39,21 @@ export const RecipeShowcaseRightPanel = ({
               text-[var(--brand-rose)]
 
               md:text-[10px]
-            '
+            "
           >
             Recipe Story
           </p>
 
           <p
-            className='
-              mt-3
-
+            className="
               max-w-[58ch]
-
               text-[0.95rem]
               leading-[1.7]
-
               text-[var(--text-plum)]
-
               md:mt-4
               md:text-[1rem]
-
               xl:text-[1.05rem]
-            '
+            "
           >
             {recipe.story}
           </p>
@@ -70,7 +63,7 @@ export const RecipeShowcaseRightPanel = ({
 
         <section>
           <p
-            className='
+            className="
               text-[9px]
               
               uppercase
@@ -79,20 +72,20 @@ export const RecipeShowcaseRightPanel = ({
               text-[var(--brand-rose)]
 
               md:text-[10px]
-            '
+            "
           >
             Why Dogs Love It
           </p>
 
           <div
-            className='
+            className="
               mt-4
 
               flex
               flex-wrap
 
               gap-3
-            '
+            "
           >
             {recipe.benefits.map((benefit, index) => {
               const rotations = [
@@ -138,12 +131,6 @@ export const RecipeShowcaseRightPanel = ({
               );
             })}
           </div>
-        </section>
-
-        {/* CERTIFICATIONS */}
-
-        <section>
-          <RecipeCertifications />
         </section>
 
         {/* CTA */}

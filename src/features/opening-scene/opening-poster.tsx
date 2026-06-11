@@ -1,18 +1,17 @@
 // import { OpeningActions } from "./opening-actions";
 import { OpeningCopy } from "./opening-copy";
-import { OpeningPaperTexture } from "./opening-paper-texture";
 
 export function OpeningPoster() {
   return (
     <section
-      className='
+      className="
         relative
         w-full
         mx-auto
-      '
+      "
     >
       <div
-        className='
+        className="
           relative
     z-20
 
@@ -35,14 +34,12 @@ export function OpeningPoster() {
           bg-[var(--surface-paper)]
 
           shadow-[0_8px_0_var(--ink),0_40px_70px_rgba(0,0,0,0.18)]
-        '
+        "
       >
-        <OpeningPaperTexture />
-
         {/* atmosphere */}
 
         <div
-          className='
+          className="
             absolute
             left-[5%]
             top-[10%]
@@ -55,11 +52,11 @@ export function OpeningPoster() {
             bg-[var(--brand-sun)]/15
 
             blur-[120px]
-          '
+          "
         />
 
         <div
-          className='
+          className="
             absolute
             right-[5%]
             bottom-[10%]
@@ -72,13 +69,13 @@ export function OpeningPoster() {
             bg-[var(--brand-forest)]/10
 
             blur-[120px]
-          '
+          "
         />
 
         {/* watermark */}
 
         <div
-          className='
+          className="
             pointer-events-none
 
             absolute
@@ -97,7 +94,7 @@ export function OpeningPoster() {
             text-[var(--brand-plum)]/[0.03]
 
             select-none
-          '
+          "
         >
           SELVA
         </div>
@@ -105,7 +102,7 @@ export function OpeningPoster() {
         {/* stickers */}
 
         <div
-          className='
+          className="
             absolute
             left-[4rem]
             top-[3rem]
@@ -126,13 +123,13 @@ export function OpeningPoster() {
             font-black
             uppercase
             tracking-[0.2em]
-          '
+          "
         >
           Freeze Dried
         </div>
 
         <div
-          className='
+          className="
             absolute
             right-[8rem]
             top-[5rem]
@@ -153,7 +150,7 @@ export function OpeningPoster() {
             font-black
             uppercase
             tracking-[0.2em]
-          '
+          "
         >
           Human Grade
         </div>

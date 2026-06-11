@@ -2,12 +2,12 @@ export function OpeningPaperTexture() {
   return (
     <>
       <div
-        className='
+        className="
           absolute
           inset-0
           pointer-events-none
           opacity-20
-        '
+        "
         style={{
           backgroundImage: `url('/images/canvas/10428.jpg')`,
           backgroundSize: "cover",
@@ -15,13 +15,13 @@ export function OpeningPaperTexture() {
       />
 
       <div
-        className='
+        className="
           absolute
           inset-0
           pointer-events-none
           opacity-10
           mix-blend-darken
-        '
+        "
       />
     </>
   );

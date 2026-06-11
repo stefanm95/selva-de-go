@@ -13,12 +13,13 @@ export function RecipeShowcaseNavigation({
 }: RecipeShowcaseNavigationProps) {
   return (
     <div
-      className='
+      className="
         flex
         flex-wrap
         justify-center
         gap-4
-      '
+        mt-4
+      "
     >
       {recipes.map((recipe, index) => {
         const active = index === activeRecipeIndex;
@@ -47,26 +48,26 @@ export function RecipeShowcaseNavigation({
             `}
           >
             <div
-              className='
+              className="
                 text-[11px]
                 font-black
                 uppercase
                 tracking-[0.25em]
                 text-[var(--ink)]
-              '
+              "
             >
               Formula {index + 1}
             </div>
 
             <div
-              className='
+              className="
                 mt-2
 
                 text-xl
                 leading-none
 
                 text-[var(--brand-forest)]
-              '
+              "
             >
               {recipe.name}
             </div>

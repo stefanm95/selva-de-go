@@ -1,48 +1,43 @@
-import { OpeningActions } from "./opening-actions";
 import { SceneColumn } from "@/components/scene/scene-column";
+import { OpeningActions } from "./opening-actions";
 
 export function OpeningCopy() {
   return (
     <div
-      className='
-            relative
-            z-20
-            grid
-            min-h-[42vh]
+      className="
+        grid
+        items-center
+        gap-16
 
-            lg:grid-cols-[1.1fr_0.9fr]
-
-            items-center
-            gap-10
-          '
+        lg:grid-cols-[1fr_0.9fr]
+      "
     >
-      {/* LEFT */}
+      {/* left */}
 
-      <SceneColumn spacing='sm'>
+      <SceneColumn spacing="sm">
         <p
-          className='
-                text-[11px]
-                uppercase
-
-                tracking-[0.45em]
-
-                text-[var(--brand-rose)]
-              '
+          className="
+            text-[11px]
+            uppercase
+            tracking-[0.4em]
+            text-[var(--brand-rose)]
+          "
         >
           Wild Nutrition Supply
         </p>
 
         <h1
-          className='
-                font-display
+          className="
+            font-display
 
-                text-7xl
-                lg:text-[9rem]
+            text-[clamp(4.5rem,9vw,8rem)]
 
-                leading-[0.82]
+            leading-[0.82]
 
-                text-[var(--brand-plum)]
-              '
+            tracking-[-0.07em]
+
+            text-[var(--brand-plum)]
+          "
         >
           Food For
           <br />
@@ -50,86 +45,97 @@ export function OpeningCopy() {
         </h1>
 
         <p
-          className='
-                max-w-[720px]
+          className="
+            max-w-[38rem]
 
-                text-xl
+            text-lg
+            leading-relaxed
 
-                leading-relaxed
-
-                text-[var(--text-plum)]/75
-              '
+            text-[var(--text-plum)]/75
+          "
         >
           Built from real ingredients, inspired by ancestral feeding patterns
           and preserved through gentle freeze-drying for modern companions.
         </p>
 
         <div
-          className='
-                flex
-                flex-wrap
-                gap-4
-              '
+          className="
+            flex
+            flex-wrap
+            gap-4
+
+            text-[11px]
+            uppercase
+
+            tracking-[0.25em]
+
+            text-[var(--text-plum)]/55
+          "
         >
-          {[
-            "Novel Proteins",
-            "Omega Rich",
-            "Human Grade",
-            "No Artificial Additives",
-          ].map((tag) => (
-            <div
-              key={tag}
-              className='
-                    border-[3px]
-                    border-[var(--ink)]
+          <span>Novel Proteins</span>
 
-                    bg-[var(--brand-sun)]
+          <span>•</span>
 
-                    px-5
-                    py-3
+          <span>Omega Rich</span>
 
-                    shadow-[3px_3px_0_var(--ink)]
+          <span>•</span>
 
-                    text-[11px]
-                    font-black
-                    uppercase
+          <span>Human Grade</span>
 
-                    tracking-[0.18em]
+          <span>•</span>
 
-                    text-[var(--ink)]
-                  '
-            >
-              {tag}
-            </div>
-          ))}
+          <span>No Artificial Additives</span>
         </div>
 
-        <div>
-          <OpeningActions />
-        </div>
+        <OpeningActions />
       </SceneColumn>
 
-      {/* RIGHT */}
+      {/* right */}
 
       <div
-        className='
+        className="
     relative
 
     flex
     items-center
     justify-center
-  '
+
+    lg:justify-end
+  "
       >
+        {/* atmosphere */}
+
+        <div
+          className="
+      absolute
+
+      h-[32rem]
+      w-[32rem]
+
+      rounded-full
+
+      bg-[var(--brand-sun)]/15
+
+      blur-[120px]
+    "
+        />
+
+        {/* bag */}
+
         <img
-          src='/images/products/board/cartoonish-bag.png'
-          alt='Wild Game & Salmon'
-          className='
-      w-[clamp(18rem,38vw,42rem)]
+          src="/images/products/board/cartoonish-bag.png"
+          alt=""
+          className="
+      relative
 
-      rotate-[4deg]
+      w-[clamp(15rem,26vw,24rem)]
 
-      drop-shadow-[0_40px_60px_rgba(0,0,0,0.35)]
-    '
+      translate-y-4
+
+      rotate-[2deg]
+
+      drop-shadow-[0_40px_60px_rgba(0,0,0,0.22)]
+    "
         />
       </div>
     </div>

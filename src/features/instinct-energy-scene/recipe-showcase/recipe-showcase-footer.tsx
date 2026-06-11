@@ -21,36 +21,33 @@ const amazonLinks: Record<string, string> = {
 export function RecipeShowcaseFooter({ recipe }: RecipeShowcaseFooterProps) {
   return (
     <div
-      className='
+      className="
         relative
-
         border-t
         border-[var(--brand-plum)]/10
-
-        pt-8
-      '
+      "
     >
       <div>
         <p
-          className='
+          className="
             text-[10px]
             uppercase
             tracking-[0.35em]
 
             text-[var(--brand-rose)]
-          '
+          "
         >
           Available Online
         </p>
 
         <p
-          className='
+          className="
             mt-2
 
             text-sm
 
             text-[var(--brand-plum)]/70
-          '
+          "
         >
           Discover the complete recipe on Amazon.
         </p>
@@ -60,8 +57,8 @@ export function RecipeShowcaseFooter({ recipe }: RecipeShowcaseFooterProps) {
         <Magnetic strength={12} rotation={3}>
           <motion.a
             href={amazonLinks[recipe.id]}
-            target='_blank'
-            rel='noopener noreferrer'
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{
               rotate: 0,
               y: -6,
@@ -71,7 +68,7 @@ export function RecipeShowcaseFooter({ recipe }: RecipeShowcaseFooterProps) {
               y: 2,
               scale: 0.98,
             }}
-            className='
+            className="
               group
 
               relative
@@ -97,18 +94,18 @@ export function RecipeShowcaseFooter({ recipe }: RecipeShowcaseFooterProps) {
               py-5
 
               shadow-[0_5px_0_var(--ink),0_14px_24px_rgba(0,0,0,0.18)]
-            '
+            "
           >
             {/* texture */}
 
             <div
-              className='
+              className="
                 absolute
                 inset-0
 
                 opacity-[0.08]
                 mix-blend-multiply
-              '
+              "
               style={{
                 backgroundImage: "url('/images/wrm-paper/carton.jfif')",
                 backgroundSize: "cover",
@@ -127,7 +124,7 @@ export function RecipeShowcaseFooter({ recipe }: RecipeShowcaseFooterProps) {
                 ease: "linear",
                 repeatDelay: 2,
               }}
-              className='
+              className="
                 absolute
                 inset-y-0
 
@@ -137,13 +134,13 @@ export function RecipeShowcaseFooter({ recipe }: RecipeShowcaseFooterProps) {
 
                 bg-white/20
                 blur-md
-              '
+              "
             />
 
             {/* sticker glow */}
 
             <div
-              className='
+              className="
                 absolute
                 -right-6
                 -top-6
@@ -156,14 +153,14 @@ export function RecipeShowcaseFooter({ recipe }: RecipeShowcaseFooterProps) {
                 bg-white/15
 
                 blur-sm
-              '
+              "
             />
 
             {/* content */}
 
-            <div className='relative z-10'>
+            <div className="relative z-10">
               <p
-                className='
+                className="
                   text-[9px]
                   font-black
                   uppercase
@@ -171,13 +168,13 @@ export function RecipeShowcaseFooter({ recipe }: RecipeShowcaseFooterProps) {
                   tracking-[0.3em]
 
                   text-[#4b2419]
-                '
+                "
               >
                 Official Supply
               </p>
 
               <div
-                className='
+                className="
                   mt-1
 
                   text-lg
@@ -187,7 +184,7 @@ export function RecipeShowcaseFooter({ recipe }: RecipeShowcaseFooterProps) {
                   tracking-[0.06em]
 
                   text-[var(--ink)]
-                '
+                "
               >
                 Get The Recipe →
               </div>

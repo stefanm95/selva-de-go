@@ -1,36 +1,27 @@
 import { FadeIn, Reveal } from "@/components/motion";
-
 import { Button } from "@/components/ui/button";
 
 export function OpeningActions() {
   return (
     <Reveal
-      className='
-        relative
-        z-30
-        mt-6
-        sm:mt-8
-        lg:mt-14
-        
+      className="
+        mt-8
+
         flex
         flex-col
-        sm:flex-row
-        flex-wrap
-        items-stretch
-        sm:items-center
+        gap-4
 
-        gap-3
-        sm:gap-5
-      '
+        sm:flex-row
+      "
     >
-      <FadeIn delay={0.42}>
-        <Button variant='primary' size='lg' className='w-full sm:w-auto'>
+      <FadeIn delay={0.35}>
+        <Button variant="primary" size="lg">
           Explore Recipes
         </Button>
       </FadeIn>
 
-      <FadeIn delay={0.5}>
-        <Button variant='secondary' size='lg' className='w-full sm:w-auto'>
+      <FadeIn delay={0.45}>
+        <Button variant="secondary" size="lg">
           Our Philosophy
         </Button>
       </FadeIn>
